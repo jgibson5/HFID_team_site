@@ -98,3 +98,14 @@ body {
 .article {
 	padding:10px;
 }
+
+table {
+	border-spacing:0px;
+	border:solid 1px;
+}
+
+td, th {
+	border:solid 1px;
+	border-color:#471B00;
+	padding:3px;
+}
