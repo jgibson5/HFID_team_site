@@ -14,7 +14,7 @@ img.inline {
 .centered {
 	margin:0px auto;
 	text-align:left;
-	width:960px;
+	width:1210px;
 }
 
 .header {
@@ -22,7 +22,7 @@ img.inline {
 	padding:5px 0px;
 	height:150px;
 	width:100%;
-	background:#F2EA8A;
+	background:#9999FF;
 	text-align:center;
 }
 
@@ -42,7 +42,7 @@ img.inline {
 	display:inline-block;
 	float:left;
 	padding:0px;
-	width:730px;
+	width:1030px;
 	background:#F2EA8A;
 }
 
@@ -64,7 +64,7 @@ img.inline {
 }
 
 .nav-bar-link > a {
-	color:#F2EA8A;
+	color:#9999FF;
 	text-decoration:none;
 	margin:0px auto;
 	display:block;
@@ -78,7 +78,7 @@ img.inline {
 .side-bar {
 	display:inline-block;
 	float:left;
-	width:180px;
+	width:150px;
 	margin:0px 0px 0px 10px;
 	padding:10px;
 }
