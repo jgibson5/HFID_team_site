@@ -39,7 +39,7 @@ body {
 	float:left;
 	padding:0px;
 	width:730px;
-	background:#F2EA8A;
+	background:#FFFFDD;
 }
 
 .nav-bar {
@@ -56,7 +56,7 @@ body {
 }
 
 .nav-bar-link.active {
-	background:#F2EA8A;
+	background:#FFFFDD;
 }
 
 .nav-bar-link > a {
@@ -85,7 +85,7 @@ body {
 
 
 .side-bar-link > a {
-	color:#F2EA8A;
+	color:#FFFFDD;
 	text-decoration:none;
 }
 
