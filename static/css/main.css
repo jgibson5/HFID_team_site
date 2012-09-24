@@ -22,6 +22,15 @@ body {
 	text-align:center;
 }
 
+.headerRight {
+	margin:0px 0px 10px 0px;
+	padding:5px 0px;
+	height:150px;
+	width:20%;
+	background:#9999FF;
+	text-align:center;	
+}
+
 #team-name {
 	font-size:30px;
 	margin:5px 0px;
@@ -39,7 +48,7 @@ body {
 	float:left;
 	padding:0px;
 	width:1030px;
-	background:#F2EA8A;
+	background:#FFFFDD;
 }
 
 .nav-bar {
@@ -51,22 +60,24 @@ body {
 	float:center;
 	margin:0px -5px 0px 0px;
 	padding:10px;
-	width:162.5px;
+	width:238.5px;
 	background:#782F02;
 }
 
 .nav-bar-link.active {
-	background:#F2EA8A;
+	background:#FFFFDD;
 }
 
 .nav-bar-link > a {
 	color:#9999FF;
+	float:center;
 	text-decoration:none;
 	margin:0px auto;
 	display:block;
 }
 
 .nav-bar-link.active > a {
+	float: center;
 	color:#471B00;
 	text-decoration:none;
 }
@@ -85,7 +96,7 @@ body {
 
 
 .side-bar-link > a {
-	color:#F2EA8A;
+	color:#FFFFDD;
 	text-decoration:none;
 }
 
