@@ -1,10 +1,12 @@
 body {
 	margin:0px;
 	padding:0px;
-	background:#471B00;
+	/*background:#471B00;*/
+	background:#000033;
 	font-family:sans-serif;
 	font-size:16px;
-	color:#471B00;
+	/*color:#471B00;*/
+	color:#000033;
 }
 
 .centered {
@@ -52,7 +54,9 @@ body {
 	margin:0px -5px 0px 0px;
 	padding:10px;
 	width:163.25px;
-	background:#782F02;
+	/*background:#782F02;*/
+	background:#663300;
+	text-align:center;
 }
 
 .nav-bar-link.active {
@@ -67,7 +71,8 @@ body {
 }
 
 .nav-bar-link.active > a {
-	color:#471B00;
+	/*color:#471B00;*/
+	color:#000000;
 	text-decoration:none;
 }
 
@@ -110,6 +115,7 @@ table {
 
 td, th {
 	border:solid 1px;
-	border-color:#471B00;
+	/*border-color:#471B00;*/
+	border-color:#000033;
 	padding:3px;
 }
