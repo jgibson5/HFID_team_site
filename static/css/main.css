@@ -110,6 +110,11 @@ body {
 	margin:8px;
 }
 
+.img-block {
+	display:block;
+	margin:0px 0px 5px 0px;
+}
+
 table {
 	border-spacing:0px;
 	border:solid 1px;
