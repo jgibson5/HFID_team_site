@@ -4,14 +4,20 @@ import re
 loc = "/var/www/virtual/hfid.olin.edu/html/sa2013/s_engr3220-fallera"
 cmd = "scp"
 
-cwd = ""
-
 filePattern = ".html|.jpg|.JPG|.png|.css|.js"
 folderPattern = "\."
+myDirPattern = "/home/jgibson/git/HFID_team_site"
+
+queue = []
 
 def nav_folder(path = ""):
-	if path != cwd:
-		cwd = path
+	cwd = os.popen("pwd")
+	cwd = cwd.readline()[0:-1]
+	if path != "":
+		os.chdir(cwd+"/"+path)
+		cwd = os.popen("pwd")
+		cwd = cwd.readline()[0:-1]
+	print cwd
 		
 	directory = os.popen("ls")
 	
@@ -23,6 +29,13 @@ def nav_folder(path = ""):
 		folders = re.findall(folderPattern, dirObj)
 		if not len(folders):
 			print dirObj, "FOLDER"
+			nav_folder(dirObj)
+	
+	r = cwd.split("/")[0:-1]
+	r = "/".join(r)
+	os.chdir(r)
 		
 		
 nav_folder()
+
+
