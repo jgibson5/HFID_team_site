@@ -1,7 +1,5 @@
 import os
 import re
-import time
-import paramiko
 
 loc = "/var/www/virtual/hfid.olin.edu/html/sa2013/s_engr3220-fallera"
 cmd = "scp"
@@ -27,6 +25,9 @@ def nav_folder(path = ""):
 		files = re.findall(filePattern, dirObj)
 		if len(files):
 			print dirObj, "FILE"
+			ext = cwd[len(myDirPattern)+1:] + "/"
+			print ext
+			make_copy(dirObj, ext)
 		folders = re.findall(folderPattern, dirObj)
 		if not len(folders):
 			print dirObj, "FOLDER"
@@ -37,17 +38,14 @@ def nav_folder(path = ""):
 	os.chdir(r)
 		
 def make_copy(fileName = "", path = ""):
-	c = cmd + " " + fileName + " " + server + loc + "/test" + fileName
+	c = cmd + " " + fileName + " " + server + loc + "/" + path + fileName
 	print c
-	t = os.popen(c)
-	for line in t.readlines():
-		print line
 	os.system(c)
 	
+
+#make_copy("index.html", "static/")
 	
-make_copy("index.html")
 	
-	
-#nav_folder()
+nav_folder()
 
 
