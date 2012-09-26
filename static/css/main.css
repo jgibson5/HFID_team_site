@@ -23,6 +23,7 @@ body {
 	background:#9999FF;
 	text-align:center;
 	font-weight:bold;
+	display:block;
 }
 
 #team-name {
