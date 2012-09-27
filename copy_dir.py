@@ -43,9 +43,9 @@ def make_copy(fileName = "", path = ""):
 	os.system(c)
 	
 
-#make_copy("index.html", "static/")
+make_copy("assignments/assignments.html", "")
 	
-	
-nav_folder()
+
+#nav_folder()
 
 
