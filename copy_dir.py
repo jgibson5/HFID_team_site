@@ -29,7 +29,7 @@ def nav_folder(path = ""):
 			print ext
 			make_copy(dirObj, ext)
 		folders = re.findall(folderPattern, dirObj)
-		if not len(folders):
+		if not len(folders) && dir_Obj != "revisedMockups":
 			print dirObj, "FOLDER"
 			nav_folder(dirObj)
 	
