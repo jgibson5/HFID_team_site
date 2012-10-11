@@ -29,7 +29,7 @@ def nav_folder(path = ""):
 			print ext
 			make_copy(dirObj, ext)
 		folders = re.findall(folderPattern, dirObj)
-		if not len(folders) && dir_Obj != "revisedMockups":
+		if not len(folders):
 			print dirObj, "FOLDER"
 			nav_folder(dirObj)
 	
@@ -43,9 +43,9 @@ def make_copy(fileName = "", path = ""):
 	os.system(c)
 	
 
-make_copy("assignments/assignments.html", "")
+#make_copy("index.html", "static/")
 	
-
-#nav_folder()
+	
+nav_folder()
 
 
