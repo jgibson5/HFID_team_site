@@ -1,4 +1,15 @@
 .top-row{
+	width:756px;
+	height:150px;
+}
+
+.tabs{
+	width:756px;
+	height:50px;
+}
+
+.recipeBook{
+	width:756px;
 }
 
 .vertical-buttons{
@@ -142,7 +153,7 @@ vertical-align:middle;
 .pageTitle { 
 	font-family:Trebuchet MS;
 	float:left;
-	font-size:30px;
+	font-size:20px;
 	display:inline-block;
 }
 
@@ -300,3 +311,44 @@ overflow: hidden;
 margin: 0px;
 }
 
+/* Box that holds filter stuff */
+.filterBox{
+	border:solid 2px #000000;
+	background:#FFFFFF;
+	width: 200px;
+	height: 100px;
+	margin:0px;
+	padding:0px;
+	font-family:Trebuchet MS;
+	font-size:16px;
+	color:#000000;
+
+	display:inline-block;
+	float:right;
+
+}
+
+
+.smallHeading{
+	color:#000000;
+	font-family:Trebuchet MS;
+	font-size:20px;
+	text-align:center;
+}
+
+.filterSide{
+	display:inline-block;
+	width:95px;
+	border:none;
+}
+
+/* Input textbox */
+.inputBox{
+	display:inline-block;
+	padding: 7px 8px;
+	background: #FFFFFF;
+	border: 2px solid #000000;
+	color: #000000;
+	width: 70px;
+	text-align:left;
+}
