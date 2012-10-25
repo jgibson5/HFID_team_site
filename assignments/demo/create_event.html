@@ -33,6 +33,21 @@
 		text-align:center;
 		font-size:8px;
 		font-family:Trebuchet MS;
+		moz-box-align:left;
+		}
+		
+		.nav-bar-link.active {
+		background:#FFFFFF;
+		text-align:center;
+		font-size:28px;
+		border-top-style:solid;
+		border-right-style:none;
+		border-bottom-style:solid;
+		border-color:#000000;
+		border-width:2px;
+		border-top-style:none;
+		border-bottom-style:none;
+		border-right-style:solid;
 		}
 		
 		.align-bottom-left
@@ -46,6 +61,17 @@
 			margin:0px;
 			padding:0px;
 		}
+		
+		/* Input textbox */
+.inputBox{
+    display:inline-block;
+    padding: 7px 8px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    color: #000000;
+    width: 70px;
+    text-align:left;
+}
 		
 		</style>
 	
@@ -61,9 +87,9 @@
 					<h1 style=text-align:center>Create Event</h1>
 				</div>
 				
-				<div class="align-bottom-left">
+				<div valign="left">
 					
-					<div class="nav-bar-link">
+					<div class="nav-bar-link.active">
 						Event Name
 					</div>
 				
@@ -92,6 +118,12 @@
 					</div>
 				</div>
 				
+				<div>
+					<h3>Title your event!</h3>
+					<div class=inputBox>
+						<p>Dessert Party!</p>
+					</div>
+				</div>
 				
 			</div>
 		</div>
