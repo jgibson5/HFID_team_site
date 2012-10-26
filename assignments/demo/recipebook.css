@@ -1,4 +1,15 @@
 .top-row{
+	width:756px;
+	height:150px;
+}
+
+.tabs{
+	width:756px;
+	height:50px;
+}
+
+.recipeBook{
+	width:756px;
 }
 
 .vertical-buttons{
@@ -142,7 +153,7 @@ vertical-align:middle;
 .pageTitle { 
 	font-family:Trebuchet MS;
 	float:left;
-	font-size:30px;
+	font-size:20px;
 	display:inline-block;
 }
 
@@ -253,13 +264,15 @@ vertical-align:middle;
 
 .recipeTab {
 	display:inline-block;
-	float:center;
+	float:left;
 	margin:0px -5px 0px 0px;
 	padding:10px;
+	width: 150px;
 	background:#dcdcdc;
 	text-align:center;
 	font-size:20px;
 	font-family:Trebuchet MS;
+	border:solid 1px #000000;
 }
 .recipeTab.active {
 	background:#0000333399;
@@ -277,4 +290,65 @@ vertical-align:middle;
 	height = 0;
 	border-button: 40px solid #333399;
 	border-right: 40px solid transparent;
+}
+
+.recipeCard{
+	border:solid 2px #000000;
+	background:#FFFFFF;
+	width: 160px;
+	float: left; 
+	height: 160px;
+	margin:5px;
+	padding:0px;
+	font-family:Trebuchet MS;
+	font-size:16px;
+	color:#000000;
+}
+
+.recipeRow{
+float: left; 
+overflow: hidden; 
+margin: 0px;
+}
+
+/* Box that holds filter stuff */
+.filterBox{
+	border:solid 2px #000000;
+	background:#FFFFFF;
+	width: 200px;
+	height: 100px;
+	margin:0px;
+	padding:0px;
+	font-family:Trebuchet MS;
+	font-size:16px;
+	color:#000000;
+
+	display:inline-block;
+	float:right;
+
+}
+
+
+.smallHeading{
+	color:#000000;
+	font-family:Trebuchet MS;
+	font-size:20px;
+	text-align:center;
+}
+
+.filterSide{
+	display:inline-block;
+	width:95px;
+	border:none;
+}
+
+/* Input textbox */
+.inputBox{
+	display:inline-block;
+	padding: 7px 8px;
+	background: #FFFFFF;
+	border: 2px solid #000000;
+	color: #000000;
+	width: 70px;
+	text-align:left;
 }
