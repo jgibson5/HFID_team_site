@@ -54,13 +54,39 @@
 			border-right-style:solid;
 		}
 
-		.nav-bar-link-2{
+		.nav-bar-link.active{
+			margin:-2px -5px 0px 0px;
+			height:43px;
+			background:#FFFFFF;
+			border-top-style:solid;
+			border-right-style:none;
+			border-bottom-style:solid;
+		}
+		
+		.nav-bar-link-short{
+			display:inline-block;
+			float:center;
+			margin:0px -5px 0px 0px;
+			padding:10px;
+			width:180px;
+			height:37px;
+			background:#BBBBBB;
+			text-align:left;
+			font-size:24px;
+			font-family:Trebuchet MS;
+			moz-box-align:left;
+			border-width:2px;
+			border-top-style:none;
+			border-bottom-style:none;
+			border-right-style:solid;
+		}
+		.nav-bar-link-short-2{
 			display:inline-block;
 			float:center;
 			margin:-2px -5px 0px 0px;
 			padding:10px;
 			width:182px;
-			height:43px;
+			height:34px;
 			text-align:left;
 			font-size:24px;
 			font-family:Trebuchet MS;
@@ -250,6 +276,30 @@
 			margin:30px 10px 10px 10px;
 		}
 		
+		.recipeBlock{
+			display:inline-block;
+			float:center;
+			width:200px;
+			height:120px;
+			margin:5px 0px 5px 0px;
+			text-align:center;
+		}
+		
+		.recipePic{
+			display:inline-block;
+			float:center;
+		}
+		
+		.recipeTag{
+			display:inline-block;
+			float:center;
+			color:#000000;
+			font-family:Trebuchet MS;
+			font-weight:bold;
+			font-size:16px;
+			text-align:center;
+		}
+		
 		</style>
 	
 	</head>
@@ -261,29 +311,54 @@
 				<!-- PUT STUFF HERE -->
 				
 				<div>
-					<div class = "pageTitle">Create Event</div>
+					<div class = "pageTitle">Dessert Party!</div>
 				</div>
 				
 				<div class="eventBox">
 					<div class="nav-bar">
-					
-						<div class="nav-bar-link">Event Name</div>
-						<div class="nav-bar-link">Recipes</div>
-						<div class="nav-bar-link">Invited Friends</div>
-						<div class="nav-bar-link">Date</div>
-						<div class="nav-bar-link">Time</div>
-						<div class="nav-bar-link">Location</div>
-						<div class="nav-bar-link">Summary</div>
+						<div class="nav-bar-link-short">Overview</div>
+						<div class="nav-bar-link-short">Recipes</div>
+						<div class="nav-bar-link-short">Ingredients</div>
+						<div class="nav-bar-link-short">Invited Friends</div>
+						<div class="nav-bar-link-short">Date</div>
+						<div class="nav-bar-link-short">Time</div>
+						<div class="nav-bar-link-short">Location</div>
+						<div class="nav-bar-link-short">Comments</div>
 					</div>
 					<div class="nav-bar-toggle">
-						<div class="headingSmall">Title your event!</div>
-						<input type="text" name="eventTitle">
+						<p>What: Dessert Party!</p>
+						<p>When: October 1st, 2012 at 2:30 pm</p>
+						<p>Where: My house</p>
+						<p>Scheduled by: Me</p>
+						<p>Invited:</p>
+						<center>
+							<div class="friendBlock">
+								<div class="friend"><img src="../../static/images/prototype/people/allie.jpg" width="90px"></div>
+								<div class="friendTag">Allie S.</div>
+							</div>
+							<div class="friendBlock">
+								<div class="friend"><img src="../../static/images/prototype/people/joe.jpg" width="90px"></div>
+								<div class="friendTag">Joe F.</div>
+							</div>
+							<div class="friendBlock">
+								<div class="friend"><img src="../../static/images/prototype/people/deirdre.jpg" width="90px"></div>
+								<div class="friendTag">Deirdre O.</div>
+							</div>
+							<div class="buttonBlock">
+								<div class="submitButton">Submit</div>
+								<div class="cancelButton">Cancel</div>
+							</div>
+						</center>
 					</div>
-					<div class="nav-bar-toggle">
+					<div class="nav-bar-toggle-2">
 						<div class="recipeBox">
-							<div class="headingSmall">Recipes already selected:</div>
+							<div class="headingSmall">Recipes for this event (press X to remove):</div>
+							<div class="recipeBlock">
+								<div class="recipePic"><img src="../../static/images/prototype/food/strawberries.jpg" width="180px"></div>
+								<div class="recipeTag">Chocolate Swirl Strawberries</div>
+							</div>
 						</div>
-						<div class="uploadRecipeButton">Choose another recipe</div>
+						<div class="uploadRecipeButton">Add another recipe</div>
 					</div>
 					<div class="nav-bar-toggle">
 						<div class="headingSmall">Tap friends to invite them:</div>
@@ -336,31 +411,7 @@
 						<div class="headingSmall">Enter the event location:</div>
 						<input type="text" name="eventLocation">
 					</div>
-					<div class="nav-bar-toggle-2">
-						<p>What: Dessert Party!</p>
-						<p>When: October 1st, 2012 at 2:30 pm</p>
-						<p>Where: My house</p>
-						<p>Scheduled by: Me</p>
-						<p>Invited:</p>
-						<center>
-							<div class="friendBlock">
-								<div class="friend"><img src="../../static/images/prototype/people/allie.jpg" width="90px"></div>
-								<div class="friendTag">Allie S.</div>
-							</div>
-							<div class="friendBlock">
-								<div class="friend"><img src="../../static/images/prototype/people/joe.jpg" width="90px"></div>
-								<div class="friendTag">Joe F.</div>
-							</div>
-							<div class="friendBlock">
-								<div class="friend"><img src="../../static/images/prototype/people/deirdre.jpg" width="90px"></div>
-								<div class="friendTag">Deirdre O.</div>
-							</div>
-							<div class="buttonBlock">
-								<div class="submitButton">Submit</div>
-								<div class="cancelButton">Cancel</div>
-							</div>
-						</center>
-					</div>
+
 				</div>
 			</div>
 		</div>
