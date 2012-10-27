@@ -344,7 +344,7 @@ height:300px;*/
 	border:solid 2px #000000;
 	background:#FFFFFF;
 	width: 200px;
-	height: 100px;
+	height: 120px;
 	margin:0px;
 	padding:0px;
 	font-family:Trebuchet MS;
@@ -364,19 +364,20 @@ height:300px;*/
 	text-align:center;
 }
 
-.filterSide{
-	display:inline-block;
-	width:95px;
+.filterRow{
+	/*display:inline-block;*/
+	width:200px;
 	border:none;
+	margin: 5px 10px;
 }
 
 /* Input textbox */
 .inputBox{
+	float:left;
 	display:inline-block;
-	padding: 7px 8px;
-	background: #FFFFFF;
+	/*background: #FFFFFF;
 	border: 2px solid #000000;
 	color: #000000;
 	width: 70px;
-	text-align:left;
+	text-align:left;*/
 }
