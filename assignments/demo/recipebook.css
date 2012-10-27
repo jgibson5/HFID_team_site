@@ -1,19 +1,27 @@
 .top-row{
 	width:756px;
-	height:150px;
+	height:115px;
+	display:inline-block;
 }
 
 .tabs{
+	display:inline-block;
+	margin:0px;
+	padding:0px;
 	width:756px;
-	height:50px;
+	height:42px;
 }
 
 .recipeBook{
-	width:756px;
+	width:956px;
+	height:420px;
+	border:solid 2px;
+	position:relative;
+	left:-65px;
 }
 
 .vertical-buttons{
-	margin:35px 5px;
+	margin:10px 10px;
 	display:inline-block;
 	float:left;
 }
@@ -22,6 +30,7 @@
 	border:solid 3px;
 	width:756px;
 	height:576px;
+	overflow:hidden;
 }
 
 .pull-right {
@@ -155,6 +164,7 @@ vertical-align:middle;
 	float:left;
 	font-size:20px;
 	display:inline-block;
+	margin: 0px 15px;
 }
 
 /* Body for the right side of event pages; super duper plain and boring */
@@ -185,7 +195,7 @@ vertical-align:middle;
 	height: 30px;
 	text-decoration:none;
 	text-shadow:1px 1px 0px #777777;
-	margin:35px 5px;
+	margin:10px 10px;
 text-align:center;
 vertical-align:middle;
 }.homeButton:active {
@@ -206,7 +216,7 @@ vertical-align:middle;
 	font-family:Trebuchet MS;
 	font-size:16px;
 	font-weight:bold;
-	width: 70px;
+	width: 60px;
 	height: 30px;
 	text-decoration:none;
 	text-shadow:1px 1px 0px #777777;
@@ -230,8 +240,9 @@ vertical-align:middle;
 	font-family:Trebuchet MS;
 	font-size:16px;
 	font-weight:bold;
-	width: 70px;
+	width: 60px;
 	height: 30px;
+	margin: 3px 10px;
 	text-decoration:none;
 	text-shadow:1px 1px 0px #777777;
 text-align:center;
@@ -266,8 +277,8 @@ vertical-align:middle;
 	display:inline-block;
 	float:left;
 	margin:0px -5px 0px 0px;
-	padding:10px;
-	width: 150px;
+	padding:5px;
+	margin: 5px;
 	background:#dcdcdc;
 	text-align:center;
 	font-size:20px;
@@ -296,19 +307,36 @@ vertical-align:middle;
 	border:solid 2px #000000;
 	background:#FFFFFF;
 	width: 160px;
-	float: left; 
-	height: 160px;
-	margin:5px;
+	/*float: left; */
+	height: 175px;
+	margin:10px 5px 20px 5px;
 	padding:0px;
 	font-family:Trebuchet MS;
 	font-size:16px;
 	color:#000000;
+	/*display:inline-block;*/
 }
 
 .recipeRow{
 float: left; 
 overflow: hidden; 
 margin: 0px;
+position:relative;
+left:-30px;
+display:inline-block;
+min-width:200px;
+height:300px;
+}
+
+.recipeColumn{
+float: left; 
+overflow: hidden; 
+margin: 7px 0px;
+/*position:relative;
+left:-65px;*/
+display:inline-block;
+/*min-width:200px;
+height:300px;*/
 }
 
 /* Box that holds filter stuff */
@@ -316,7 +344,7 @@ margin: 0px;
 	border:solid 2px #000000;
 	background:#FFFFFF;
 	width: 200px;
-	height: 100px;
+	height: 120px;
 	margin:0px;
 	padding:0px;
 	font-family:Trebuchet MS;
@@ -336,19 +364,20 @@ margin: 0px;
 	text-align:center;
 }
 
-.filterSide{
-	display:inline-block;
-	width:95px;
+.filterRow{
+	/*display:inline-block;*/
+	width:200px;
 	border:none;
+	margin: 5px 10px;
 }
 
 /* Input textbox */
 .inputBox{
+	float:left;
 	display:inline-block;
-	padding: 7px 8px;
-	background: #FFFFFF;
+	/*background: #FFFFFF;
 	border: 2px solid #000000;
 	color: #000000;
 	width: 70px;
-	text-align:left;
+	text-align:left;*/
 }
