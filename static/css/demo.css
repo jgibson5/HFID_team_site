@@ -15,33 +15,30 @@
     float:left;
 }
 
+.mainLeft{
+	width:350px;
+	height:500px;
+	display:inline-block;	
+}
+
 /* Normal button on the main page */
 .mainPageButton {
-    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-    box-shadow:inset 0px 1px 0px 0px #ffffff;
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
-    background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
-    background-color:#FFFFFF;
-    opacity:0.5;
     -moz-border-radius:16px;
     -webkit-border-radius:16px;
     border-radius:16px;
-    border:1px solid #dcdcdc;
-    display:table-cell;
-    color:#000000;
-    font-family:Trebuchet MS;
-    font-size:28px;
-    font-weight:bold;
+	background-color:rgba(255, 255, 255, 0.5);
     width: 200px;
     height: 100px;
-    text-decoration:none;
-    text-shadow:1px 1px 0px #777777;
-
-text-align:center;
-
-vertical-align:middle;
+	font-size:26px;
+	font-weight:bold;
+	font-family:Trebuchet MS;
+	color:#000000;
+	text-decoration:none;
+	text-shadow: 1px 1px 0px #777777;
+	text-align:center;
+	display:inline-block;
+	margin:25px 25px 25px 25px;
+	text-align:center;
 }.mainPageButton:active {
     position:relative;
     top:1px;
@@ -49,26 +46,19 @@ vertical-align:middle;
 
 /* Translucent box for the app name on the main page */
 .mainPageNameBox{
-    width: 200px;
-    height: 50px;
-
-font-size:35px;
-
-font-weight:bold;
-
-font-family:Trebuchet MS;
-
-color:#000000;
-
-text-decoration:none;
-
-text-shadow: 1px 1px 0px #777777;
-
-text-align:center;
-
-display:table-cell;
-
-vertical-align:middle;
+	background-color:rgba(255, 255, 255, 0.5);
+    width: 290px;
+    height: 45px;
+	font-size:30px;
+	font-weight:bold;
+	font-family:Trebuchet MS;
+	color:#000000;
+	text-decoration:none;
+	text-shadow: 1px 1px 0px #777777;
+	text-align:center;
+	display:inline-block;
+	margin: 25px 25px 25px 25px;
+	border:2px solid #000000;
 }
 
 /* Special button for the background image (b/c is thinner) */
@@ -76,15 +66,10 @@ vertical-align:middle;
     -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
     -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
     box-shadow:inset 0px 1px 0px 0px #ffffff;
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
-    background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
-    background-color:#FFFFFF;
-    opacity:0.5;
+    background-color:rgba(255, 255, 255, 0.5);
     -moz-border-radius:16px;
     -webkit-border-radius:16px;
     border-radius:16px;
-    border:1px solid #dcdcdc;
     display:table-cell;
     color:#000000;
     font-family:Trebuchet MS;
@@ -99,7 +84,7 @@ vertical-align:middle;
 vertical-align:middle;
 }
 .mainPageButtonSmall:active {
-    background:#7FFF00;
+    background:rbga(200, 200, 200, 0.5);
 }
 
 /* Timeline on the main page */
