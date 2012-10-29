@@ -17,18 +17,29 @@
 
 .mainLeft{
 	width:350px;
-	height:500px;
+	height:550px;
 	display:inline-block;	
+}
+
+.mainRight{
+	width:350px;
+	height:550px;
+	display:inline-block;
+	float:right;	
 }
 
 /* Normal button on the main page */
 .mainPageButton {
+     -moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    box-shadow:inset 1px 1px 0px 0px #ffffff;
     -moz-border-radius:16px;
     -webkit-border-radius:16px;
     border-radius:16px;
-	background-color:rgba(255, 255, 255, 0.5);
-    width: 200px;
-    height: 100px;
+	background-color:rgba(255, 255, 255, 0.6);
+    width: 270px;
+    height: 40px;
+	padding: 10px;
 	font-size:26px;
 	font-weight:bold;
 	font-family:Trebuchet MS;
@@ -37,8 +48,9 @@
 	text-shadow: 1px 1px 0px #777777;
 	text-align:center;
 	display:inline-block;
-	margin:25px 25px 25px 25px;
+	margin:5px 25px 5px 25px;
 	text-align:center;
+	border:2px solid #000000;
 }.mainPageButton:active {
     position:relative;
     top:1px;
@@ -46,7 +58,10 @@
 
 /* Translucent box for the app name on the main page */
 .mainPageNameBox{
-	background-color:rgba(255, 255, 255, 0.5);
+    -moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    box-shadow:inset 1px 1px 0px 0px #ffffff;
+	background-color:rgba(255, 255, 255, 0.7);
     width: 290px;
     height: 45px;
 	font-size:30px;
@@ -63,53 +78,52 @@
 
 /* Special button for the background image (b/c is thinner) */
 .mainPageButtonSmall {
-    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-    box-shadow:inset 0px 1px 0px 0px #ffffff;
-    background-color:rgba(255, 255, 255, 0.5);
+    -moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    box-shadow:inset 1px 1px 0px 0px #ffffff;
+    background-color:rgba(255, 255, 255, 0.6);
     -moz-border-radius:16px;
     -webkit-border-radius:16px;
     border-radius:16px;
-    display:table-cell;
+    display:inline-block;
+	padding:10px;
     color:#000000;
     font-family:Trebuchet MS;
-    font-size:12px;
+    font-size:18px;
     font-weight:bold;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 80px;
     text-decoration:none;
     text-shadow:1px 1px 0px #777777;
     text-align:center;
-
-vertical-align:middle;
+	border:2px solid #000000;
+	margin: 270px 25px 25px 25px;
 }
 .mainPageButtonSmall:active {
-    background:rbga(200, 200, 200, 0.5);
+    background:rbga(200, 200, 200, 0.6);
 }
 
 /* Timeline on the main page */
 .mainPageTimeline {
-    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-    box-shadow:inset 0px 1px 0px 0px #ffffff;
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
-    background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
-    background-color:#FFFFFF;
-    opacity:0.5;
+    -moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    box-shadow:inset 1px 1px 0px 0px #ffffff;
+    background-color:rgba(255, 255, 255, 0.6);
     -moz-border-radius:16px;
     -webkit-border-radius:16px;
     border-radius:16px;
-    border:1px solid #dcdcdc;
     display:inline-block;
     color:#000000;
     font-family:Trebuchet MS;
-    font-size:28px;
+    font-size:18px;
     font-weight:bold;
-    width: 200px;
-    height: 400px;
+    width: 290px;
+    height: 350px;
     text-decoration:none;
     text-shadow:1px 1px 0px #777777;
+    text-align:center;
+	border:2px solid #000000;
+	margin:25px 25px 25px 25px;
 }
 
 /* Navigation bar == left-hand thingy in the create and view event pages */
@@ -145,6 +159,24 @@ vertical-align:middle;
     color:#000000;
 }
 
+.timelineItem{
+	display:block;
+	text-align:center;
+	font-size:18px;
+	font-family:Trebuchet MS;
+	color:#000000;	
+	font-weight:normal;
+}
+.timelineItemTop{
+	display:block;
+	text-align:center;
+	font-size:18px;
+	font-family:Trebuchet MS;
+	color:#000000;	
+	margin:15px 0px 0px 0px;
+	font-weight:bold:
+}
+
 /* Normal button on the main page */
 .homeButton {
     -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -162,10 +194,7 @@ vertical-align:middle;
     height: 30px;
     text-decoration:none;
     text-shadow:1px 1px 0px #777777;
-
-text-align:center;
-
-vertical-align:middle;
+	text-align:center;
 }.homeButton:active {
     position:relative;
     top:1px;
