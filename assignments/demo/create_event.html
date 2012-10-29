@@ -27,7 +27,7 @@
 			display:inline-block;
 			float:center;
 			width:690px;
-			height:455px;
+			height:453px;
 			margin: 17px -5px 0px 35px;
 			background:#FFFFFF;
 			border:solid 2px #000000;
@@ -45,37 +45,31 @@
 		{
 			display:inline-block;
 			float:center;
-			margin:0px -5px 0px 0px;
 			padding:10px;
-			width:180px;
-			height:45px;
-			background:#BBBBBB;
 			text-align:left;
 			font-size:24px;
 			font-family:Trebuchet MS;
 			moz-box-align:left;
 			border-width:2px;
-			border-top-style:none;
-			border-bottom-style:none;
-			border-right-style:solid;
+			margin:0px -5px 0px 0px;
+			width:180px;
+			height:45px;
+			background:#BBBBBB;
+			border-style:none;
 		}
 
 		.nav-bar-link-2{
 			display:inline-block;
 			float:center;
-			margin:-2px -5px 0px 0px;
 			padding:10px;
-			width:182px;
-			height:43px;
 			text-align:left;
 			font-size:24px;
 			font-family:Trebuchet MS;
 			moz-box-align:left;
-			border-width:2px;
+			margin:0px -5px 0px 0px;
+			width:182px;
+			height:43px;
 			background:#FFFFFF;
-			border-top-style:solid;
-			border-right-style:none;
-			border-bottom-style:solid;
 		}
 		
 		.nav-bar{
@@ -128,13 +122,21 @@
 			font-size:18px;
 		}		
 		
+		a:link{
+			color:#000000;
+		}		
+		a:visited{
+			color:#000000;
+		}		
+		a:hover{
+			color:#000000;
+		}		
+		a:active{
+			color:#000000;
+		}		
+		
 		.nav-bar-toggle{
 			display:none;
-			width:450px;
-		}
-		
-		.nav-bar-toggle-2{
-			display:inline-block;
 			width:450px;
 			text-align:center;
 			font-family:Trebuchet MS;
@@ -264,6 +266,32 @@
 	</head>
 	
 	<body>
+		<script type="text/javascript">
+			<!--
+			console.log("test");
+			function toggle_visibility(idt, idb) {
+				var tabs = new Array('nameTab', 'recipeTab', 'friendsTab', 'dateTab', 'timeTab', 'locationTab', 'summaryTab');
+				var blocks = new Array('nameBlock', 'recipeBlock', 'friendsBlock', 'dateBlock', 'timeBlock', 'locationBlock', 'summaryBlock');
+				var b = document.getElementById(idb);
+				var t = document.getElementById(idt);
+				for(i=0;i<tabs.length;i++){
+					document.getElementById(blocks[i]).style.display = 'none';
+					tab = document.getElementById(tabs[i]);
+					tab.style.margin = '0px -5px 0px 0px';
+					tab.style.width = '180px';
+					tab.style.height = '45px';
+					tab.style.background = '#BBBBBB';
+					tab.style.border = '2px none';
+				}
+				b.style.display = 'inline-block';
+				t.style.margin = '0px -5px 0px 0px';
+				t.style.width = '182px';
+				t.style.height = '43px';
+				t.style.background = '#FFFFFF';
+				t.style.border = '2px none solid none solid';
+			}
+			//-->
+		</script>
 		<div style="position:relative; margin:40px 0px 0px 40px">
 			<img class="ipad-img" src="../../static/images/prototype/ipadRev.png">
 			<div class="template-div">  <!--756 by 576-->
@@ -276,26 +304,25 @@
 					
 					<div class="eventBox">
 						<div class="nav-bar">
-						
-							<div class="nav-bar-link">Event Name</div>
-							<div class="nav-bar-link">Recipes</div>
-							<div class="nav-bar-link">Invited Friends</div>
-							<div class="nav-bar-link">Date</div>
-							<div class="nav-bar-link">Time</div>
-							<div class="nav-bar-link">Location</div>
-							<div class="nav-bar-link">Summary</div>
+							<a href="#" onclick="toggle_visibility('nameTab', 'nameBlock');"><div class="nav-bar-link-2" id="nameTab">Event Name</div></a>
+							<a href="#" onclick="toggle_visibility('recipeTab', 'recipeBlock');"><div class="nav-bar-link" id="recipeTab">Recipes</div></a>
+							<a href="#" onclick="toggle_visibility('friendsTab', 'friendsBlock');"><div class="nav-bar-link" id="friendsTab">Invited Friends</div></a>
+							<a href="#" onclick="toggle_visibility('dateTab', 'dateBlock');"><div class="nav-bar-link" id="dateTab">Date</div></a>
+							<a href="#" onclick="toggle_visibility('timeTab', 'timeBlock');"><div class="nav-bar-link" id="timeTab">Time</div></a>
+							<a href="#" onclick="toggle_visibility('locationTab', 'locationBlock');"><div class="nav-bar-link" id="locationTab">Location</div></a>
+							<a href="#" onclick="toggle_visibility('summaryTab', 'summaryBlock');"><div class="nav-bar-link" id="summaryTab">Summary</div></a>
 						</div>
-						<div class="nav-bar-toggle">
+						<div class="nav-bar-toggle-2" id="nameBlock">
 							<div class="headingSmall">Title your event!</div>
 							<input type="text" name="eventTitle">
 						</div>
-						<div class="nav-bar-toggle">
+						<div class="nav-bar-toggle" id="recipeBlock">
 							<div class="recipeBox">
 								<div class="headingSmall">Recipes already selected:</div>
 							</div>
 							<div class="uploadRecipeButton">Choose another recipe</div>
 						</div>
-						<div class="nav-bar-toggle">
+						<div class="nav-bar-toggle" id="friendsBlock">
 							<div class="headingSmall">Tap friends to invite them:</div>
 							<div class="friendsBox">
 								<div class="friendBlock">
@@ -336,17 +363,17 @@
 								</div>
 							</div>
 						</div>
-						<div class="nav-bar-toggle">
+						<div class="nav-bar-toggle" id="dateBlock">
 							<div class="headingSmall">Tap a date to select:</div>
 						</div>
-						<div class="nav-bar-toggle">
+						<div class="nav-bar-toggle" id="timeBlock">
 							<div class="headingSmall">Select a time:</div>
 						</div>
-						<div class="nav-bar-toggle">
+						<div class="nav-bar-toggle" id="locationBlock">
 							<div class="headingSmall">Enter the event location:</div>
 							<input type="text" name="eventLocation">
 						</div>
-						<div class="nav-bar-toggle-2">
+						<div class="nav-bar-toggle" id="summaryBlock">
 							<div class="alignLeftBlock">
 								<p>What: Dessert Party!</p>
 								<p>When: October 1st, 2012 at 2:30 pm</p>
