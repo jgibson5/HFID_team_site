@@ -157,6 +157,37 @@
 	background:#FFFFFF;
 }
 
+.nav-bar-link-short
+{
+	display:inline-block;
+	float:center;
+	padding:10px;
+	text-align:left;
+	font-size:24px;
+	font-family:Trebuchet MS;
+	moz-box-align:left;
+	border-width:2px;
+	margin:0px -5px 0px 0px;
+	width:180px;
+	height:37px;
+	background:#BBBBBB;
+	border-style:none;
+}
+
+.nav-bar-link-short-2{
+	display:inline-block;
+	float:center;
+	padding:10px;
+	text-align:left;
+	font-size:24px;
+	font-family:Trebuchet MS;
+	moz-box-align:left;
+	margin:0px -5px 0px 0px;
+	width:182px;
+	height:34px;
+	background:#FFFFFF;
+}
+
 .nav-bar{
 	display:inline-block;
 	float:left;
@@ -172,7 +203,8 @@
 	font-family:Trebuchet MS;
 	font-size:40px;
 	text-align:center;
-	padding:10px
+	padding:10px;
+	display:inline-block;
 }
 
 .plainBody
@@ -206,13 +238,14 @@
 
 /* Normal button on the main page */
 .homeButton {
-    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -moz-box-shadow:inset 1px 1px 0px 0px #9999FF;
+    -webkit-box-shadow:inset 1px 1px 0px 0px #9999FF;
+    box-shadow:inset 1px 1px 0px 0px #9999FF;
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
     background-color:#000099;
-    border:1px solid #dcdcdc;
-    display:table-cell;
+    border:1px solid #000000;
+	border-radius:5px;
+    display:inline-block;
     color:#FFFFFF;
     font-family:Trebuchet MS;
     font-size:16px;
@@ -220,12 +253,44 @@
     width: 70px;
     height: 30px;
     text-decoration:none;
-    text-shadow:1px 1px 0px #777777;
+    text-shadow:1px 1px 0px #000000;
 	text-align:center;
+	margin:25px 0px 0px 35px;
 }.homeButton:active {
     position:relative;
     top:1px;
 }
+
+.saveButton {
+	-moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+	box-shadow:inset 1px 1px 0px 0px #FF9999;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#993366;
+	border:1px solid #000000;
+	display:inline-block;
+	color:#FFFFFF;
+	font-family:Trebuchet MS;
+	font-size:16px;
+	font-weight:bold;
+	border-radius:5px;
+	width: 60px;
+	height: 30px;
+	margin: 3px 10px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #000000;
+	text-align:center;
+}.saveButton:active {
+	position:relative;
+	top:1px;
+}
+
+.horzSpace{
+	width:128px;
+	background:none;	
+	display:inline-block;
+}
+
 
 .genericButton {
     -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -242,18 +307,19 @@
     padding:8px 8px;
     text-decoration:none;
     text-shadow:1px 1px 0px #777777;
-
-text-align:center;
-
-vertical-align:middle;
+	text-align:center;
 }.genericButton:active {
     position:relative;
     top:1px;
 }
 
-.blueBody
-{
+.blueBody{
 	background:#99CCFF;
+	height:576px;
+}
+
+.strawberryBody{
+	background:url("../../revisedMockups/assets/strawberriesBg.png");
 	height:576px;
 }
 		
