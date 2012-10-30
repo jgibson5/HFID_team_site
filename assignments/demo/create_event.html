@@ -3,266 +3,7 @@
 
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="../../static/css/demo.css">
-	
-		<style>
-		
-		.blueBody
-		{
-			background:#99CCFF;
-			height:576px;
-		}
-		
-		.plainBody
-		{
-			margin:0px;
-			padding:0px;
-			background:#FFFFFF;
-			font-family:sans-serif;
-			font-size:28px;
-			color:#000000;
-		}
-		
-		.eventBox{
-			display:inline-block;
-			float:center;
-			width:690px;
-			height:453px;
-			margin: 17px -5px 0px 35px;
-			background:#FFFFFF;
-			border:solid 2px #000000;
-		}
-		
-		.recipeBox{
-			display:inline-block;
-			float:center;
-			width:450px;
-			height:405px;
-			border:none;
-		}
-		
-		.nav-bar-link 
-		{
-			display:inline-block;
-			float:center;
-			padding:10px;
-			text-align:left;
-			font-size:24px;
-			font-family:Trebuchet MS;
-			moz-box-align:left;
-			border-width:2px;
-			margin:0px -5px 0px 0px;
-			width:180px;
-			height:45px;
-			background:#BBBBBB;
-			border-style:none;
-		}
-
-		.nav-bar-link-2{
-			display:inline-block;
-			float:center;
-			padding:10px;
-			text-align:left;
-			font-size:24px;
-			font-family:Trebuchet MS;
-			moz-box-align:left;
-			margin:0px -5px 0px 0px;
-			width:182px;
-			height:43px;
-			background:#FFFFFF;
-		}
-		
-		.nav-bar{
-			display:inline-block;
-			float:left;
-			width:220px;
-			height:500px;
-			color:#000000;
-			border:none;
-		}
-		
-		
-		.pageTitle { 
-			font-family:Trebuchet MS;
-			font-size:40px;
-			text-align:center;
-			padding:10px
-		}
-		
-		.headingSmall {
-			display:inline-block;
-			text-align:center;
-			font-family:Trebuchet MS;
-			font-size:28px;
-			padding:10px;
-		}
-		
-		.align-bottom-left
-		{
-			position:relative;
-			bottom:20
-			left:5
-		}
-		
-		h5 {
-			margin:0px;
-			padding:0px;
-		}
-		
-		input[type="text"]{
-			display:inline-block;
-			float:center;
-			background: #FFFFFF;
-			border: 2px solid #000000;
-			padding:7px;
-			color: #000000;
-			width: 430px;
-			text-align:left;
-			font-family:Trebuchet MS;
-			font-size:18px;
-		}		
-		
-		a:link{
-			color:#000000;
-		}		
-		a:visited{
-			color:#000000;
-		}		
-		a:hover{
-			color:#000000;
-		}		
-		a:active{
-			color:#000000;
-		}		
-		
-		.nav-bar-toggle{
-			display:none;
-			width:450px;
-			text-align:center;
-			font-family:Trebuchet MS;
-			font-size:18px;
-		}
-		
-		.uploadRecipeButton {
-			-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-			-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-			box-shadow:inset 0px 1px 0px 0px #ffffff;
-			background-color:#990066;
-			padding:7px;
-			-moz-border-radius:16px;
-			-webkit-border-radius:16px;
-			border-radius:16px;
-			border:1px solid #dcdcdc;
-			display:inline-block;
-			float:center;
-			color:#FFFFFF;
-			font-family:Trebuchet MS;
-			font-size:18px;
-			width:300px;
-			height:25px;
-			text-decoration:none;
-			text-shadow:1px 1px 0px #000000;
-			text-align:center;
-		}.uploadRecipeButton:active {
-			position:relative;
-			top:1px;
-		}
-		
-		.friendsBox{
-			display:inline-block;
-			margin:auto;
-			width:350px;
-			height:400px;
-			color:#FFFFFF;
-			text-align:center;
-		}
-		
-		.friendBlock{
-			display:inline-block;
-			float:center;
-			width:110px;
-			height:120px;
-			margin:5px 0px 5px 0px;
-			text-align:center;
-		}
-		.friendBlock.active{
-			border:2px solid #00CC00;
-			border-radius:5px;
-		}		
-		
-		.friend{
-			display:inline-block;
-			float:center;
-		}
-		
-		.friendTag{
-			display:inline-block;
-			float:center;
-			color:#000000;
-			font-family:Trebuchet MS;
-			font-size:16px;
-			text-align:center;
-		}
-		
-		.submitButton {
-			-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-			-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-			box-shadow:inset 0px 1px 0px 0px #ffffff;
-			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
-			background-color:#009900;
-			border:2px solid #000000;
-			display:inline-block;
-			color:#FFFFFF;
-			font-family:Trebuchet MS;
-			font-size:16px;
-			border-radius:5px;
-			width: 70px;
-			height: 25px;
-			text-decoration:none;
-			text-shadow:1px 1px 0px #000000;
-			text-align:center;
-			padding:4px;
-		}.submitButton:active {
-			position:relative;
-			top:1px;
-		}	
-
-		.cancelButton {
-			-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-			-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-			box-shadow:inset 0px 1px 0px 0px #ffffff;
-			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
-			background-color:#990000;
-			border:2px solid #000000;
-			display:inline-block;
-			color:#FFFFFF;
-			font-family:Trebuchet MS;
-			font-size:16px;
-			border-radius:5px;
-			width: 70px;
-			height: 25px;
-			text-decoration:none;
-			text-shadow:1px 1px 0px #000000;
-			text-align:center;
-			padding:4px;
-		}.cancelButton:active {
-			position:relative;
-			top:1px;
-		}
-		
-		.buttonBlock{
-			display:inline-block;
-			width:300px;
-			text-align:center;
-			margin:30px 10px 10px 10px;
-		}
-		
-		.alignLeftBlock{
-			text-align:left;
-		}
-		
-		</style>
-	
+		<link rel="stylesheet" type="text/css" href="../../static/css/demo.css">	
 	</head>
 	
 	<body>
@@ -289,6 +30,16 @@
 				t.style.height = '43px';
 				t.style.background = '#FFFFFF';
 				t.style.border = '2px none solid none solid';
+			}
+			function toggleFriend(id){
+				var f = document.getElementById(id);
+				if(f.style.border == 'none'){
+					f.style.border = '2px solid #00CC00';
+					f.style.margin = '3px -2px 3px -2px';
+				}
+				else
+					f.style.border = 'none';
+					f.style.margin = '5px 0px 5px 0px';
 			}
 			//-->
 		</script>
@@ -325,42 +76,42 @@
 						<div class="nav-bar-toggle" id="friendsBlock">
 							<div class="headingSmall">Tap friends to invite them:</div>
 							<div class="friendsBox">
-								<div class="friendBlock">
+								<a href="#" onclick="toggleFriend('allie');"><div class="friendBlock" id="allie">
 									<div class="friend"><img src="../../static/images/prototype/people/allie.jpg" width="90px"></div>
 									<div class="friendTag">Allie S.</div>
-								</div>
-								<div class="friendBlock">
+								</div></a>
+								<a href="#" onclick="toggleFriend('bob');"><div class="friendBlock" id="bob">
 									<div class="friend"><img src="../../static/images/prototype/people/bob.jpg" width="90px"></div>
 									<div class="friendTag">Bob R.</div>
-								</div>
-								<div class="friendBlock">
+								</div></a>
+								<a href="#" onclick="toggleFriend('paul');"><div class="friendBlock" id="paul">
 									<div class="friend"><img src="../../static/images/prototype/people/paul.jpg" width="90px"></div>
 									<div class="friendTag">Paul K.</div>
-								</div>
-								<div class="friendBlock">
+								</div></a>
+								<a href="#" onclick="toggleFriend('sara');"><div class="friendBlock" id="sara">
 									<div class="friend"><img src="../../static/images/prototype/people/sara.jpg" width="90px"></div>
 									<div class="friendTag">Sara Y.</div>
-								</div>
-								<div class="friendBlock">
+								</div></a>
+								<a href="#" onclick="toggleFriend('deirdre');"><div class="friendBlock" id="deirdre">
 									<div class="friend"><img src="../../static/images/prototype/people/deirdre.jpg" width="90px"></div>
 									<div class="friendTag">Deirdre O.</div>
-								</div>
-								<div class="friendBlock">
+								</div></a>
+								<a href="#" onclick="toggleFriend('joe');"><div class="friendBlock" id="joe">
 									<div class="friend"><img src="../../static/images/prototype/people/joe.jpg" width="90px"></div>
 									<div class="friendTag">Joe F.</div>
-								</div>
-								<div class="friendBlock">
+								</div></a>
+								<a href="#" onclick="toggleFriend('gina');"><div class="friendBlock" id="gina">
 									<div class="friend"><img src="../../static/images/prototype/people/gina.jpg" width="90px"></div>
 									<div class="friendTag">Gina H.</div>
-								</div>
-								<div class="friendBlock">
+								</div></a>
+								<a href="#" onclick="toggleFriend('lisa');"><div class="friendBlock" id="lisa">
 									<div class="friend"><img src="../../static/images/prototype/people/lisa.jpg" width="90px"></div>
 									<div class="friendTag">Lisa S.</div>
-								</div>
-								<div class="friendBlock">
+								</div></a>
+								<a href="#" onclick="toggleFriend('tina');"><div class="friendBlock" id="tina">
 									<div class="friend"><img src="../../static/images/prototype/people/tina.jpg" width="90px"></div>
 									<div class="friendTag">Tina D.</div>
-								</div>
+								</div></a>
 							</div>
 						</div>
 						<div class="nav-bar-toggle" id="dateBlock">
