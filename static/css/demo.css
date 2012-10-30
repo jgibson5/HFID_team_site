@@ -203,7 +203,7 @@
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	font-size:40px;
 	text-align:center;
-	padding:10px;
+	padding:10px 5px 10px 5px;
 	display:inline-block;
 }
 
@@ -285,6 +285,30 @@
 	top:1px;
 }
 
+.makeButton {
+	-moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+	box-shadow:inset 1px 1px 0px 0px #FF9999;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#009900;
+	border:1px solid #000000;
+	display:inline-block;
+	color:#FFFFFF;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	border-radius:5px;
+	width: 60px;
+	height: 30px;
+	margin: 3px 10px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #000000;
+	text-align:center;
+}.makeButton:active {
+	position:relative;
+	top:1px;
+}
+
 .horzSpace{
 	width:128px;
 	background:none;	
@@ -324,21 +348,23 @@
 }
 
 .genericButton {
-    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    box-shadow:inset 1px 1px 0px 0px #ffffff;
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
-    background-color:#000099;
-    border:1px solid #dcdcdc;
+    background-color:#CCCCCC;
+    border:1px solid #000000;
+	border-radius:5px;
     display:inline-block;
-    color:#FFFFFF;
+    color:#000000;
     font-family:"Trebuchet MS", Helvetica, sans-serif;
     font-size:16px;
     font-weight:bold;
     padding:8px 8px;
     text-decoration:none;
-    text-shadow:1px 1px 0px #777777;
+    text-shadow:1px 1px 0px #FFFFFF;
 	text-align:center;
+	margin:5px;
 }.genericButton:active {
     position:relative;
     top:1px;
@@ -429,15 +455,19 @@
 
 a:link{
 	color:#000000;
+	text-decoration:none;
 }		
 a:visited{
 	color:#000000;
+	text-decoration:none;
 }		
 a:hover{
 	color:#000000;
+	text-decoration:none;
 }		
 a:active{
 	color:#000000;
+	text-decoration:none;
 }		
 
 .nav-bar-toggle{
@@ -568,4 +598,130 @@ a:active{
 
 .alignLeftBlock{
 	text-align:left;
+}
+
+.top-row{
+	width:765px;
+	height:115px;
+	display:inline-block;
+}
+
+.tabs{
+	display:inline-block;
+	margin:0px;
+	padding:0px;
+	width:756px;
+	height:42px;
+}
+
+.recipeBook{
+	width:956px;
+	height:420px;
+	border:solid 2px;
+	position:relative;
+	left:-65px;
+}
+
+.vertical-buttons{
+	margin:10px 10px;
+	display:inline-block;
+	width:180px;
+}
+
+.verticalSmall{
+	margin:10px 10px;
+	display:inline-block;
+	width:100px;
+	height:100px;
+	float:left;
+	text-align:center;
+}
+
+.recipeCard{
+	border:solid 2px #000000;
+	background:#FFFFFF;
+	width: 160px;
+	/*float: left; */
+	height: 175px;
+	margin:10px 5px 20px 5px;
+	padding:0px;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:16px;
+	color:#000000;
+	/*display:inline-block;*/
+}
+
+.recipeRow{
+float: left; 
+overflow: hidden; 
+margin: 0px;
+position:relative;
+left:-30px;
+display:inline-block;
+min-width:200px;
+height:300px;
+}
+
+.recipeColumn{
+float: left; 
+overflow: hidden; 
+margin: 7px 0px;
+/*position:relative;
+left:-65px;*/
+display:inline-block;
+/*min-width:200px;
+height:300px;*/
+}
+
+/* Box that holds filter stuff */
+.filterBox{
+	border:solid 2px #000000;
+	background:#FFFFFF;
+	width: 200px;
+	height: 120px;
+	margin:0px;
+	padding:0px;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:16px;
+	color:#000000;
+
+	display:inline-block;
+	float:right;
+
+}
+
+.smallHeading{
+	color:#000000;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:20px;
+	text-align:center;
+}
+
+.filterRow{
+	/*display:inline-block;*/
+	width:200px;
+	border:none;
+	margin: 5px 10px;
+}
+
+.inputBox{
+	float:left;
+	display:inline-block;
+	/*background: #FFFFFF;
+	border: 2px solid #000000;
+	color: #000000;
+	width: 70px;
+	text-align:left;*/
+}
+
+.recipeTab{
+	padding:5px;
+	margin:0px;
+	background:#999999;
+	border:none;
+	color:#000000;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:18px;
+	text-align:center;	
+	display:inline-block;	
 }
