@@ -203,8 +203,23 @@
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	font-size:40px;
 	text-align:center;
-	padding:10px 5px 10px 5px;
+	padding:10px 0px 10px 0px;
 	display:inline-block;
+}
+
+.pageTitleName{
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:30px;
+	text-align:center;
+	padding:0px;
+	display:inline-block;
+}
+
+.titleBlock{
+	text-align:center;
+	display:inline-block;
+	width:220px;	
+	height:200px;
 }
 
 .plainBody
@@ -273,12 +288,11 @@
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	font-size:16px;
 	font-weight:bold;
-	border-radius:5px;
 	width: 60px;
 	height: 30px;
-	margin: 3px 10px;
+	margin: 0px 10px;
 	text-decoration:none;
-	text-shadow:1px 1px 0px #000000;
+	text-shadow:1px 1px 0px #CCCCCC;
 	text-align:center;
 }.saveButton:active {
 	position:relative;
@@ -286,9 +300,9 @@
 }
 
 .makeButton {
-	-moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
-	-webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
-	box-shadow:inset 1px 1px 0px 0px #FF9999;
+	-moz-box-shadow:inset 1px 1px 0px 0px #99FF99;
+	-webkit-box-shadow:inset 1px 1px 0px 0px #99FF99;
+	box-shadow:inset 1px 1px 0px 0px #99FF99;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
 	background-color:#009900;
 	border:1px solid #000000;
@@ -297,12 +311,11 @@
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	font-size:16px;
 	font-weight:bold;
-	border-radius:5px;
 	width: 60px;
 	height: 30px;
-	margin: 3px 10px;
+	margin: 0px;
 	text-decoration:none;
-	text-shadow:1px 1px 0px #000000;
+	text-shadow:1px 1px 0px #CCCCCC;
 	text-align:center;
 }.makeButton:active {
 	position:relative;
@@ -310,7 +323,7 @@
 }
 
 .horzSpace{
-	width:128px;
+	width:138px;
 	background:none;	
 	display:inline-block;
 }
@@ -611,15 +624,16 @@ a:active{
 	margin:0px;
 	padding:0px;
 	width:756px;
-	height:42px;
+	height:33px;
 }
 
 .recipeBook{
-	width:956px;
-	height:420px;
-	border:solid 2px;
+	width:765px;
+	height:428px;
+	margin:0px 0px 0px 0px;
 	position:relative;
-	left:-65px;
+	overflow:hidden;
+	background-color:#FFFFFF;
 }
 
 .vertical-buttons{
@@ -642,35 +656,71 @@ a:active{
 	background:#FFFFFF;
 	width: 160px;
 	/*float: left; */
-	height: 175px;
-	margin:10px 5px 20px 5px;
+	height: 160px;
 	padding:0px;
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	font-size:16px;
 	color:#000000;
+	text-align:center;
 	/*display:inline-block;*/
 }
 
+.greaterRecipeCard{
+	width:160px;
+	height:175px;
+	margin:5px 5px 20px 5px;	
+	display:inline-block;
+}
+
 .recipeRow{
-float: left; 
-overflow: hidden; 
-margin: 0px;
-position:relative;
-left:-30px;
-display:inline-block;
-min-width:200px;
-height:300px;
+	float: left; 
+	overflow: hidden; 
+	margin: 0px;
+	position:relative;
+	left:-30px;
+	display:inline-block;
+	min-width:200px;
+	height:300px;
 }
 
 .recipeColumn{
-float: left; 
-overflow: hidden; 
-margin: 7px 0px;
-/*position:relative;
-left:-65px;*/
-display:inline-block;
-/*min-width:200px;
-height:300px;*/
+	float: left; 
+	margin: 7px 0px;
+	/*position:relative;
+	left:-65px;*/
+	display:inline-block;
+	width:180px;
+	height:410px;
+	/*min-width:200px;
+	height:300px;*/
+}
+
+.recipeColumnRight{
+	float: left; 
+	margin: 7px 0px 0px 0px;
+	/*position:relative;
+	left:-65px;*/
+	display:inline-block;
+	width:108px;
+	height:410px;
+	overflow:hidden;
+	/*min-width:200px;
+	height:300px;*/
+}
+
+.recipeColumnLeft{
+	float: left; 
+	margin: 7px 10px 0px 0px;
+	/*position:relative;
+	left:-65px;*/
+	display:inline-block;
+	padding:0px 0px 0px -100px;
+	width:107px;
+	height:410px;
+	overflow:hidden;
+	text-align:left;
+	/*min-width:200px;
+	height:300px;*/
 }
 
 /* Box that holds filter stuff */
@@ -684,7 +734,7 @@ height:300px;*/
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	font-size:16px;
 	color:#000000;
-
+	margin:5px;
 	display:inline-block;
 	float:right;
 
@@ -718,6 +768,18 @@ height:300px;*/
 	padding:5px;
 	margin:0px;
 	background:#999999;
+	border:none;
+	color:#000000;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:18px;
+	text-align:center;	
+	display:inline-block;	
+}
+
+.recipeTab2{
+	padding:5px;
+	margin:0px;
+	background:#FFFFFF;
 	border:none;
 	color:#000000;
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
