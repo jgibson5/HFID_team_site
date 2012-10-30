@@ -398,15 +398,15 @@ a:active{
 }
 
 .uploadRecipeButton {
-	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-moz-box-shadow:inset 1px 1px 0px 0px #FF99CC;
+	-webkit-box-shadow:inset 1px 1px 0px 0px #FF99CC;
+	box-shadow:inset 1px 1px 0px 0px #FF99CC;
 	background-color:#990066;
 	padding:7px;
 	-moz-border-radius:16px;
 	-webkit-border-radius:16px;
 	border-radius:16px;
-	border:1px solid #dcdcdc;
+	border:1px solid #000000;
 	display:inline-block;
 	float:center;
 	color:#FFFFFF;
