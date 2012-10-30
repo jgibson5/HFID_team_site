@@ -5,6 +5,7 @@
     position:absolute;
     top:79px;
     left:90px;
+	overflow:hidden;
 }
 
 .pull-right {
@@ -446,6 +447,7 @@
 .recipeBox{
 	display:inline-block;
 	float:center;
+	background-color:#FFFFFF;
 	width:450px;
 	height:405px;
 	border:none;
@@ -628,12 +630,11 @@ a:active{
 }
 
 .recipeBook{
-	width:765px;
-	height:428px;
-	margin:0px 0px 0px 0px;
-	position:relative;
-	overflow:hidden;
+	width:956px;
+	height:430px;
 	background-color:#FFFFFF;
+	position:relative;
+	left:-65px;
 }
 
 .vertical-buttons{
@@ -685,9 +686,9 @@ a:active{
 
 .recipeColumn{
 	float: left; 
-	margin: 7px 0px;
-	/*position:relative;
-	left:-65px;*/
+	margin: 7px 7px;
+	position:relative;
+	left:-30px;
 	display:inline-block;
 	width:180px;
 	height:410px;
@@ -698,10 +699,10 @@ a:active{
 .recipeColumnRight{
 	float: left; 
 	margin: 7px 0px 0px 0px;
-	/*position:relative;
-	left:-65px;*/
+	position:relative;
+	left:-20px;
 	display:inline-block;
-	width:108px;
+	width:180px;
 	height:410px;
 	overflow:hidden;
 	/*min-width:200px;
@@ -711,14 +712,14 @@ a:active{
 .recipeColumnLeft{
 	float: left; 
 	margin: 7px 10px 0px 0px;
-	/*position:relative;
-	left:-65px;*/
+	position:relative;
+	left:-30px;
 	display:inline-block;
-	padding:0px 0px 0px -100px;
-	width:107px;
+	width:180px;
 	height:410px;
 	overflow:hidden;
 	text-align:left;
+	padding:0px;
 	/*min-width:200px;
 	height:300px;*/
 }
