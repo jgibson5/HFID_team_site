@@ -874,6 +874,24 @@ a:active{
 	text-align:center;
 }
 
+.calendar{
+	width:350px;
+	height:200px;
+	display:inline-block;
+	float:center;	
+	text-align:center;
+}
+
+.date{
+	width:48px;
+	height:38px;
+	display:inline-block;
+	margin:0px 0px 0px 0px;
+	text-align:center;	
+	border:1px solid #000000;
+	float:left;
+}
+
 .eventTitleWrapper{
 	width:540px;
 	height:50px;	
