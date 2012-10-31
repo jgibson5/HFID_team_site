@@ -23,21 +23,6 @@
 						</div>
 					
 						<div class = "pageTitle">Recipe Book</div>
-						
-						<!-- filter box-->
-						<div class = "filterBox">
-							<div class = "smallHeading">Filter</div>
-							<div class = "filterRow">
-								Favorites
-								<input type = "checkbox" id = "checkbox" onclick="checkBox()">
-							</div>
-							<div class = "filterRow">
-								<div class = "inputBox">Must Have: </div><div class = "inputBox"><input type="text" name="Must Have" size="10" onkeypress="mustHaveFunction(event)"></div>
-							</div>
-							<div class = "filterRow">
-								<div class = "inputBox">Can't Have: </div><div class = "inputBox"><input type="text" name = "Can't Have" size="10" onkeypress="mustHaveFunction(event)"></div>
-							</div>
-						</div>
 
 					</div>
 					
@@ -51,97 +36,30 @@
 					</div>
 					
 					<!-- recipebook div-->
-					<div class = "recipeBook">
-					
-						<!-- recipe column one-->
-						<div class = "recipeColumnLeft"> 
-							<div class="greaterRecipeCard">
-								<div class = "recipeCard">
-									Gingerbread Cookies 
-									<img src="../../revisedMockups/assets/gingerbread.jpg" width="150px"> 
-								</div>
-								<div class = "makeButton" onclick="makeButtonFunction()"><a href="create_event.html">Make</a></div>
+					<div class = "recipeBookSingle">
+						<div class="largeRecipeCard">
+							<div class="largeRecipeColumn">
+								<center>Chocolate Swirl Strawberries</center>
+								<img src="../../revisedMockups/assets/strawberries.jpg" width="300px">
+								<div class="recipeItem">Cook time: 15 mins</div>
+								<div class="recipeItem">4 c strawberries</div>
+								<div class="recipeItem">5 skewers</div>
+								<div class="recipeItem">2 c chocolate chips</div>
+								<div class="recipeItem">1 T lemon juice</div>
 							</div>
-							<div class="greaterRecipeCard">
-								<div class = "recipeCard">
-								Cinnamon Rolls
-								<img src="../../revisedMockups/assets/cinnamon Rolls.jpg" width="150px">
-								</div>
-							<div class = "makeButton" onclick="makeButtonFunction()"><a href="create_event.html">Make</a></div>
-							</div>
-						</div>
-						
-						<!-- recipe column two-->
-						<div class = "recipeColumn">
-							<div class="greaterRecipeCard">
-								<div class = "recipeCard">
-									Almond Lace Cookies
-									<img src="../../revisedMockups/assets/orangeAlmondLaceCookies.jpg" width="150px">
-								</div>
-								<div class = "makeButton" onclick="makeButtonFunction()"><a href="create_event.html">Make</a></div>
-							</div>
-							<div class="greaterRecipeCard">
-								<div class = "recipeCard">
-									Raspberry Cupcakes
-									<img src="../../revisedMockups/assets/raspberry cupcakes.jpg" width="150px">
-								</div>
-								<div class = "makeButton" onclick="makeButtonFunction()"><a href="create_event.html">Make</a></div>
+							<div class="largeRecipeColumn">
+								<div class="recipeItem">1. Cut stems out of strawberries and toss the strawberries with lemon juice to maintain color.</div>
+								<div class="recipeItem">2. Melt chocolate chips over low heat.</div>
+								<div class="recipeItem">3. While chocolate is melting, stick three strawberries on each skewer.</div>
+								<div class="recipeItem">4. Drizzle chocolate over strawberries and allow to cool at room temperature for 5 minutes, then refrigerate until serving.</div>
+								<center><div class="largeRecipeButtons">
+									<a href="create_event.html"><div class="submitButton">Make with Friends!</div></a>
+									<a href="#"><div class="pictureButton">Add Picture</div></a>
+									<a href="#"><div class="editButton">Edit</div></a>
+									<a href="recipebook.html"><div class="cancelButton">Delete</div></a>
+								</div></center>
 							</div>
 						</div>
-						
-						<!-- recipe column three-->
-						<div class = "recipeColumn">
-							<div class="greaterRecipeCard">
-								<div class = "recipeCard">
-									Chocolate Swirl Strawberries
-									<img src="../../revisedMockups/assets/strawberries.jpg" width="150px">
-								</div>
-								<div class = "makeButton" onclick="makeButtonFunction()"><a href="create_event.html">Make</a></div>				
-							</div>
-							<div class="greaterRecipeCard">
-								<div class = "recipeCard">
-									Halloween Cookies
-									<img src="../../revisedMockups/assets/halloween cookies.jpg" width="150px">
-								</div>
-								<div class = "makeButton" onclick="makeButtonFunction()"><a href="create_event.html">Make</a></div>
-							</div>
-						</div>
-						
-						<!-- recipe column four-->
-						<div class = "recipeColumn">
-							<div class="greaterRecipeCard">
-								<div class = "recipeCard">
-									Rainbow Cake
-									<img src="../../revisedMockups/assets/rainbow cake.jpg" width="150px">
-								</div>
-								<div class = "makeButton" onclick="makeButtonFunction()"><a href="create_event.html">Make</a></div>
-							</div>
-							<div class="greaterRecipeCard">
-								<div class = "recipeCard">
-									Apple Pie
-									<img src="../../revisedMockups/assets/apple pie.jpg" width="150px">
-								</div>  
-								<div class = "makeButton" onclick="makeButtonFunction()"><a href="create_event.html">Make</a></div>
-							</div>
-						</div>
-						
-						<!-- recipe column five-->
-						<div class = "recipeColumnRight">
-							<div class="greaterRecipeCard">
-								<div class = "recipeCard">
-									Cheesecake
-									<img src="../../revisedMockups/assets/cheesecake.jpg" width="150px">
-								</div>
-								<div class = "makeButton" onclick="makeButtonFunction()"><a href="create_event.html">Make</a></div>
-							</div>
-							<div class="greaterRecipeCard">
-								<div class = "recipeCard">
-									Tiramisu
-									<img src="../../revisedMockups/assets/tiramisu.jpg" width="150px">
-								</div>
-								<div class = "makeButton" onclick="makeButtonFunction()"><a href="create_event.html">Make</a></div>
-							</div>
-						</div>	
 					</div>
 				</div>
 			</div>

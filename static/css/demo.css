@@ -570,7 +570,6 @@ a:active{
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	font-size:16px;
 	border-radius:5px;
-	width: 70px;
 	height: 25px;
 	text-decoration:none;
 	text-shadow:1px 1px 0px #000000;
@@ -593,7 +592,6 @@ a:active{
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	font-size:16px;
 	border-radius:5px;
-	width: 70px;
 	height: 25px;
 	text-decoration:none;
 	text-shadow:1px 1px 0px #000000;
@@ -635,6 +633,12 @@ a:active{
 	background-color:#FFFFFF;
 	position:relative;
 	left:-65px;
+}
+
+.recipeBookSingle{
+	width:765px;
+	height:430px;
+	background-color:#FFFFFF;
 }
 
 .vertical-buttons{
@@ -787,4 +791,94 @@ a:active{
 	font-size:18px;
 	text-align:center;	
 	display:inline-block;	
+}
+
+.largeRecipeCard{
+	border:2px solid #000000;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:18px;
+	text-align:left;	
+	display:inline-block;			
+	padding:10px 10px 10px 10px;
+	width:692px;
+	height:357px;
+	float:left;
+	margin:25px 25px 25px 25px;
+}
+
+.largeRecipeColumn{
+	border:none;
+	display:inline-block;
+	height:330px;
+	width:320px;
+	padding:10px 10px 10px 10px;
+	background-color:#FFFFFFFF;
+	margin:0px 0px 0px 0px;
+	float:left;
+}
+
+.editButton{
+	-moz-box-shadow:inset 1px 1px 0px 0px #FFFF99;
+	-webkit-box-shadow:inset 1px 1px 0px 0px #FFFF99;
+	box-shadow:inset 1px 1px 0px 0px #FFFF99;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#999900;
+	border:1px solid #000000;
+	border-radius:5px;
+	display:inline-block;
+	color:#FFFFFF;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:16px;
+	height: 25px;
+	margin: 10px 5px 0px 0px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #000000;
+	text-align:center;
+	padding:4px;
+}.editButton:active {
+	position:relative;
+	top:1px;
+}
+
+.pictureButton{
+	-moz-box-shadow:inset 1px 1px 0px 0px #CCCCFF;
+	-webkit-box-shadow:inset 1px 1px 0px 0px #CCCCFF;
+	box-shadow:inset 1px 1px 0px 0px #CCCCFF;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#6666FF;
+	border:2px solid #000000;
+	border-radius:5px;
+	display:inline-block;
+	color:#FFFFFF;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:16px;
+	height: 25px;
+	margin: 10px 5px 0px 0px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #000000;
+	text-align:center;
+	padding:4px;
+}.pictureButton:active {
+	position:relative;
+	top:1px;
+}
+		
+.largeRecipeButtons{
+	border:none;
+	display:inline-block;
+	height:100px;
+	width:230px;
+	float:center;
+	margin:10px 0px 0px 0px;
+	padding:0px 0px 0px 0px;	
+	text-align:center;
+}
+
+.subTimeline{
+	width:270;
+	margin:0px 9px 0px 9px;
+}
+
+.recipeItem{
+	display:block;	
 }
