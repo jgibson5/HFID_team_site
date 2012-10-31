@@ -293,7 +293,7 @@
 	height: 30px;
 	margin: 0px 10px;
 	text-decoration:none;
-	text-shadow:1px 1px 0px #CCCCCC;
+	text-shadow:1px 1px 0px #000000;
 	text-align:center;
 }.saveButton:active {
 	position:relative;
@@ -871,6 +871,13 @@ a:active{
 	float:center;
 	margin:10px 0px 0px 0px;
 	padding:0px 0px 0px 0px;	
+	text-align:center;
+}
+
+.eventTitleWrapper{
+	width:540px;
+	height:50px;	
+	display:inline-block;
 	text-align:center;
 }
 
