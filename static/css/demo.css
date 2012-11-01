@@ -283,8 +283,9 @@
     font-family:"Trebuchet MS", Helvetica, sans-serif;
     font-size:16px;
     font-weight:bold;
-    width: 70px;
-    height: 30px;
+    width: 64px;
+	height:24px;
+	padding:3px;
     text-decoration:none;
     text-shadow:1px 1px 0px #000000;
 	text-align:center;
@@ -306,11 +307,12 @@
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	font-size:16px;
 	font-weight:bold;
-	width: 60px;
-	height: 30px;
+	width: 64px;
+	height: 24px;
+	padding:3px;
 	margin: 0px 10px;
 	text-decoration:none;
-	text-shadow:1px 1px 0px #000000;
+	text-shadow:1px 1px 0px #CCCCCC;
 	text-align:center;
 }.saveButton:active {
 	position:relative;
@@ -329,9 +331,10 @@
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	font-size:16px;
 	font-weight:bold;
-	width: 60px;
-	height: 30px;
+	width: 54px;
+	height: 24px;
 	margin: 0px;
+	padding:3px;
 	text-decoration:none;
 	text-shadow:1px 1px 0px #CCCCCC;
 	text-align:center;
@@ -559,6 +562,16 @@ a:active{
 	margin:5px 0px 5px 0px;
 	text-align:center;
 	border:none;
+}
+
+.friendBlock2{
+	display:inline-block;
+	float:center;
+	width:110px;
+	height:120px;
+	margin:1px -2px 1px -2px;
+	text-align:center;
+	border:2px solid #00CC00;
 }
 
 .friend{
