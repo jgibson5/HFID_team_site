@@ -25,8 +25,8 @@
 			<!--
 			console.log("test");
 			function toggle_visibility(idt, idb) {
-				var tabs = new Array('overviewTab', 'recipeTab', 'ingredientsTab', 'friendsTab', 'dateTab', 'timeTab', 'locationTab', 'commentsTab');
-				var blocks = new Array('overviewBlock', 'recipeBlock', 'ingredientsBlock', 'friendsBlock', 'dateBlock', 'timeBlock', 'locationBlock', 'commentsBlock');
+				var tabs = new Array('overviewTab', 'ingredientsTab', 'commentsTab');
+				var blocks = new Array('overviewBlock', 'ingredientsBlock', 'commentsBlock');
 				var b = document.getElementById(idb);
 				var t = document.getElementById(idt);
 				for(i=0;i<tabs.length;i++){
@@ -55,6 +55,22 @@
 					f.style.border = 'none';
 					f.style.margin = '5px 0px 5px 0px';
 			}
+			
+			function toggleDate(id){
+				var d = document.getElementById(id);
+				if(d.style.border != 'none'){
+					d.style.background = '#99FF99';
+					d.style.height = '40px';
+					d.style.width = '50px';
+					d.style.border = 'none';
+				}
+				else{
+					d.style.background = '#CCCCCC';
+					d.style.border = '1px solid #000000';
+					d.style.height = '38px';
+					d.style.width = '48px';
+				}
+			}
 			//-->
 		</script>
 		<div style="position:relative; margin:40px 0px 0px 40px">
@@ -65,28 +81,23 @@
 					
 					<div>
 						<a href="mainpage.html"><div class="homeButton">Home</div></a>
-						<div class="horzSpace"></div>
-						<div class="pageTitle">Cinnamon Rolls!</div>
-						<div class="horzSpace"></div>
+						<div class="eventTitleWrapper"><div class="pageTitle">Cinnamon Rolls</div></div>
 						<a href="mainpage.html"><div class="saveButton">Save</div></a>
 					</div>
 					
 					<div class="eventBox">
 						<div class="nav-bar">
-							<a href="#" onclick="toggle_visibility('overviewTab', 'overviewBlock');"><div class="nav-bar-link-short-2" id="overviewTab">Overview</div></a>
-							<a href="#" onclick="toggle_visibility('recipeTab', 'recipeBlock');"><div class="nav-bar-link-short" id="recipeTab">Recipes</div></a>
+							<a href="#" onclick="toggle_visibility('overviewTab', 'overviewBlock');"><div class="nav-bar-link-short-2" id="overviewTab">Overview
+							</div></a>
 							<a href="#" onclick="toggle_visibility('ingredientsTab', 'ingredientsBlock');"><div class="nav-bar-link-short" id="ingredientsTab">Ingredients</div></a>
-							<a href="#" onclick="toggle_visibility('friendsTab', 'friendsBlock');"><div class="nav-bar-link-short" id="friendsTab">Invited Friends</div></a>
-							<a href="#" onclick="toggle_visibility('dateTab', 'dateBlock');"><div class="nav-bar-link-short" id="dateTab">Date</div></a>
-							<a href="#" onclick="toggle_visibility('timeTab', 'timeBlock');"><div class="nav-bar-link-short" id="timeTab">Time</div></a>
-							<a href="#" onclick="toggle_visibility('locationTab', 'locationBlock');"><div class="nav-bar-link-short" id="locationTab">Location</div></a>
 							<a href="#" onclick="toggle_visibility('commentsTab', 'commentsBlock');"><div class="nav-bar-link-short" id="commentsTab">Comments</div></a>
+							<div class="nav-bar-block"> </div>
 						</div>
 						<div class="nav-bar-toggle-2" id="overviewBlock">
 							<div class="alignLeftBlock">
 								<p>What: Cinnamon Rolls</p>
-								<p>When: November 25th, 2012 at 2:30 pm</p>
-								<p>Where: My house</p>
+								<p>When: October 31st, 2012 at 11:00 AM</p>
+								<p>Where: Bob's house</p>
 								<p>Scheduled by: Bob</p>
 								<p>Invited:</p>
 								<center>
@@ -105,18 +116,6 @@
 								</center>
 							</div>
 						</div>
-						<div class="nav-bar-toggle" id="recipeBlock">
-							<div class="recipeBox">
-								<div class="headingSmall">Recipes for this event (press X to remove):</div>
-								<div class="alignLeftBlock">
-									<div class="recipeBlock">
-										<div class="recipePic"><img src="../../static/images/prototype/food/strawberries.jpg" width="180px"></div>
-										<div class="recipeTag">Chocolate Swirl Strawberries</div>
-									</div>
-								</div>
-							</div>
-							<a href="recipebook.html"><center><div class="uploadRecipeButton">Add another recipe</div></center></a>
-						</div>
 						<div class="nav-bar-toggle" id="ingredientsBlock">
 							<div class="recipeBox">
 								<div class="headingSmall">Tap a checkbox to claim an item to bring!</div>
@@ -127,57 +126,6 @@
 									<p><input type="checkbox" name="checkbox4">2 T lemon juice</p>
 								</div>
 							</div>
-						</div>
-						<div class="nav-bar-toggle" id="friendsBlock">
-							<div class="headingSmall">Tap friends to invite or uninvite:</div>
-							<div class="friendsBox">
-								<div class="friendBlock">
-									<div class="friend"><img src="../../static/images/prototype/people/allie.jpg" width="90px"></div>
-									<div class="friendTag">Allie S.</div>
-								</div>
-								<div class="friendBlock">
-									<div class="friend"><img src="../../static/images/prototype/people/bob.jpg" width="90px"></div>
-									<div class="friendTag">Bob R.</div>
-								</div>
-								<div class="friendBlock">
-									<div class="friend"><img src="../../static/images/prototype/people/paul.jpg" width="90px"></div>
-									<div class="friendTag">Paul K.</div>
-								</div>
-								<div class="friendBlock">
-									<div class="friend"><img src="../../static/images/prototype/people/sara.jpg" width="90px"></div>
-									<div class="friendTag">Sara Y.</div>
-								</div>
-								<div class="friendBlock">
-									<div class="friend"><img src="../../static/images/prototype/people/deirdre.jpg" width="90px"></div>
-									<div class="friendTag">Deirdre O.</div>
-								</div>
-								<div class="friendBlock">
-									<div class="friend"><img src="../../static/images/prototype/people/joe.jpg" width="90px"></div>
-									<div class="friendTag">Joe F.</div>
-								</div>
-								<div class="friendBlock">
-									<div class="friend"><img src="../../static/images/prototype/people/gina.jpg" width="90px"></div>
-									<div class="friendTag">Gina H.</div>
-								</div>
-								<div class="friendBlock">
-									<div class="friend"><img src="../../static/images/prototype/people/lisa.jpg" width="90px"></div>
-									<div class="friendTag">Lisa S.</div>
-								</div>
-								<div class="friendBlock">
-									<div class="friend"><img src="../../static/images/prototype/people/tina.jpg" width="90px"></div>
-									<div class="friendTag">Tina D.</div>
-								</div>
-							</div>
-						</div>
-						<div class="nav-bar-toggle" id="dateBlock">
-							<div class="headingSmall">Tap a date to change the selection:</div>
-						</div>
-						<div class="nav-bar-toggle" id="timeBlock">
-							<div class="headingSmall">Use the dials to change the time:</div>
-						</div>
-						<div class="nav-bar-toggle" id="locationBlock">
-							<div class="headingSmall">Edit event location below:</div>
-							<input type="text" name="eventLocation" value="My House">
 						</div>
 						<div class="nav-bar-toggle" id="commentsBlock">
 							<div class="headingSmall">Comments</div>
