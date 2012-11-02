@@ -61,7 +61,6 @@
 				$(idt).css('background', '#FFFFFF');
 				$(idt).css('border', '2px none solid none solid');
 			}
-<<<<<<< HEAD
 			function toggleFriend(f){
 				console.log(info);
 				if($(f).css('border-top-style') === 'none'){
@@ -78,37 +77,11 @@
 					$(f).css('margin-bottom', '5px');
 					$(f).css('margin-left', '0px');
 					removeA(info.selectedFriends, f);
-=======
-			function toggleFriend(id){
-				var f = document.getElementById(id);
-				if(f.style.border == 'none'){
-					f.style.border = '2px solid #00CC00';
-					f.style.margin = '1px -4px 1px -4px';
->>>>>>> d02ce7983aa497a08669516474136325d0d3a296
 				}
 			}
 			
-<<<<<<< HEAD
 			
 			
-=======
-			function toggleDate(id){
-				var d = document.getElementById(id);
-				if(d.style.border != 'none'){
-					d.style.background = '#99FF99';
-					d.style.height = '40px';
-					d.style.width = '50px';
-					d.style.border = 'none';
-				}
-				else{
-					d.style.background = '#CCCCCC';
-					d.style.border = '1px solid #000000';
-					d.style.height = '38px';
-					d.style.width = '48px';
-				}
-			}
-			//-->
->>>>>>> d02ce7983aa497a08669516474136325d0d3a296
 		</script>
 		
 	</head>
