@@ -52,6 +52,7 @@
 	margin:5px 25px 5px 25px;
 	text-align:center;
 	border:2px solid #000000;
+	
 }.mainPageButton:active {
     position:relative;
     top:1px;
@@ -76,7 +77,9 @@
 	margin: 25px 25px 25px 25px;
 	border:2px solid #000000;
 }
-
+#test {
+	height: 60px;
+}
 /* Special button for the background image (b/c is thinner) */
 .mainPageButtonSmall {
     -moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
