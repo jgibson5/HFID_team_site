@@ -4,8 +4,9 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="../../static/css/demo.css">
-		<script src="../../static/js/jquery.min.js" type="text/javascript">
-		</script>
+		<script src="../../static/js/jquery.min.js" type="text/javascript"></script>
+		<script src="../../static/js/jqueryUI.js" type="text/javascript"></script>
+		<script src="../../static/js/timepicker.js" type="text/javascript"></script>
 		<style>
 		input[type="text"]{
 			display:inline-block;
@@ -91,6 +92,11 @@
 				
 				
 			}
+			
+			$(document).ready(function() {
+				console.log("MAIN CALLED");
+				$('#basic_example_2').timepicker();
+			});
 			
 		</script>
 		
@@ -212,7 +218,9 @@
 						</div>
 						<div class="nav-bar-toggle" id="timeBlock">
 							<div class="headingSmall">Select a time:</div>
-							<input type="text" name="time" value="2:30 PM">
+							<div>
+								<input id="basic_example_2" class="hasDatepicker" type="text" value="" name="basic_example_2">
+							</div>
 						</div>
 						<div class="nav-bar-toggle" id="locationBlock">
 							<div class="headingSmall">Enter the event location:</div>
