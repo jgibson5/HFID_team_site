@@ -1121,9 +1121,13 @@ a:active{
 	margin: 5px;
 }
 
-.dietaryNeedsTitle {
+.dietaryNeedsTopRow {
     font-weight:bold;
 	margin: 0px 0px 0px 10px;
+	width:756px;
+	height:50px;
+	display:inline-block;
+	float:left;
 }
 
 .foodPreferences{
@@ -1131,4 +1135,34 @@ a:active{
 	float:left;
 	margin:5px;
 	width:350px;
+}
+
+.select:hover {
+	cursor:pointer;
+}
+
+.homeButtonDiv{
+	margin:0px 0px 0px 250px;
+	display:inline-block;
+	width:50px;
+	height:30px;
+	float:left;
+}
+
+.backButtonDiv{
+	margin:23px 10px 0px 80px;
+	display:inline-block;
+	width:50px;
+	height:30px;
+	float:left;
+}
+
+/* Title for pages e.g. Recipe Book and Create New Event */
+.dietaryNeedsTitle { 
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:40px;
+	text-align:center;
+	padding:10px 0px 10px 0px;
+	display:inline-block;
+	float:left; 
 }
