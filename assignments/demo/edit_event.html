@@ -49,11 +49,27 @@
 				var f = document.getElementById(id);
 				if(f.style.border == 'none'){
 					f.style.border = '2px solid #00CC00';
-					f.style.margin = '3px -2px 3px -2px';
+					f.style.margin = '1px -2px 1px -2px';
 				}
 				else
 					f.style.border = 'none';
 					f.style.margin = '5px 0px 5px 0px';
+			}
+			
+			function toggleDate(id){
+				var d = document.getElementById(id);
+				if(d.style.border != 'none'){
+					d.style.background = '#99FF99';
+					d.style.height = '40px';
+					d.style.width = '50px';
+					d.style.border = 'none';
+				}
+				else{
+					d.style.background = '#CCCCCC';
+					d.style.border = '1px solid #000000';
+					d.style.height = '38px';
+					d.style.width = '48px';
+				}
 			}
 			//-->
 		</script>
@@ -129,86 +145,88 @@
 						<div class="nav-bar-toggle" id="friendsBlock">
 							<div class="headingSmall">Tap friends to invite or uninvite:</div>
 							<div class="friendsBox">
-								<div class="friendBlock">
+								<a href="#" onclick="toggleFriend('allie');"><div class="friendBlock2" id="allie">
 									<div class="friend"><img src="../../static/images/prototype/people/allie.jpg" width="90px"></div>
 									<div class="friendTag">Allie S.</div>
-								</div>
-								<div class="friendBlock">
+								</div></a>
+								<a href="#" onclick="toggleFriend('bob');"><div class="friendBlock" id="bob">
 									<div class="friend"><img src="../../static/images/prototype/people/bob.jpg" width="90px"></div>
 									<div class="friendTag">Bob R.</div>
-								</div>
-								<div class="friendBlock">
+								</div></a>
+								<a href="#" onclick="toggleFriend('paul');"><div class="friendBlock" id="paul">
 									<div class="friend"><img src="../../static/images/prototype/people/paul.jpg" width="90px"></div>
 									<div class="friendTag">Paul K.</div>
-								</div>
-								<div class="friendBlock">
+								</div></a>
+								<a href="#" onclick="toggleFriend('sara');"><div class="friendBlock" id="sara">
 									<div class="friend"><img src="../../static/images/prototype/people/sara.jpg" width="90px"></div>
 									<div class="friendTag">Sara Y.</div>
-								</div>
-								<div class="friendBlock">
+								</div></a>
+								<a href="#" onclick="toggleFriend('deirdre');"><div class="friendBlock2" id="deirdre">
 									<div class="friend"><img src="../../static/images/prototype/people/deirdre.jpg" width="90px"></div>
 									<div class="friendTag">Deirdre O.</div>
-								</div>
-								<div class="friendBlock">
+								</div></a>
+								<a href="#" onclick="toggleFriend('joe');"><div class="friendBlock2" id="joe">
 									<div class="friend"><img src="../../static/images/prototype/people/joe.jpg" width="90px"></div>
 									<div class="friendTag">Joe F.</div>
-								</div>
-								<div class="friendBlock">
+								</div></a>
+								<a href="#" onclick="toggleFriend('gina');"><div class="friendBlock" id="gina">
 									<div class="friend"><img src="../../static/images/prototype/people/gina.jpg" width="90px"></div>
 									<div class="friendTag">Gina H.</div>
-								</div>
-								<div class="friendBlock">
+								</div></a>
+								<a href="#" onclick="toggleFriend('lisa');"><div class="friendBlock" id="lisa">
 									<div class="friend"><img src="../../static/images/prototype/people/lisa.jpg" width="90px"></div>
 									<div class="friendTag">Lisa S.</div>
-								</div>
-								<div class="friendBlock">
+								</div></a>
+								<a href="#" onclick="toggleFriend('tina');"><div class="friendBlock" id="tina">
 									<div class="friend"><img src="../../static/images/prototype/people/tina.jpg" width="90px"></div>
 									<div class="friendTag">Tina D.</div>
-								</div>
+								</div></a>
 							</div>
 						</div>
 						<div class="nav-bar-toggle" id="dateBlock">
 							<div class="headingSmall">Tap a date to change the selection:</div>
+							<center><h4>October 2012</h4></center>
 							<div class="calendar">
-								<div class="date"></div>
-								<div class="date">1</div>
-								<div class="date">2</div>
-								<div class="date">3</div>
-								<div class="date">4</div>
-								<div class="date">5</div>
-								<div class="date">6</div>
-								<div class="date">7</div>
-								<div class="date">8</div>
-								<div class="date">9</div>
-								<div class="date">10</div>
-								<div class="date">11</div>
-								<div class="date">12</div>
-								<div class="date">13</div>
-								<div class="date">14</div>
-								<div class="date">15</div>
-								<div class="date">16</div>
-								<div class="date">17</div>
-								<div class="date">18</div>
-								<div class="date">19</div>
-								<div class="date">20</div>
-								<div class="date">21</div>
-								<div class="date">22</div>
-								<div class="date">23</div>
-								<div class="date">24</div>
-								<div class="date">25</div>
-								<div class="date">26</div>
-								<div class="date">27</div>
-								<div class="date">28</div>
-								<div class="date">29</div>
-								<div class="date">30</div>
-								<div class="date">31</div>
-								<div class="date"></div>
-								<div class="date"></div>
-								<div class="date"></div>
+								<div class="dateHolder"></div>
+								<a href="#" onclick="toggleDate('d1');"><div class="date" id="d1">1</div></a>
+								<a href="#" onclick="toggleDate('d2');"><div class="date" id="d2">2</div></a>
+								<a href="#" onclick="toggleDate('d3');"><div class="date" id="d3">3</div></a>
+								<a href="#" onclick="toggleDate('d4');"><div class="date" id="d4">4</div></a>
+								<a href="#" onclick="toggleDate('d5');"><div class="date" id="d5">5</div></a>
+								<a href="#" onclick="toggleDate('d6');"><div class="date" id="d6">6</div></a>
+								<a href="#" onclick="toggleDate('d7');"><div class="date" id="d7">7</div></a>
+								<a href="#" onclick="toggleDate('d8');"><div class="date" id="d8">8</div></a>
+								<a href="#" onclick="toggleDate('d9');"><div class="date" id="d9">9</div></a>
+								<a href="#" onclick="toggleDate('d10');"><div class="date" id="d10">10</div></a>
+								<a href="#" onclick="toggleDate('d11');"><div class="date" id="d11">11</div></a>
+								<a href="#" onclick="toggleDate('d12');"><div class="date" id="d12">12</div></a>
+								<a href="#" onclick="toggleDate('d13');"><div class="date" id="d13">13</div></a>
+								<a href="#" onclick="toggleDate('d14');"><div class="date" id="d14">14</div></a>
+								<a href="#" onclick="toggleDate('d15');"><div class="date" id="d15">15</div></a>
+								<a href="#" onclick="toggleDate('d16');"><div class="date" id="d16">16</div></a>
+								<a href="#" onclick="toggleDate('d17');"><div class="date" id="d17">17</div></a>
+								<a href="#" onclick="toggleDate('d18');"><div class="date" id="d18">18</div></a>
+								<a href="#" onclick="toggleDate('d19');"><div class="date" id="d19">19</div></a>
+								<a href="#" onclick="toggleDate('d20');"><div class="date" id="d20">20</div></a>
+								<a href="#" onclick="toggleDate('d21');"><div class="date" id="d21">21</div></a>
+								<a href="#" onclick="toggleDate('d22');"><div class="date" id="d22">22</div></a>
+								<a href="#" onclick="toggleDate('d23');"><div class="date" id="d23">23</div></a>
+								<a href="#" onclick="toggleDate('d24');"><div class="date" id="d24">24</div></a>
+								<a href="#" onclick="toggleDate('d25');"><div class="date" id="d25">25</div></a>
+								<a href="#" onclick="toggleDate('d26');"><div class="date" id="d26">26</div></a>
+								<a href="#" onclick="toggleDate('d27');"><div class="date" id="d27">27</div></a>
+								<a href="#" onclick="toggleDate('d28');"><div class="date" id="d28">28</div></a>
+								<a href="#" onclick="toggleDate('d29');"><div class="date" id="d29">29</div></a>
+								<a href="#" onclick="toggleDate('d30');"><div class="date" id="d30">30</div></a>
+								<a href="#" onclick="toggleDate('d31');"><div class="date" id="d31">31</div></a>
+								<div class="dateHolder"></div>
+								<div class="dateHolder"></div>
+								<div class="dateHolder"></div>
 							</div>
 						</div>
 						<div class="nav-bar-toggle" id="timeBlock">
 							<div class="headingSmall">Use the dials to change the time:</div>
+							<input type="text" name="time" value="2:30 PM">
 						</div>
 						<div class="nav-bar-toggle" id="locationBlock">
 							<div class="headingSmall">Edit event location below:</div>
