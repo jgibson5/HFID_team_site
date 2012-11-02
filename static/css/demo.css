@@ -1115,4 +1115,8 @@ a:active{
     position:relative;
     top:1px;
 }
->>>>>>> fixing_1
+
+
+.select:hover {
+	cursor:pointer;
+}
