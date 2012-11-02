@@ -1115,4 +1115,20 @@ a:active{
     position:relative;
     top:1px;
 }
->>>>>>> d02ce7983aa497a08669516474136325d0d3a296
+
+.food{
+	font-size:26px;	
+	margin: 5px;
+}
+
+.dietaryNeedsTitle {
+    font-weight:bold;
+	margin: 0px 0px 0px 10px;
+}
+
+.foodPreferences{
+	display:inline-block;
+	float:left;
+	margin:5px;
+	width:350px;
+}
