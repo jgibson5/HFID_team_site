@@ -95,7 +95,7 @@
 			
 			$(document).ready(function() {
 				console.log("MAIN CALLED");
-				$('#basic_example_2').timepicker();
+				$('#basic_example_2').datetimepicker();
 			});
 			
 		</script>
@@ -120,13 +120,48 @@
 					
 					<div class="eventBox">
 						<div class="nav-bar">
-							<a class="select" onclick="toggle_visibility('#nameTab', '#nameBlock');"><div class="nav-bar-link-2" id="nameTab">Event Name</div></a>
-							<a class="select" onclick="toggle_visibility('#recipeTab', '#recipeBlock');"><div class="nav-bar-link" id="recipeTab">Recipes</div></a>
-							<a class="select" onclick="toggle_visibility('#friendsTab', '#friendsBlock');"><div class="nav-bar-link" id="friendsTab">Invited Friends</div></a>
-							<a class="select" onclick="toggle_visibility('#dateTab', '#dateBlock');"><div class="nav-bar-link" id="dateTab">Date</div></a>
-							<a class="select" onclick="toggle_visibility('#timeTab', '#timeBlock');"><div class="nav-bar-link" id="timeTab">Time</div></a>
-							<a class="select" onclick="toggle_visibility('#locationTab', '#locationBlock');"><div class="nav-bar-link" id="locationTab">Location</div></a>
-							<a class="select" onclick="toggle_visibility('#summaryTab', '#summaryBlock');"><div class="nav-bar-link" id="summaryTab">Summary</div></a>
+							<a class="select" onclick="toggle_visibility('#nameTab', '#nameBlock');">
+								<div class="nav-bar-link-2" id="nameTab">
+									<div>Event Name</div>
+									<div id="eName"></div>
+								</div>
+							</a>
+							<a class="select" onclick="toggle_visibility('#recipeTab', '#recipeBlock');">
+								<div class="nav-bar-link" id="recipeTab">
+									<div>Recipes</div>
+									<div id="eRecipes"></div>
+								</div>
+							</a>
+							<a class="select" onclick="toggle_visibility('#friendsTab', '#friendsBlock');">
+								<div class="nav-bar-link" id="friendsTab">
+									<div>Invited Friends</div>
+									<div id="eFriends"></div>
+								</div>
+							</a>
+							<a class="select" onclick="toggle_visibility('#dateTab', '#dateBlock');">
+								<div class="nav-bar-link" id="dateTab">
+									<div>Date</div>
+									<div id="eDate"></div>
+								</div>
+							</a>
+							<a class="select" onclick="toggle_visibility('#timeTab', '#timeBlock');">
+								<div class="nav-bar-link" id="timeTab">
+									<div>Time</div>
+									<div id="eTime"></div>
+								</div>
+							</a>
+							<a class="select" onclick="toggle_visibility('#locationTab', '#locationBlock');">
+								<div class="nav-bar-link" id="locationTab">
+									<div>Location</div>
+									<div id="eLocation"></div>
+								</div>
+							</a>
+							<a class="select" onclick="toggle_visibility('#summaryTab', '#summaryBlock');">
+								<div class="nav-bar-link" id="summaryTab">
+									<div>Summary</div>
+									<div id="eSummary"></div>
+								</div>
+							</a>
 						</div>
 						<div class="nav-bar-toggle-2" id="nameBlock">
 							<div class="headingSmall">Title your event!</div>
