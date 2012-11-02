@@ -536,7 +536,7 @@ a:active{
 
 .friendBlock{
 	display:inline-block;
-	float:center;
+	float:left;
 	width:110px;
 	height:120px;
 	margin:5px 0px 5px 0px;
@@ -906,4 +906,31 @@ a:active{
 
 .recipeItem{
 	display:block;	
+}
+
+
+.select:hover {
+	cursor:pointer;
+}
+
+.friendsSelected {
+	height:120px;
+	overflow:hidden;
+}
+.friendsSelectedNormal {
+	display:inline-block;
+	height:120px;
+	overflow:hidden;
+	width:330px;
+	float:left;
+}
+
+.friendsSelectedOverflow {
+	display:inline-block;
+	height:120px;
+	overflow:hidden;
+	width:300px;
+	position:relative;
+	left:330px;
+	top:-120px;
 }
