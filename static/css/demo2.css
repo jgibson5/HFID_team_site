@@ -214,8 +214,8 @@
 	color:#000000;
 	border:none;
 }
-		
-		
+
+
 /* Title for pages e.g. Recipe Book and Create New Event */
 .pageTitle { 
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
@@ -453,7 +453,7 @@
 	background:url("../../revisedMockups/assets/strawberriesBg.png");
 	height:576px;
 }
-		
+
 .eventBox{
 	display:inline-block;
 	float:center;
@@ -463,7 +463,7 @@
 	background:#FFFFFF;
 	border:solid 2px #000000;
 }
-		
+
 .recipeBox{
 	display:inline-block;
 	float:center;
@@ -472,7 +472,7 @@
 	height:405px;
 	border:none;
 }
-	
+
 .headingSmall {
 	display:inline-block;
 	text-align:center;
@@ -556,7 +556,7 @@ a:active{
 
 .friendBlock{
 	display:inline-block;
-	float:left;
+	float:center;
 	width:110px;
 	height:120px;
 	margin:5px 0px 5px 0px;
@@ -892,7 +892,7 @@ a:active{
 	position:relative;
 	top:1px;
 }
-		
+
 .largeRecipeButtons{
 	border:none;
 	display:inline-block;
@@ -957,31 +957,6 @@ a:active{
 	margin:0px 9px 0px 9px;
 }
 
-.select:hover {
-	cursor:pointer;
-}
-
-.friendsSelected {
-	height:120px;
-	overflow:hidden;
-}
-.friendsSelectedNormal {
-	display:inline-block;
-	height:120px;
-	overflow:hidden;
-	width:330px;
-	float:left;
-}
-
-.friendsSelectedOverflow {
-	display:inline-block;
-	height:120px;
-	overflow:hidden;
-	width:300px;
-	position:relative;
-	left:330px;
-	top:-120px;
-}
 .recipeItem{
 	display:block;	
 }
@@ -1110,55 +1085,4 @@ a:active{
 }.dietaryNeedsButton:active {
     position:relative;
     top:1px;
-}
-
-.food{
-	font-size:26px;	
-	margin: 5px;
-}
-
-.dietaryNeedsTopRow {
-    font-weight:bold;
-	margin: 0px 0px 0px 10px;
-	width:756px;
-	height:50px;
-	display:inline-block;
-	float:left;
-}
-
-.foodPreferences{
-	display:inline-block;
-	float:left;
-	margin:5px;
-	width:350px;
-}
-
-.select:hover {
-	cursor:pointer;
-}
-
-.homeButtonDiv{
-	margin:0px 0px 0px 250px;
-	display:inline-block;
-	width:50px;
-	height:30px;
-	float:left;
-}
-
-.backButtonDiv{
-	margin:23px 10px 0px 80px;
-	display:inline-block;
-	width:50px;
-	height:30px;
-	float:left;
-}
-
-/* Title for pages e.g. Recipe Book and Create New Event */
-.dietaryNeedsTitle { 
-	font-family:"Trebuchet MS", Helvetica, sans-serif;
-	font-size:40px;
-	text-align:center;
-	padding:10px 0px 10px 0px;
-	display:inline-block;
-	float:left; 
 }
