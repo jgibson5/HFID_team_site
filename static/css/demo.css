@@ -303,6 +303,150 @@
     top:1px;
 }
 
+.saveButton1 {
+	-moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+	box-shadow:inset 1px 1px 0px 0px #FF9999;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#F5A9F2;
+	border:1px solid #000000;
+	display:inline-block;
+	color:#FFFFFF;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	width: 64px;
+	height: 24px;
+	padding:3px;
+	margin: 0px 10px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #CCCCCC;
+	text-align:center;
+}.saveButton1:active {
+	position:relative;
+	top:1px;
+}
+
+.saveButton2 {
+	-moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+	box-shadow:inset 1px 1px 0px 0px #FF9999;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#F5A9F2;
+	border:1px solid #000000;
+	display:inline-block;
+	color:#FFFFFF;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	width: 64px;
+	height: 24px;
+	padding:3px;
+	margin: 0px 10px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #CCCCCC;
+	text-align:center;
+}.saveButton2:active {
+	position:relative;
+	top:1px;
+}
+
+.saveButton3 {
+	-moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+	box-shadow:inset 1px 1px 0px 0px #FF9999;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#F5A9F2;
+	border:1px solid #000000;
+	display:inline-block;
+	color:#FFFFFF;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	width: 64px;
+	height: 24px;
+	padding:3px;
+	margin: 0px 10px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #CCCCCC;
+	text-align:center;
+}.saveButton3:active {
+	position:relative;
+	top:1px;
+}
+
+.saveButton4 {
+	-moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+	box-shadow:inset 1px 1px 0px 0px #FF9999;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#F5A9F2;
+	border:1px solid #000000;
+	display:inline-block;
+	color:#FFFFFF;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	width: 64px;
+	height: 24px;
+	padding:3px;
+	margin: 0px 10px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #CCCCCC;
+	text-align:center;
+}.saveButton4:active {
+	position:relative;
+	top:1px;
+}
+
+.saveButton5 {
+	-moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+	box-shadow:inset 1px 1px 0px 0px #FF9999;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#F5A9F2;
+	border:1px solid #000000;
+	display:inline-block;
+	color:#FFFFFF;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	width: 64px;
+	height: 24px;
+	padding:3px;
+	margin: 0px 10px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #CCCCCC;
+	text-align:center;
+}.saveButton5:active {
+	position:relative;
+	top:1px;
+}
+
+.saveButton6 {
+	-moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+	box-shadow:inset 1px 1px 0px 0px #FF9999;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#F5A9F2;
+	border:1px solid #000000;
+	display:inline-block;
+	color:#FFFFFF;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	width: 64px;
+	height: 24px;
+	padding:3px;
+	margin: 0px 10px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #CCCCCC;
+	text-align:center;
+}.saveButton6:active {
+	position:relative;
+	top:1px;
+}
+
 .saveButton {
 	-moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;

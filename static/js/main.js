@@ -15,3 +15,33 @@ function on_load() {
 }
 
 //$(document).ready(on_load)
+
+function saveButtonFunction1()
+{
+	document.getElementsByClassName("saveButton1")[0].innerHTML="Saved!";
+}
+
+function saveButtonFunction2()
+{
+	document.getElementsByClassName("saveButton2")[0].innerHTML="Saved!";
+}
+
+function saveButtonFunction3()
+{
+	document.getElementsByClassName("saveButton3")[0].innerHTML="Saved!";
+}
+
+function saveButtonFunction4()
+{
+	document.getElementsByClassName("saveButton4")[0].innerHTML="Saved!";
+}
+
+function saveButtonFunction5()
+{
+	document.getElementsByClassName("saveButton5")[0].innerHTML="Saved!";
+}
+
+function saveButtonFunction6()
+{
+	document.getElementsByClassName("saveButton6")[0].innerHTML="Saved!";
+}
