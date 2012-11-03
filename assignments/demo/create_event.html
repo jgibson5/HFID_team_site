@@ -61,6 +61,13 @@
 				$(idt).css('height', '43px');
 				$(idt).css('background', '#FFFFFF');
 				$(idt).css('border', '2px none solid none solid');
+				
+				if (idt === '#summaryTab') {
+					$('#sName').html($('#nameTextBox').val());
+					$('#sDate').html($('#eDate').html());
+					$('#sTime').html($('#timeTextBox').val());
+					$('#sLocation').html($('#locationTextBox').val());
+				}
 			}
 			
 			function toggleFriend(f){
@@ -70,15 +77,16 @@
 					$(f).css('margin-right', '-2px');
 					$(f).css('margin-bottom', '3px');
 					$(f).css('margin-left', '-2px');
-					info.selectedFriends.push(f);
+					info.friends.push($(f + ' > .friendTag').html());
 				} else {
 					$(f).css('border', 'none');
 					$(f).css('margin-top', '5px');
 					$(f).css('margin-right', '0px');
 					$(f).css('margin-bottom', '5px');
 					$(f).css('margin-left', '0px');
-					removeA(info.selectedFriends, f);
+					removeA(info.friends, $(f + ' > .friendTag').html());
 				}
+				$('#eFriends').html(info.friends.join(", "));
 			}
 			
 			function toggleDate(d) {
@@ -86,6 +94,7 @@
 				info.date = date;
 				$('.date').css('background', '#CCCCCC');
 				$('#'+d.toString()).css('background', 'green');
+				$('#eDate').html(date);
 			}
 			
 			function toggleTime(t) {
@@ -94,8 +103,26 @@
 			}
 			
 			$(document).ready(function() {
-				console.log("MAIN CALLED");
 				$('#basic_example_2').datetimepicker();
+				$('#timeTextBox').keypress(function(e) {
+					if (e.which == 13) {
+						toggle_visibility('#locationTab', '#locationBlock');
+						$('#eTime').html($('#timeTextBox').val());
+					}
+				});
+				$('#nameTextBox').keypress(function(e) {
+					if (e.which == 13) {
+						console.log("name");
+						toggle_visibility('#recipeTab', '#recipeBlock');
+						$('#eName').html($('#nameTextBox').val());
+					}
+				});
+				$('#locationTextBox').keypress(function(e) {
+					if (e.which == 13) {
+						toggle_visibility('#summaryTab', '#summaryBlock');
+						$('#eLocation').html($('#locationTextBox').val());
+					}
+				});
 			});
 			
 		</script>
@@ -114,9 +141,9 @@
 						<a href="mainpage.html"><div class="homeButton">Home</div></a>
 					</div>	
 						
-					<div>
-						<center><div class = "pageTitle">Create Event</div></center>
-					</div>
+					
+					<div class = "pageTitle">Create Event</div>
+					
 					
 					<div class="eventBox">
 						<div class="nav-bar">
@@ -165,7 +192,7 @@
 						</div>
 						<div class="nav-bar-toggle-2" id="nameBlock">
 							<div class="headingSmall">Title your event!</div>
-							<input type="text" name="eventTitle">
+							<input id="nameTextBox" type="text" name="eventTitle">
 						</div>
 						<div class="nav-bar-toggle" id="recipeBlock">
 							<div class="recipeBox">
@@ -257,19 +284,17 @@
 						</div>
 						<div class="nav-bar-toggle" id="timeBlock">
 							<div class="headingSmall">Select a time:</div>
-							<div>
-								<input id="basic_example_2" class="hasDatepicker" type="text" value="" name="basic_example_2">
-							</div>
+							<input id="timeTextBox" type="text" value="">
 						</div>
 						<div class="nav-bar-toggle" id="locationBlock">
 							<div class="headingSmall">Enter the event location:</div>
-							<input type="text" name="eventLocation">
+							<input id="locationTextBox" type="text" name="eventLocation">
 						</div>
 						<div class="nav-bar-toggle" id="summaryBlock">
 							<div class="alignLeftBlock">
-								<p>What: <span id="eName">Dessert Party!</span></p>
-								<p>When: <span id="eDate">October 1st, 2012</span> at <span id="eTime">2:30 pm</span></p>
-								<p>Where: <span id="eLocation">My house</span></p>
+								<p>What: <span id="sName">Dessert Party!</span></p>
+								<p>When: <span id="sDate">October 1st, 2012</span> at <span id="sTime">2:30 pm</span></p>
+								<p>Where: <span id="sLocation">My house</span></p>
 								<p>Scheduled by: Me</p>
 								<p>Invited:</p>
 								<div class="friendsSelected">
@@ -290,8 +315,8 @@
 									
 									<div class="friendsSelectedOverflow">
 										<div class="friendBlock">
-											<div class="friend"><img src="../../static/images/prototype/people/allie.jpg" width="90px"></div>
-											<div class="friendTag">Allie S.</div>
+											<div class="friend"><img src="../../static/images/prototype/people/tina.jpg" width="90px"></div>
+											<div class="friendTag">Tina D.</div>
 										</div>
 										<div class="friendBlock">
 											<div class="friend"><img src="../../static/images/prototype/people/joe.jpg" width="90px"></div>

@@ -218,14 +218,19 @@
 	border:none;
 }
 		
-		
+.createEventHomeButtonDiv {
+	position:absolute;
+	top:0px;
+	left:0px;
+}
 /* Title for pages e.g. Recipe Book and Create New Event */
 .pageTitle { 
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
-	font-size:40px;
-	text-align:center;
-	padding:10px 0px 10px 0px;
+	font-size:35px;
+	margin:15px auto;
 	display:inline-block;
+	width:765px;
+	text-align:center;
 }
 
 .pageTitleName{
@@ -1173,4 +1178,10 @@ a:active{
 	padding:10px 0px 10px 0px;
 	display:inline-block;
 	float:left; 
+}
+
+#eName, #eFriends, #eDate, #eTime, #eLocation, #eSummary {
+	height:20px;
+	font-size:14px;
+	overflow:hidden;
 }
