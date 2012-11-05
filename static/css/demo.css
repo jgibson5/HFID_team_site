@@ -1336,3 +1336,8 @@ a:active{
 	font-size:14px;
 	overflow:hidden;
 }
+
+.f_selected {
+	border:2px solid #00CC00;
+	margin:3px -2px;
+}
