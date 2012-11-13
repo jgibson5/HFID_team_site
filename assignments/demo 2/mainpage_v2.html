@@ -7,23 +7,32 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="../../static/css/demo.css">
 		<style>
-		.strawberryBody
-		{
-			background:url("../../revisedMockups/assets/strawberriesBg.png");
-			height:576px;
-		}
-		
 		.with {
 			font-size:12px;
 		}
 		</style>
+		
+		
+		
+		<script type="text/javascript">
+		
+			background_images = new Array("url('../../static/images/prototype/food/raspberry cupcakes.jpg')", "url('../../static/images/prototype/food/rainbowCake2.jpg')", "url('../../revisedMockups/assets/strawberriesBg.png')", "url('../../static/images/prototype/food/sashimi.jpg')", "url('../../static/images/prototype/food/tuscanLemonChicken.jpg')");
+		
+			function funcToCall()
+			{
+				var randURL = background_images[Math.floor(Math.random() * background_images.length)];
+				document.getElementById("mainBody").style.background = randURL;
+			}
+		
+		</script>
+		
 	</head>
 	
-	<body>
+	<body onload="funcToCall()">
 		<div style="position:relative; margin:40px 0px 0px 40px">
 			<img class="ipad-img" src="../../static/images/prototype/ipadRev.png">
 			<div class="template-div">
-				<div class="strawberryBody">
+				<div class="strawberryBody" id="mainBody">
 					
 					<div class="mainLeft">
 						<a href="mainpage_v2.html"><div class="mainPageNameButton">Cook With Friends</div></a>
