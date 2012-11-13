@@ -58,6 +58,100 @@
     top:1px;
 }
 
+.createNewEventTitleButton {
+     -moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    box-shadow:inset 1px 1px 0px 0px #ffffff;
+	background-color:rgba(255, 255, 255, 0.6);
+    width: 200px;
+    height: 40px;
+	padding: 10px;
+	font-size:26px;
+	font-weight:bold;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	color:#000000;
+	text-decoration:none;
+	text-shadow: 1px 1px 0px #777777;
+	text-align:center;
+	display:inline-block;
+	margin:70px 0px 0px 565px;
+	text-align:center;
+	border:2px solid #000000;
+	
+}.mainPageButton:active {
+    position:relative;
+    top:1px;
+}
+
+.friendsButton {
+     -moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    box-shadow:inset 1px 1px 0px 0px #ffffff;
+    -moz-border-radius:16px;
+    -webkit-border-radius:16px;
+    border-radius:16px;
+	background-color:rgba(255, 255, 255, 0.6);
+    width: 150px;
+    height: 30px;
+	padding: 10px;
+	font-size:26px;
+	font-weight:bold;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	color:#000000;
+	text-decoration:none;
+	text-shadow: 1px 1px 0px #777777;
+	text-align:center;
+	display:inline-block;
+	margin:20px 25px 5px 85px;
+	text-align:center;
+	border:2px solid #000000;
+	
+}.friendsButton:active {
+    position:relative;
+    top:1px;
+}
+
+
+.timelineItemButton {
+     -moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    box-shadow:inset 1px 1px 0px 0px #ffffff;
+    -moz-border-radius:16px;
+    -webkit-border-radius:16px;
+    border-radius:16px;
+	background-color:rgba(255, 255, 255, 0.6);
+    width: 250px;
+    height: 80px;
+	padding: 0px;
+	font-size:26px;
+	font-weight:bold;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	color:#000000;
+	text-decoration:none;
+	text-shadow: 1px 1px 0px #777777;
+	text-align:center;
+	display:inline-block;
+	margin:5px;
+	text-align:center;
+	border:2px solid #000000;
+	position:relative;
+	
+}.timelineItemButton:active {
+    position:relative;
+    top:1px;
+}
+
+.titleButtonSize {
+    width: 300px;
+    height: 50px;
+	padding: 20px;
+	font-size:30px;
+}
+
+.titleButtonMargin {
+	margin: 25px 25px 50px 25px;
+}
+
 /* Translucent box for the app name on the main page */
 .mainPageNameButton{
     -moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
@@ -79,6 +173,9 @@
 	display:inline-block;
 	margin: 25px 25px 50px 25px;
 	border:2px solid #000000;
+}.mainPageNameButton:active {
+    position:relative;
+    top:1px;
 }
 #test {
 	height: 60px;
@@ -125,12 +222,13 @@
     font-size:18px;
     font-weight:bold;
     width: 290px;
-    height: 400px;
+    height: 420px;
     text-decoration:none;
     text-shadow:1px 1px 0px #777777;
     text-align:center;
 	border:2px solid #000000;
 	margin:25px 25px 25px 25px;
+	overflow:hidden; /*Prevents last button from overflowing outside upcoming events box*/
 }
 
 .nav-bar-link 
@@ -146,7 +244,8 @@
 	margin:0px -5px 0px 0px;
 	width:180px;
 	height:45px;
-	background:#BBBBBB;
+	/*background:#BBBBBB;*/
+	background-color:rgba(100, 100, 100, 0.6);
 	border-style:none;
 }
 
@@ -159,9 +258,10 @@
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	moz-box-align:left;
 	margin:0px -5px 0px 0px;
-	width:182px;
+	width:180px;
 	height:43px;
-	background:#FFFFFF;
+	/*background:#FFFFFF;*/
+	background-color:rgba(255, 255, 255, 0);
 }
 
 .nav-bar-link-short
@@ -177,7 +277,8 @@
 	margin:0px -5px 0px 0px;
 	width:180px;
 	height:37px;
-	background:#BBBBBB;
+	/*background:#BBBBBB;*/
+	background-color:rgba(100, 100, 100, 0.6);
 	border-style:none;
 }
 
@@ -194,7 +295,8 @@
 	margin:0px -5px 0px 0px;
 	width:180px;
 	height:265px;
-	background:#BBBBBB;
+	/*background:#BBBBBB;*/
+	background-color:rgba(100, 100, 100, 0.6);
 	border-style:none;
 }
 
@@ -207,9 +309,10 @@
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	moz-box-align:left;
 	margin:0px -5px 0px 0px;
-	width:182px;
+	width:180px;
 	height:34px;
-	background:#FFFFFF;
+	/*background:#FFFFFF;*/
+	background-color:rgba(255, 255, 255, 0.6);
 }
 
 .nav-bar{
@@ -217,7 +320,8 @@
 	float:left;
 	width:220px;
 	height:500px;
-	color:#000000;
+	/*color:#000000;*/
+	background-color:rgba(255, 255, 255, 0);
 	border:none;
 }
 		
@@ -612,17 +716,19 @@
 .eventBox{
 	display:inline-block;
 	float:center;
-	width:690px;
-	height:453px;
-	margin: 17px -5px 0px 35px;
-	background:#FFFFFF;
+	width:763px;
+	height:445px;
+	margin: 0px -5px 0px 0px;
+	/*background:#FFFFFF;*/
+	background-color:rgba(255, 255, 255, 0.6);
 	border:solid 2px #000000;
 }
 		
 .recipeBox{
 	display:inline-block;
 	float:center;
-	background-color:#FFFFFF;
+	/*background:#FFFFFF;*/
+	background-color:rgba(255, 255, 255, 0);
 	width:450px;
 	height:405px;
 	border:none;
