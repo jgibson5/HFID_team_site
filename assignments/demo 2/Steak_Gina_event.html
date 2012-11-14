@@ -3,8 +3,12 @@
 
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="../../static/css/demo.css">	
+		<link rel="stylesheet" type="text/css" href="../../static/css/demo.css">
+		<script src="../../static/js/jquery.min.js" type="text/javascript"></script>
+		<script src="../../static/js/jqueryUI.js" type="text/javascript"></script>
+		<script src="../../static/js/timepicker.js" type="text/javascript"></script>
 		<style>
+		
 		input[type="text"]{
 			display:inline-block;
 			float:center;
@@ -18,78 +22,157 @@
 			font-size:18px;
 		}	
 		</style>
-	</head>
-	
-	<body>
+		
 		<script type="text/javascript">
-			<!--
-			console.log("test");
-			function toggle_visibility(idt, idb) {
-				var tabs = new Array('overviewTab', 'ingredientsTab', 'commentsTab');
-				var blocks = new Array('overviewBlock', 'ingredientsBlock', 'commentsBlock');
-				var b = document.getElementById(idb);
-				var t = document.getElementById(idt);
-				for(i=0;i<tabs.length;i++){
-					document.getElementById(blocks[i]).style.display = 'none';
-					tab = document.getElementById(tabs[i]);
-					tab.style.margin = '0px -5px 0px 0px';
-					tab.style.width = '180px';
-					tab.style.height = '37px';
-					tab.style.background = '#BBBBBB';
-					tab.style.border = '2px none';
-				}
-				b.style.display = 'inline-block';
-				t.style.margin = '0px -5px 0px 0px';
-				t.style.width = '182px';
-				t.style.height = '34px';
-				t.style.background = '#FFFFFF';
-				t.style.border = '2px none solid none solid';
+		
+			background_images = new Array("url('../../static/images/prototype/food/raspberry cupcakes.jpg')", "url('../../static/images/prototype/food/rainbowCake2.jpg')", "url('../../revisedMockups/assets/strawberriesBg.png')", "url('../../static/images/prototype/food/sashimi.jpg')", "url('../../static/images/prototype/food/tuscanLemonChicken.jpg')");
+		
+			function funcToCall()
+			{
+				var randURL = background_images[Math.floor(Math.random() * background_images.length)];
+				document.getElementById("mainBody").style.background = randURL;
 			}
-			function toggleFriend(id){
-				var f = document.getElementById(id);
-				if(f.style.border == 'none'){
-					f.style.border = '2px solid #00CC00';
-					f.style.margin = '3px -2px 3px -2px';
-				}
-				else
-					f.style.border = 'none';
-					f.style.margin = '5px 0px 5px 0px';
+		
+			function removeA(arr){
+			    var what, a= arguments, L= a.length, ax;
+			    while(L> 1 && arr.length){
+			        what= a[--L];
+			        while((ax= arr.indexOf(what))!= -1){
+			            arr.splice(ax, 1);
+			        }
+			    }
+			    return arr;
 			}
 			
-			function toggleDate(id){
-				var d = document.getElementById(id);
-				if(d.style.border != 'none'){
-					d.style.background = '#99FF99';
-					d.style.height = '40px';
-					d.style.width = '50px';
-					d.style.border = 'none';
+			info = {
+				'friends':[],
+				'recipes':[],
+				'name':'',
+				'date':'',
+				'time':'',
+				'location':''
+				};
+			tabs = new Array('#overviewTab', '#ingredientsTab', '#commentsTab');
+			blocks = new Array('#overviewBlock', '#ingredientsBlock', '#commentsBlock');
+			
+			
+			function toggle_visibility(idt, idb) {
+				for(i=0;i<tabs.length;i++){
+					$(blocks[i]).css('display', 'none');
+					$(tabs[i]).css('margin', '0px -5px 0px 0px');
+					$(tabs[i]).css('width', '180px');
+					$(tabs[i]).css('height', '128px');
+					$(tabs[i]).css('background-color', 'rgba(100, 100, 100, 0.6)');
+					$(tabs[i]).css('border', '2px none');
 				}
-				else{
-					d.style.background = '#CCCCCC';
-					d.style.border = '1px solid #000000';
-					d.style.height = '38px';
-					d.style.width = '48px';
+				$(idb).css('display', 'inline-block');
+				$(idt).css('margin', '0px -5px 0px 0px');
+				$(idt).css('width', '180px');
+				$(idt).css('height', '127px');
+				$(idt).css('background-color', 'rgba(255, 255, 255, 0)');
+				$(idt).css('border', '2px none solid none solid');
+				
+				if (idt === '#summaryTab') {
+					$('#sName').html($('#nameTextBox').val());
+					$('#sDate').html($('#eDate').html());
+					$('#sTime').html($('#timeTextBox').val());
+					$('#sLocation').html($('#locationTextBox').val());
 				}
 			}
-			//-->
+			
+			function toggleFriend(f){
+				if($(f).css('border-top-style') === 'none'){
+					$(f).css('border', '2px solid #00CC00');
+					$(f).css('margin-top', '3px');
+					$(f).css('margin-right', '-2px');
+					$(f).css('margin-bottom', '3px');
+					$(f).css('margin-left', '-2px');
+					info.friends.push($(f + ' > .friendTag').html());
+				} else {
+					$(f).css('border', 'none');
+					$(f).css('margin-top', '5px');
+					$(f).css('margin-right', '0px');
+					$(f).css('margin-bottom', '5px');
+					$(f).css('margin-left', '0px');
+					removeA(info.friends, $(f + ' > .friendTag').html());
+				}
+				$('#eFriends').html(info.friends.join(", "));
+			}
+			
+			function toggleDate(d) {
+				date = "10-" + d.toString().slice(1) + "-12";
+				info.date = date;
+				$('.date').css('background', '#CCCCCC');
+				$('#'+d.toString()).css('background', 'green');
+				$('#eDate').html(date);
+			}
+			
+			function toggleTime(t) {
+				
+				
+			}
+			
+			$(document).ready(function() {
+				$('#basic_example_2').datetimepicker();
+				$('#timeTextBox').keypress(function(e) {
+					if (e.which == 13) {
+						toggle_visibility('#locationTab', '#locationBlock');
+						$('#eTime').html($('#timeTextBox').val());
+					}
+				});
+				$('#nameTextBox').keypress(function(e) {
+					if (e.which == 13) {
+						console.log("name");
+						toggle_visibility('#recipeTab', '#recipeBlock');
+						$('#eName').html($('#nameTextBox').val());
+					}
+				});
+				$('#locationTextBox').keypress(function(e) {
+					if (e.which == 13) {
+						toggle_visibility('#summaryTab', '#summaryBlock');
+						$('#eLocation').html($('#locationTextBox').val());
+					}
+				});
+			});
+			
 		</script>
+		
+	</head>
+	
+	<body onload="funcToCall()">
+		
 		<div style="position:relative; margin:40px 0px 0px 40px">
 			<img class="ipad-img" src="../../static/images/prototype/ipadRev.png">
 			<div class="template-div">  <!--756 by 576-->
-				<div class="blueBody">
+				<div class="strawberryBody" id="mainBody">
 					<!-- PUT STUFF HERE -->
+					<div class="createEventHomeButtonDiv">
+						<a href="mainpage_v2.html"><div class="mainPageNameButton">Cook With Friends</div></a>
+					</div>	
+						
+					<div class = "createNewEventTitleButton">Create Event</div>
 					
-					<div>
-						<a href="mainpage_v1.html"><div class="homeButton">Home</div></a>
-						<div class="eventTitleWrapper"><div class="pageTitle">Steak</div></div>
-					</div>
 					
 					<div class="eventBox">
 						<div class="nav-bar">
-							<a href="#" onclick="toggle_visibility('overviewTab', 'overviewBlock');"><div class="nav-bar-link-short-2" id="overviewTab">Overview</div></a>
-							<a href="#" onclick="toggle_visibility('ingredientsTab', 'ingredientsBlock');"><div class="nav-bar-link-short" id="ingredientsTab">Ingredients</div></a>
-							<a href="#" onclick="toggle_visibility('commentsTab', 'commentsBlock');"><div class="nav-bar-link-short" id="commentsTab">Comments</div></a>
-							<div class="nav-bar-block"> </div>
+							<a class="select" onclick="toggle_visibility('#overviewTab', '#overviewBlock');">
+								<div class="nav-bar-link-xtra-tall-2" id="overviewTab">
+									<div>Overview</div>
+									<div id="eName"></div>
+								</div>
+							</a>
+							<a class="select" onclick="toggle_visibility('#ingredientsTab', '#ingredientsBlock');">
+								<div class="nav-bar-link-xtra-tall" id="ingredientsTab">
+									<div>Ingredients</div>
+									<div id="eName"></div>
+								</div>
+							</a>
+							<a class="select" onclick="toggle_visibility('#commentsTab', '#commentsBlock');">
+								<div class="nav-bar-link-xtra-tall" id="commentsTab">
+									<div>Comments</div>
+									<div id="eName"></div>
+								</div>
+							</a>
 						</div>
 						<div class="nav-bar-toggle-2" id="overviewBlock">
 							<div class="alignLeftBlock">

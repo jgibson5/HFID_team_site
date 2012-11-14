@@ -307,6 +307,23 @@ a:hover{
 	border-style:none;
 }
 
+.nav-bar-link-xtra-tall
+{
+	display:inline-block;
+	float:center;
+	padding:10px;
+	text-align:left;
+	font-size:24px;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	moz-box-align:left;
+	border-width:2px;
+	margin:0px -5px 0px 0px;
+	width:183px;
+	height:128px;
+	/*background:#BBBBBB;*/
+	background-color:rgba(100, 100, 100, 0.6);
+	border-style:none;
+}
 
 .nav-bar-block
 {
@@ -356,6 +373,20 @@ a:hover{
 	background-color:rgba(255, 255, 255, 0);
 }
 
+.nav-bar-link-xtra-tall-2{
+	display:inline-block;
+	float:center;
+	padding:10px;
+	text-align:left;
+	font-size:24px;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	moz-box-align:left;
+	margin:0px -5px 0px 0px;
+	width:180px;
+	height:127px;
+	/*background:#FFFFFF;*/
+	background-color:rgba(255, 255, 255, 0);
+}
 
 .nav-bar{
 	display:inline-block;
