@@ -78,7 +78,7 @@ a:hover{
 	text-shadow: 1px 1px 0px #777777;
 	text-align:center;
 	display:inline-block;
-	margin:70px 0px 0px 0px;
+	margin:70px 0px 0px 373px;
 	text-align:center;
 	border-top:2px solid #000000;
 	border-right:2px solid #000000;
@@ -842,6 +842,7 @@ a:active{
 .nav-bar-toggle{
 	display:none;
 	width:450px;
+	margin-left:38px;
 	text-align:center;
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	font-size:18px;
@@ -849,6 +850,7 @@ a:active{
 .nav-bar-toggle-2{
 	display:inline-block;
 	width:450px;
+	margin-left:38px;
 	text-align:center;
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	font-size:18px;
