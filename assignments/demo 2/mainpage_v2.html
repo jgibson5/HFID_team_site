@@ -5,7 +5,10 @@
 
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="../../static/css/demo.css">
+		<script src="../../static/js/jquery.min.js" type="text/javascript"></script>
+		<script src="../../static/js/jqueryUI.js" type="text/javascript"></script>
 		<style>
 		.with {
 			font-size:12px;
@@ -20,6 +23,20 @@
 		
 			function funcToCall()
 			{
+				$(".slider").draggable({axis: "y"});
+				$(".slider").on("mouseup", function() {
+					var height = $(".slider > a").length * 80;
+					var div_height = 400;
+					console.log(height, div_height);
+					var top = $(".slider").css("top");
+					
+					if (top.slice(0, top.length-2) > 0) {
+						$(".slider").animate({top: 0}, 200);
+					} else if (top.slice(0, top.length-2) < -50) {
+						$(".slider").animate({top: -50}, 200);
+					}
+					
+				});
 				var randURL = background_images[Math.floor(Math.random() * background_images.length)];
 				document.getElementById("mainBody").style.background = randURL;
 			}
@@ -43,34 +60,36 @@
 						<div class = "mainPageTimeline">
 							<h2>Upcoming Events</h2>
 							<div class="subTimeline">
-								<a href="Pancakes_Paul_event.html">
-									<div class="timelineItemButton">
-										<div class="timelineItemTop"><span class="with">You are </span>going<span class="with"> to: </span></div>
-										<div class="timelineItem">Pancakes <span class="with">organized by</span> Paul</div>
-										<div class="timelineItem">Oct. 14th, Sun 10:00 AM.</div>
-									</div>
-								</a>
-								<a href="Steak_Gina_event.html">
-									<div class="timelineItemButton">
-										<div class="timelineItemTop"><span class="with">You are </span>hosting<span class="with">: </span></div>
-										<div class="timelineItem">Steak <span class="with">organized by</span> yourself</div>
-										<div class="timelineItem">Oct. 23rd, Tue 7:30 PM.</div>
-									</div>
-								</a>
-								<a href="Cookies_Allie_event.html">
-									<div class="timelineItemButton">
-										<div class="timelineItemTop"><span class="with">You are </span>invited<span class="with"> to: </span></div>
-										<div class="timelineItem">Cookies <span class="with">organized by</span> Allie</div>
-										<div class="timelineItem">Oct. 28th, Sun 11:00 AM.</div>
-									</div>
-								</a>
-								<a href="Cinnamon_Bob_event.html">
-									<div class="timelineItemButton">
-										<div class="timelineItemTop"><span class="with">You are </span>invited<span class="with"> to: </span></div>
-										<div class="timelineItem">Cinnamon Rolls <span class="with">organized by</span> Bob</div>
-										<div class="timelineItem">Oct. 31st, Wed 11:00 AM.</div>	
-									</div>
-								</a>
+								<div class="slider">
+									<a href="Pancakes_Paul_event.html">
+										<div class="timelineItemButton">
+											<div class="timelineItemTop"><span class="with">You are </span>going<span class="with"> to: </span></div>
+											<div class="timelineItem">Pancakes <span class="with">organized by</span> Paul</div>
+											<div class="timelineItem">Oct. 14th, Sun 10:00 AM.</div>
+										</div>
+									</a>
+									<a href="Steak_Gina_event.html">
+										<div class="timelineItemButton">
+											<div class="timelineItemTop"><span class="with">You are </span>hosting<span class="with">: </span></div>
+											<div class="timelineItem">Steak <span class="with">organized by</span> yourself</div>
+											<div class="timelineItem">Oct. 23rd, Tue 7:30 PM.</div>
+										</div>
+									</a>
+									<a href="Cookies_Allie_event.html">
+										<div class="timelineItemButton">
+											<div class="timelineItemTop"><span class="with">You are </span>invited<span class="with"> to: </span></div>
+											<div class="timelineItem">Cookies <span class="with">organized by</span> Allie</div>
+											<div class="timelineItem">Oct. 28th, Sun 11:00 AM.</div>
+										</div>
+									</a>
+									<a href="Cinnamon_Bob_event.html">
+										<div class="timelineItemButton">
+											<div class="timelineItemTop"><span class="with">You are </span>invited<span class="with"> to: </span></div>
+											<div class="timelineItem">Cinnamon Rolls <span class="with">organized by</span> Bob</div>
+											<div class="timelineItem">Oct. 31st, Wed 11:00 AM.</div>	
+										</div>
+									</a>
+								</div>
 							</div>
 						</div>
 						<!-- <a href="recipebook.html"><div class="mainPageButton">My Recipe Book</div></a>

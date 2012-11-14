@@ -1224,7 +1224,9 @@ a:active{
 }
 
 .subTimeline{
-	width:270;
+	width:270px;
+	height:400px;
+	overflow:hidden;
 	margin:0px 9px 0px 9px;
 }
 
