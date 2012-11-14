@@ -38,7 +38,7 @@
     -webkit-border-radius:16px;
     border-radius:16px;
 	background-color:rgba(255, 255, 255, 0.6);
-    width: 250px;
+    width: 180px;
     height: 40px;
 	padding: 10px;
 	font-size:26px;
@@ -49,7 +49,7 @@
 	text-shadow: 1px 1px 0px #777777;
 	text-align:center;
 	display:inline-block;
-	margin:5px 25px 5px 60px;
+	margin:5px 25px 5px 25px;
 	text-align:center;
 	border:2px solid #000000;
 	
@@ -74,9 +74,12 @@
 	text-shadow: 1px 1px 0px #777777;
 	text-align:center;
 	display:inline-block;
-	margin:70px 0px 0px 565px;
+	margin:70px 0px 0px 0px;
 	text-align:center;
-	border:2px solid #000000;
+	border-top:2px solid #000000;
+	border-right:2px solid #000000;
+	border-bottom:0px solid #000000;
+	border-left:2px solid #000000;
 	
 }.mainPageButton:active {
     position:relative;
@@ -160,9 +163,9 @@
 	-moz-border-radius:16px;
     -webkit-border-radius:16px;
 	background-color:rgba(255, 255, 255, 0.7);
-    width: 300px;
-    height: 50px;
-	padding: 20px;
+    width: 180px;
+    height: 75px;
+	padding: 5px;
 	font-size:30px;
 	font-weight:bold;
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
