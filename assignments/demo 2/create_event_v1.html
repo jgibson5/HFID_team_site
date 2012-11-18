@@ -28,6 +28,7 @@
 		
 			background_images = new Array("url('../../static/images/prototype/food/raspberry cupcakes.jpg')", "url('../../static/images/prototype/food/rainbowCake2.jpg')", "url('../../revisedMockups/assets/strawberriesBg.png')", "url('../../static/images/prototype/food/sashimi.jpg')", "url('../../static/images/prototype/food/tuscanLemonChicken.jpg')");
 		
+			
 			function funcToCall()
 			{
 				var randURL = background_images[Math.floor(Math.random() * background_images.length)];
@@ -48,6 +49,8 @@
 			info = {
 				'friends':[],
 				'recipes':[],
+				'dishes':[],
+				'ingredients':[],
 				'name':'',
 				'date':'',
 				'time':'',
@@ -74,10 +77,13 @@
 				$(idt).css('border', '2px none solid none solid');
 				
 				if (idt === '#summaryTab') {
-					$('#sName').html($('#nameTextBox').val());
+					$('#sName').html($('#eName').html());
+					$('#sDish').html(info.dishes.join(", "));
+					$('#sIngredient').html(info.ingredients.join(", "));
+					$('#sFriends').html(info.friends.join(", "));
 					$('#sDate').html($('#eDate').html());
-					$('#sTime').html($('#timeTextBox').val());
-					$('#sLocation').html($('#locationTextBox').val());
+					$('#sTime').html($('#eTime').html());
+					$('#sLocation').html($('#eLocation').html());
 				}
 			}
 			
@@ -128,10 +134,31 @@
 						$('#eName').html($('#nameTextBox').val());
 					}
 				});
+				$('#dishTextBox').keypress(function(e) {
+					if (e.which == 13) {
+						console.log("dish");
+						<!-- toggle_visibility('#recipeTab', '#recipeBlock'); -->
+						info.recipes.push($('#dishTextBox').val());
+						info.dishes.push($('#dishTextBox').val());
+						$('#eRecipes').html(info.recipes.join(", "));
+						$('#dishTextBox').val("");
+					}
+				});
+				$('#ingredientTextBox').keypress(function(e) {
+					if (e.which == 13) {
+						console.log("ingredient");
+						<!-- toggle_visibility('#recipeTab', '#recipeBlock'); -->
+						info.recipes.push($('#ingredientTextBox').val());
+						info.ingredients.push($('#ingredientTextBox').val());
+						$('#eRecipes').html(info.recipes.join(", "));
+						$('#ingredientTextBox').val("");
+					}
+				});
 				$('#locationTextBox').keypress(function(e) {
 					if (e.which == 13) {
-						toggle_visibility('#summaryTab', '#summaryBlock');
+						console.log("location");
 						$('#eLocation').html($('#locationTextBox').val());
+						toggle_visibility('#summaryTab', '#summaryBlock');
 					}
 				});
 			});
@@ -170,7 +197,7 @@
 							</a>
 							<a class="select" onclick="toggle_visibility('#friendsTab', '#friendsBlock');">
 								<div class="nav-bar-link" id="friendsTab">
-									<div>Invited Friends</div>
+									<div>Invite Friends</div>
 									<div id="eFriends"></div>
 								</div>
 							</a>
@@ -308,10 +335,12 @@
 						<div class="nav-bar-toggle" id="summaryBlock">
 							<div class="alignLeftBlock">
 								<p>What: <span id="sName">Dessert Party!</span></p>
+								<p>Cooking: <span id="sDish">Dishes</span> 
+								<p>Ingredients: <span id="sIngredient">Ingredients</span></p>
 								<p>When: <span id="sDate">October 1st, 2012</span> at <span id="sTime">2:30 pm</span></p>
 								<p>Where: <span id="sLocation">My house</span></p>
-								<p>Scheduled by: Me</p>
-								<p>Invited:</p>
+								<p>Invited: <span id="sFriends">My friends</span></p>
+								<!-- TODO: show correct friends, not defaults
 								<div class="friendsSelected">
 									<div class="friendsSelectedNormal">
 										<div class="friendBlock">
@@ -326,12 +355,12 @@
 											<div class="friend"><img src="../../static/images/prototype/people/deirdre.jpg" width="90px"></div>
 											<div class="friendTag">Deirdre O.</div>
 										</div>
-									</div>
+									</div> -->
 									
 								</div>
 								<div class="buttonBlock">
-									<a href="mainpage_strawberries.html"><div class="submitButton">Submit</div></a>
-									<a href="mainpage.html"><div class="cancelButton">Cancel</div></a>
+									<a href="mainpage_v1.html"><div class="submitButton">Submit</div></a>
+									<a href="mainpage_v1.html"><div class="cancelButton">Cancel</div></a>
 								</div>
 							</div>
 						</div>

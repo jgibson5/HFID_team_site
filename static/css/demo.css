@@ -974,7 +974,7 @@ a:active{
 	display:inline-block;
 	width:300px;
 	text-align:center;
-	margin:30px 10px 10px 10px;
+	margin:20px 10px 10px 10px;
 }
 
 .alignLeftBlock{
@@ -1510,7 +1510,7 @@ a:active{
 	float:left;
 }
 
-#eName, #eFriends, #eDate, #eTime, #eLocation, #eSummary {
+#eName, #eFriends, #eRecipes, #eDate, #eTime, #eLocation, #eSummary {
 	height:20px;
 	font-size:14px;
 	overflow:hidden;
