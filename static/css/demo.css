@@ -238,6 +238,30 @@ a:hover{
 	overflow:hidden; /*Prevents last button from overflowing outside upcoming events box*/
 }
 
+.mainPageTimelineTall{
+    -moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    box-shadow:inset 1px 1px 0px 0px #ffffff;
+    background-color:rgba(255, 255, 255, 0.6);
+    -moz-border-radius:16px;
+    -webkit-border-radius:16px;
+    border-radius:16px;
+    display:inline-block;
+    color:#000000;
+    font-family:"Trebuchet MS", Helvetica, sans-serif;
+    font-size:18px;
+    font-weight:bold;
+    width: 290px;
+    height: 520px;
+    text-decoration:none;
+    text-shadow:1px 1px 0px #777777;
+    text-align:center;
+	border:2px solid #000000;
+	margin:25px 25px 25px 25px;
+	overflow:hidden; /*Prevents last button from overflowing outside upcoming events box*/
+}
+
+
 .nav-bar-link 
 {
 	display:inline-block;
@@ -697,6 +721,16 @@ a:hover{
 	padding:5px;
 }
 
+.friendMain{
+	width:100px;
+	height:120px;
+	margin:4px 4px 4px 4px;
+	display:inline-block;
+	text-align:center;
+	float:center;
+	padding:5px;
+}
+
 .shelf{
 	width:715px;
 	height:120px;
@@ -743,6 +777,47 @@ a:hover{
 	float:right;
 }
 
+.newFriendBoxThin{
+	border:1px solid #000000;
+	border-radius:10px;
+	display:none;
+	width:218px;
+	height:95px;
+	color:#000000;
+	background-color:rgba(255, 255, 255, 0.6);
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:16px;
+	padding:5px 15px 5px 15px;
+	margin: 10px 10px 10px 10px;
+	text-align:left;
+	float:right;
+}
+
+.mainRightTab{
+	background-color:rgba(100, 100, 100, 0.8);
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:24px;
+	display:inline-block;
+	width:145px;
+	height:40px;
+	padding:20px 0px 15px 0px;
+	margin:0px 0px 5px 0px;
+	border-top-right-radius:14px;
+	float:right;
+}
+
+.mainRightTab-2{
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:24px;
+	display:inline-block;
+	width:145px;
+	height:70px;
+	padding:5px 0px 0px 0px;
+	margin:0px 0px 5px 0px;
+	border-top-left-radius:14px;
+	float:left;
+}
+
 .newFriendButton {
     -moz-box-shadow:inset 1px 1px 0px 0px #99CCFF;
     -webkit-box-shadow:inset 1px 1px 0px 0px #99CCFF;
@@ -758,8 +833,8 @@ a:hover{
     font-weight:bold;
 	height:70px;
 	width:60px;
-    padding:20px;
-	margin:0px 10px 0px 0px;
+    padding:15px 20px 15px 20px;
+	margin:10px 20px 0px 0px;
     text-decoration:none;
     text-shadow:1px 1px 0px #CCCCCC;
 	text-align:center;
@@ -1294,6 +1369,21 @@ a:active{
 .subTimeline{
 	width:270px;
 	height:400px;
+	overflow:hidden;
+	margin:0px 9px 0px 9px;
+}
+
+.subTimelineTall{
+	display:none;
+	width:270px;
+	height:500px;
+	overflow:hidden;
+	margin:0px 9px 0px 9px;
+}
+
+.subTimelineTall-2{
+	width:270px;
+	height:500px;
 	overflow:hidden;
 	margin:0px 9px 0px 9px;
 }

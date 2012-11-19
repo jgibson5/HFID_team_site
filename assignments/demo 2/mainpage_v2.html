@@ -13,6 +13,21 @@
 		.with {
 			font-size:12px;
 		}
+		
+		input[type="text"]{
+			display:inline-block;
+			float:center;
+			background-color:rgba(255, 255, 255, 0.6);
+			color: #000000;
+			width: 150px;
+			height: 16px;
+			border:1px solid #666666;
+			text-align:left;
+			font-family:Trebuchet MS;
+			font-size:14px;
+			padding:3px;
+			margin:3px;
+		}	
 		</style>
 		
 		
@@ -20,6 +35,40 @@
 		<script type="text/javascript">
 		
 			background_images = new Array("url('../../static/images/prototype/food/raspberry cupcakes.jpg')", "url('../../static/images/prototype/food/rainbowCake2.jpg')", "url('../../revisedMockups/assets/strawberriesBg.png')", "url('../../static/images/prototype/food/sashimi.jpg')", "url('../../static/images/prototype/food/tuscanLemonChicken.jpg')");
+		
+			tabs = new Array('#eventsTab', '#friendsTab');
+			blocks = new Array('#eventsBlock', '#friendsBlock');
+			
+			function modal() {
+				var box = document.getElementById('friendBox');
+				var button = document.getElementById('friendButton');
+				if(button.style.display != 'none'){
+					box.style.display = 'inline-block';
+					button.style.display = 'none';
+				} else {
+					box.style.display = 'none';
+					button.style.display = 'inline-block';
+				}
+			}
+		
+			function toggle_visibility(idt, idb) {
+				for(i=0;i<tabs.length;i++){
+					$(blocks[i]).css('display', 'none');
+					$(tabs[i]).css('background-color', 'rgba(100, 100, 100, 0.8)');
+				}
+				$(idb).css('display', 'inline-block');
+				$(idt).css('background-color', 'rgba(255, 255, 255, 0)');
+				
+				if (idt === '#summaryTab') {
+					$('#sName').html($('#eName').html());
+					$('#sDish').html(info.dishes.join(", "));
+					$('#sIngredient').html(info.ingredients.join(", "));
+					$('#sFriends').html(info.friends.join(", "));
+					$('#sDate').html($('#eDate').html());
+					$('#sTime').html($('#eTime').html());
+					$('#sLocation').html($('#eLocation').html());
+				}
+			}
 		
 			function funcToCall()
 			{
@@ -57,9 +106,20 @@
 						<!-- <a href="recipeStrawberriesFromHome.html"><div class="mainPageButtonSmall">Chocolate Swirl Strawberries from </div></a> -->
 					</div>
 					<div class="mainRight">
-						<div class = "mainPageTimeline">
-							<h2>Upcoming Events</h2>
-							<div class="subTimeline">
+						<div class = "mainPageTimelineTall">
+							<a class="select" onclick="toggle_visibility('#eventsTab', '#eventsBlock');">
+								<div class="mainRightTab-2" id="eventsTab">
+									<div>Upcoming Events</div>
+									<div id="eEvents"></div>
+								</div>
+							</a>
+							<a class="select" onclick="toggle_visibility('#friendsTab', '#friendsBlock');">
+								<div class="mainRightTab" id="friendsTab">
+									<div>Friends</div>
+									<div id="eEvents"></div>
+								</div>
+							</a>							
+							<div class="subTimelineTall-2" id="eventsBlock">
 								<div class="slider">
 									<a href="Pancakes_Paul_event.html">
 										<div class="timelineItemButton">
@@ -88,7 +148,60 @@
 											<div class="timelineItem">Cinnamon Rolls <span class="with">organized by</span> Bob</div>
 											<div class="timelineItem">Oct. 31st, Wed 11:00 AM.</div>	
 										</div>
-									</a>
+									</a>									
+								</div>
+							</div>
+							<div class="subTimelineTall" id="friendsBlock">
+								<div class="slider">
+									<div class="friendMain">
+										<div class="friendOutline"><img src="../../static/images/prototype/people/allie.jpg" width="100px"></div>
+										<div class="friendTag">Allie S.</div>
+									</div>
+									<div class="friendMain">
+										<div class="friendOutline"><img src="../../static/images/prototype/people/bob.jpg" width="100px"></div>
+										<div class="friendTag">Bob R.</div>
+									</div>
+									<div class="friendMain">
+										<div class="friendOutline"><img src="../../static/images/prototype/people/paul.jpg" width="100px"></div>
+										<div class="friendTag">Paul K.</div>
+									</div>
+									<div class="friendMain">
+										<div class="friendOutline"><img src="../../static/images/prototype/people/sara.jpg" width="100px"></div>
+										<div class="friendTag">Sara Y.</div>
+									</div>
+									<div class="friendMain">
+										<div class="friendOutline"><img src="../../static/images/prototype/people/tina.jpg" width="100px"></div>
+										<div class="friendTag">Tina D.</div>
+									</div>
+									<div class="friendMain">
+										<div class="friendOutline"><img src="../../static/images/prototype/people/deirdre.jpg" width="100px"></div>
+										<div class="friendTag">Deirdre O.</div>
+									</div>
+									<div class="friendMain">
+										<div class="friendOutline"><img src="../../static/images/prototype/people/joe.jpg" width="100px"></div>
+										<div class="friendTag">Joe F.</div>
+									</div>
+									<div class="friendMain">
+										<div class="friendOutline"><img src="../../static/images/prototype/people/gina.jpg" width="100px"></div>
+										<div class="friendTag">Gina H.</div>
+									</div>
+									<div class="friendMain">
+										<div class="friendOutline"><img src="../../static/images/prototype/people/lisa.jpg" width="100px"></div>
+										<div class="friendTag">Lisa S.</div>
+									</div>
+									<a onclick="modal();">
+										<div class="newFriendButton" id="friendButton">Add New Friend</div>
+									</a>				
+									<div class="newFriendBoxThin" id="friendBox">
+										Name
+										<input type="text" name="Name" size="16">
+										Email
+										<input type="text" name="email" size="16">
+										<center>
+											<a onclick="modal();"><div class="submitButton">Submit</div></a>
+											<a onclick="modal();"><div class="cancelButton">Cancel</div></a>
+										</center>
+									</div>									
 								</div>
 							</div>
 						</div>
