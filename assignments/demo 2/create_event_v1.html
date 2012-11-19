@@ -1,6 +1,13 @@
 <!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
+<!--TODO: create dynamic dish and ingredient lists-->
+<!--TODO: allow user to undo-->
+<!--TODO: add friends' pics to summary-->
+<!--TODO: add save button-->
+<!--TODO: add comments to summary-->
+<!--TODO: save info to database-->
+
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="../../static/css/demo.css">
@@ -103,7 +110,7 @@
 					$(f).css('margin-left', '0px');
 					removeA(info.friends, $(f + ' > .friendTag').html());
 				}
-				$('#eFriends').html(info.friends.join(", "));
+				<!-- $('#eFriends').html(info.friends.join(", ")); -->
 			}
 			
 			function toggleDate(d) {
@@ -140,8 +147,9 @@
 						<!-- toggle_visibility('#recipeTab', '#recipeBlock'); -->
 						info.recipes.push($('#dishTextBox').val());
 						info.dishes.push($('#dishTextBox').val());
-						$('#eRecipes').html(info.recipes.join(", "));
+						<!-- $('#eRecipes').html(info.recipes.join(", ")); -->
 						$('#dishTextBox').val("");
+						$('#sDish_Recipe').html(info.dishes.join(", "));
 					}
 				});
 				$('#ingredientTextBox').keypress(function(e) {
@@ -150,8 +158,9 @@
 						<!-- toggle_visibility('#recipeTab', '#recipeBlock'); -->
 						info.recipes.push($('#ingredientTextBox').val());
 						info.ingredients.push($('#ingredientTextBox').val());
-						$('#eRecipes').html(info.recipes.join(", "));
+						<!-- $('#eRecipes').html(info.recipes.join(", ")); -->
 						$('#ingredientTextBox').val("");
+						$('#sIngredient_Recipe').html(info.ingredients.join(", "));
 					}
 				});
 				$('#locationTextBox').keypress(function(e) {
@@ -159,6 +168,12 @@
 						console.log("location");
 						$('#eLocation').html($('#locationTextBox').val());
 						toggle_visibility('#summaryTab', '#summaryBlock');
+					}
+				});
+				$('#commentsTextBox').keypress(function(e) {
+					if (e.which == 13) {
+						console.log("comments");
+						$('#sComments').html($('#commentsTextBox').val());
 					}
 				});
 			});
@@ -234,10 +249,13 @@
 							
 							<div class="headingSmall">Choose a dish!</div>
 							<input id="dishTextBox" type="text" name="eventDish">
+							<p>Cooking: <span id="sDish_Recipe"></span> 
 							
 							<div class="headingSmall">What ingredients would you like others to bring?</div>
 							<input id="ingredientTextBox" type="text" name="eventIngredient">
-							<!-- <div class="recipeBox">
+							
+							<p>Ingredients: <span id="sIngredient_Recipe"></span></p>
+							<!--<div class="recipeBox">
 								<div class="headingSmall">Recipes already selected:</div>
 							</div>
 							<a href="recipebook.html"><div class="uploadRecipeButton">Choose another recipe</div></a> -->
@@ -356,6 +374,9 @@
 											<div class="friendTag">Deirdre O.</div>
 										</div>
 									</div> -->
+								<p>Comments: <span id="sComments"></p>
+								<input id="commentsTextBox" type="text" name="eventComments">
+								
 									
 								</div>
 								<div class="buttonBlock">
