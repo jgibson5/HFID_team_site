@@ -123,6 +123,18 @@
 				}
 			}
 			
+			function hide(name) {
+				var n = document.getElementById(name);
+				n.style.opacity = '0.4';
+				var r=confirm("Delete friend?");
+				if (r==true) {
+					n.style.display = 'none';
+				}
+				else {
+					n.style.opacity = '1';
+				}
+			}
+			
 			$(document).ready(function() {
 				$('#basic_example_2').datetimepicker();
 				$('#timeTextBox').keypress(function(e) {
@@ -166,41 +178,70 @@
 					
 					<div class="eventBox">
 						<div class="shelf">
-							<div class="book">
-								<div class="friendOutline"><img src="../../static/images/prototype/people/allie.jpg" width="100px"></div>
+							<div class="book" id="allie">
+								<div class="friendOutline">
+									<a class="select" onclick="hide('allie');">
+										<div class="x"><img src="../../static/images/styling/x.png" width="10px"></div>
+									</a>
+									<img src="../../static/images/prototype/people/allie.jpg" width="100px">
+								</div>
 								<div class="friendTag">Allie S.</div>
 							</div>
-							<div class="book">
+							<div class="book" id="bob">
+								<a class="select" onclick="hide('bob');">
+									<div class="x"><img src="../../static/images/styling/x.png" width="10px"></div>
+								</a>
 								<div class="friendOutline"><img src="../../static/images/prototype/people/bob.jpg" width="100px"></div>
 								<div class="friendTag">Bob R.</div>
 							</div>
-							<div class="book">
+							<div class="book" id="paul">
+								<a class="select" onclick="hide('paul');">
+									<div class="x"><img src="../../static/images/styling/x.png" width="10px"></div>
+								</a>
 								<div class="friendOutline"><img src="../../static/images/prototype/people/paul.jpg" width="100px"></div>
 								<div class="friendTag">Paul K.</div>
 							</div>
-							<div class="book">
+							<div class="book" id="sara">
+								<a class="select" onclick="hide('sara');">
+									<div class="x"><img src="../../static/images/styling/x.png" width="10px"></div>
+								</a>
 								<div class="friendOutline"><img src="../../static/images/prototype/people/sara.jpg" width="100px"></div>
 								<div class="friendTag">Sara Y.</div>
 							</div>
-							<div class="book">
+							<div class="book" id="tina">
+								<a class="select" onclick="hide('tina');">
+									<div class="x"><img src="../../static/images/styling/x.png" width="10px"></div>
+								</a>
 								<div class="friendOutline"><img src="../../static/images/prototype/people/tina.jpg" width="100px"></div>
 								<div class="friendTag">Tina D.</div>
 							</div>
 						</div>
 						<div class="shelf">
-							<div class="book">
+							<div class="book" id="deirdre">
+								<a class="select" onclick="hide('deirdre');">
+									<div class="x"><img src="../../static/images/styling/x.png" width="10px"></div>
+								</a>
 								<div class="friendOutline"><img src="../../static/images/prototype/people/deirdre.jpg" width="100px"></div>
 								<div class="friendTag">Deirdre O.</div>
 							</div>
-							<div class="book">
+							<div class="book" id="joe">
+								<a class="select" onclick="hide('joe');">
+									<div class="x"><img src="../../static/images/styling/x.png" width="10px"></div>
+								</a>								
 								<div class="friendOutline"><img src="../../static/images/prototype/people/joe.jpg" width="100px"></div>
 								<div class="friendTag">Joe F.</div>
 							</div>
-							<div class="book">
+							<div class="book" id="gina">
+								<a class="select" onclick="hide('gina');">
+									<div class="x"><img src="../../static/images/styling/x.png" width="10px"></div>
+								</a>
 								<div class="friendOutline"><img src="../../static/images/prototype/people/gina.jpg" width="100px"></div>
 								<div class="friendTag">Gina H.</div>
 							</div>
-							<div class="book">
+							<div class="book" id="lisa">
+								<a class="select" onclick="hide('lisa');">
+									<div class="x"><img src="../../static/images/styling/x.png" width="10px"></div>
+								</a>
 								<div class="friendOutline"><img src="../../static/images/prototype/people/lisa.jpg" width="100px"></div>
 								<div class="friendTag">Lisa S.</div>
 							</div>
