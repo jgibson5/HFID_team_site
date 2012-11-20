@@ -729,6 +729,16 @@ a:hover{
 	text-align:center;
 	float:center;
 	padding:5px;
+	position:relative;
+}
+
+.x{
+	position:relative;
+	z-index:5000;
+	height:0px;
+	margin-top:-6px;
+	margin-right:2px;
+	float:right;
 }
 
 .shelf{
@@ -989,6 +999,8 @@ a:active{
 	border:1px solid #000000;
 	margin:0px 0px 0px 0px;
 	height:100px;
+	position:relative;
+	z-index:4000;
 }
 
 
