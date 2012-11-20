@@ -1,6 +1,8 @@
 <!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
+<!--Fix time and location-->
+
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="../../static/css/demo.css">
@@ -45,9 +47,12 @@
 			    return arr;
 			}
 			
+			
 			info = {
 				'friends':[],
 				'recipes':[],
+				'dishes':[],
+				'ingredients':[],
 				'name':'',
 				'date':'',
 				'time':'',
@@ -74,10 +79,13 @@
 				$(idt).css('border', '2px none solid none solid');
 				
 				if (idt === '#summaryTab') {
-					$('#sName').html($('#nameTextBox').val());
+					$('#sName').html($('#eName').html());
+					$('#sDish').html(info.dishes.join(", "));
+					$('#sIngredient').html(info.ingredients.join(", "));
+					$('#sFriends').html(info.friends.join(", "));
 					$('#sDate').html($('#eDate').html());
-					$('#sTime').html($('#timeTextBox').val());
-					$('#sLocation').html($('#locationTextBox').val());
+					$('#sTime').html($('#eTime').html());
+					$('#sLocation').html($('#eLocation').html());
 				}
 			}
 			
@@ -97,7 +105,7 @@
 					$(f).css('margin-left', '0px');
 					removeA(info.friends, $(f + ' > .friendTag').html());
 				}
-				$('#eFriends').html(info.friends.join(", "));
+				<!-- $('#eFriends').html(info.friends.join(", ")); -->
 			}
 			
 			function toggleDate(d) {
@@ -117,21 +125,50 @@
 				$('#basic_example_2').datetimepicker();
 				$('#timeTextBox').keypress(function(e) {
 					if (e.which == 13) {
-						toggle_visibility('#locationTab', '#locationBlock');
+						<!-- toggle_visibility('#locationTab', '#locationBlock'); -->
 						$('#eTime').html($('#timeTextBox').val());
 					}
 				});
 				$('#nameTextBox').keypress(function(e) {
 					if (e.which == 13) {
 						console.log("name");
-						toggle_visibility('#recipeTab', '#recipeBlock');
+						<!-- toggle_visibility('#dateTab', '#dateBlock'); -->
 						$('#eName').html($('#nameTextBox').val());
+					}
+				});
+				$('#dishTextBox').keypress(function(e) {
+					if (e.which == 13) {
+						console.log("dish");
+						<!-- toggle_visibility('#recipeTab', '#recipeBlock'); -->
+						info.recipes.push($('#dishTextBox').val());
+						info.dishes.push($('#dishTextBox').val());
+						<!-- $('#eRecipes').html(info.recipes.join(", ")); -->
+						$('#dishTextBox').val("");
+						$('#sDish_Recipe').html(info.dishes.join(", "));
+					}
+				});
+				$('#ingredientTextBox').keypress(function(e) {
+					if (e.which == 13) {
+						console.log("ingredient");
+						<!-- toggle_visibility('#recipeTab', '#recipeBlock'); -->
+						info.recipes.push($('#ingredientTextBox').val());
+						info.ingredients.push($('#ingredientTextBox').val());
+						<!-- $('#eRecipes').html(info.recipes.join(", ")); -->
+						$('#ingredientTextBox').val("");
+						$('#sIngredient_Recipe').html(info.ingredients.join(", "));
 					}
 				});
 				$('#locationTextBox').keypress(function(e) {
 					if (e.which == 13) {
-						toggle_visibility('#summaryTab', '#summaryBlock');
+						console.log("location");
 						$('#eLocation').html($('#locationTextBox').val());
+						toggle_visibility('#summaryTab', '#summaryBlock');
+					}
+				});
+				$('#commentsTextBox').keypress(function(e) {
+					if (e.which == 13) {
+						console.log("comments");
+						$('#sComments').html($('#commentsTextBox').val());
 					}
 				});
 			});
@@ -184,10 +221,21 @@
 						<div class="nav-bar-toggle-2" id="nameBlock">
 							<div class="headingSmall">Title your event!</div>
 							<input id="nameTextBox" type="text" name="eventTitle">
-							<div class="headingSmall">List recipes to cook:</div>
+							
+							
+							<div class="headingSmall">Choose a dish!</div>
+							<input id="dishTextBox" type="text" name="eventDish">
+							<p>Cooking: <span id="sDish_Recipe"></span> 
+							
+							<div class="headingSmall">What ingredients would you like others to bring?</div>
+							<input id="ingredientTextBox" type="text" name="eventIngredient">
+							
+							<p>Ingredients: <span id="sIngredient_Recipe"></span></p>
+							
+							<!-- <div class="headingSmall">List recipes to cook:</div>
 							<input id="nameTextBox" type="text" name="recipeList">
 							<div class="headingSmall">List ingredients you will bring:</div>
-							<input id="nameTextBox" type="text" name="ingredientList">
+							<input id="nameTextBox" type="text" name="ingredientList"> -->
 						</div>
 						<div class="nav-bar-toggle" id="recipeBlock">
 							<div class="recipeBox">
@@ -276,6 +324,13 @@
 								<div class="dateHolder"></div>
 								<div class="dateHolder"></div>
 							</div>
+							
+							
+							<div class="headingSmall">Select a time:</div>
+							<input id="timeTextBox" type="text" value="">
+							
+							<div class="headingSmall">Enter the event location:</div>
+							<input id="locationTextBox" type="text" name="eventLocation">
 						</div>
 						<div class="nav-bar-toggle" id="timeBlock">
 							<div class="headingSmall">Select a time:</div>
@@ -288,10 +343,12 @@
 						<div class="nav-bar-toggle" id="summaryBlock">
 							<div class="alignLeftBlock">
 								<p>What: <span id="sName">Dessert Party!</span></p>
+								<p>Cooking: <span id="sDish">Dishes</span> 
+								<p>Ingredients: <span id="sIngredient">Ingredients</span></p>
 								<p>When: <span id="sDate">October 1st, 2012</span> at <span id="sTime">2:30 pm</span></p>
 								<p>Where: <span id="sLocation">My house</span></p>
-								<p>Scheduled by: Me</p>
-								<p>Invited:</p>
+								<p>Invited: <span id="sFriends">My friends</span></p>
+								<!-- TODO: show correct friends, not defaults
 								<div class="friendsSelected">
 									<div class="friendsSelectedNormal">
 										<div class="friendBlock">
@@ -306,12 +363,15 @@
 											<div class="friend"><img src="../../static/images/prototype/people/deirdre.jpg" width="90px"></div>
 											<div class="friendTag">Deirdre O.</div>
 										</div>
-									</div>
+									</div> -->
+								<p>Comments: <span id="sComments"></p>
+								<input id="commentsTextBox" type="text" name="eventComments">
+								
 									
 								</div>
 								<div class="buttonBlock">
-									<a href="mainpage_v2.html"><div class="submitButton">Submit</div></a>
-									<a href="mainpage_v2.html"><div class="cancelButton">Cancel</div></a>
+									<a href="mainpage_v1.html"><div class="submitButton">Submit</div></a>
+									<a href="mainpage_v1.html"><div class="cancelButton">Cancel</div></a>
 								</div>
 							</div>
 						</div>
