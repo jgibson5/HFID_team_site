@@ -1,6 +1,8 @@
 <!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
+<!--Fix time and location-->
+
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="../../static/css/demo.css">
@@ -130,7 +132,7 @@
 				$('#nameTextBox').keypress(function(e) {
 					if (e.which == 13) {
 						console.log("name");
-						toggle_visibility('#dateTab', '#dateBlock');
+						<!-- toggle_visibility('#dateTab', '#dateBlock'); -->
 						$('#eName').html($('#nameTextBox').val());
 					}
 				});
@@ -219,10 +221,21 @@
 						<div class="nav-bar-toggle-2" id="nameBlock">
 							<div class="headingSmall">Title your event!</div>
 							<input id="nameTextBox" type="text" name="eventTitle">
-							<div class="headingSmall">List recipes to cook:</div>
+							
+							
+							<div class="headingSmall">Choose a dish!</div>
+							<input id="dishTextBox" type="text" name="eventDish">
+							<p>Cooking: <span id="sDish_Recipe"></span> 
+							
+							<div class="headingSmall">What ingredients would you like others to bring?</div>
+							<input id="ingredientTextBox" type="text" name="eventIngredient">
+							
+							<p>Ingredients: <span id="sIngredient_Recipe"></span></p>
+							
+							<!-- <div class="headingSmall">List recipes to cook:</div>
 							<input id="nameTextBox" type="text" name="recipeList">
 							<div class="headingSmall">List ingredients you will bring:</div>
-							<input id="nameTextBox" type="text" name="ingredientList">
+							<input id="nameTextBox" type="text" name="ingredientList"> -->
 						</div>
 						<div class="nav-bar-toggle" id="recipeBlock">
 							<div class="recipeBox">
