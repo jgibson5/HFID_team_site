@@ -15,6 +15,7 @@
 			background: #FFFFFF;
 			border: 2px solid #000000;
 			padding:7px;
+			opacity:0.6;
 			color: #000000;
 			width: 430px;
 			text-align:left;
@@ -113,6 +114,11 @@
 			}
 			
 			$(document).ready(function() {
+				$('#submitButtonClicked').click(function () {
+					console.log("clicked submit button");
+					return confirm("Ready to submit?");
+				});
+				
 				$('#basic_example_2').datetimepicker();
 				$('#timeTextBox').keypress(function(e) {
 					if (e.which == 13) {
@@ -218,6 +224,10 @@
 									<p> 10/7 - Paul says: No problem--hopefully we can do it again sometime that works better for you! </p>
 									<p> 10/1 - Sara says: I'd love to come, but I'm out of town :(   Sorry about that! </p>
 									<p> 9/30 - Deirdre says: This sounds like so much fun!  I love breakfast :) </p>
+								</div>
+								<div class="buttonBlock">
+									<a href="mainpage_v1.html"><div class="submitButton" id="submitButtonClicked">Submit</div></a>
+									<!-- <a href="mainpage_v1.html"><div class="cancelButton">Cancel</div></a> -->
 								</div>
 							</div>
 						</div>

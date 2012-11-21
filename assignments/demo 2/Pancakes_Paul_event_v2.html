@@ -12,10 +12,10 @@
 		input[type="text"]{
 			display:inline-block;
 			float:center;
-			opacity: 0.6;
 			background: #FFFFFF;
 			border: 2px solid #000000;
 			padding:7px;
+			opacity:0.6;
 			color: #000000;
 			width: 430px;
 			text-align:left;
@@ -114,10 +114,13 @@
 			}
 			
 			$(document).ready(function() {
-			
 				$('#submitButtonClicked').click(function () {
 					console.log("clicked submit button");
-					return confirm("Ready to submit?");
+					var r= confirm("Ready to submit?");
+					if (r==true) {
+						alert("The event information has been submitted!");
+					}
+					return r;
 				});
 				
 				$('#basic_example_2').datetimepicker();
@@ -181,25 +184,25 @@
 								</div>
 							</a>
 						</div>
-												<div class="nav-bar-toggle-2" id="overviewBlock">
+						<div class="nav-bar-toggle-2" id="overviewBlock">
 							<div class="alignLeftBlock">
-								<p>What: Cookies</p>
-								<p>When: October 28th, 2012 at 11:00 am</p>
-								<p>Where: Allie's Apartment</p>
-								<p>Scheduled by: Allie</p>
+								<p>What: Pancakes</p>
+								<p>When: October 14th, 2012 at 10:00 am</p>
+								<p>Where: Paul's House</p>
+								<p>Scheduled by: Paul</p>
 								<p>Invited:</p>
 								<center>
 									<div class="friendBlock">
-										<div class="friend"><img src="../../static/images/prototype/people/allie.jpg" width="90px"></div>
-										<div class="friendTag">Allie S.</div>
+										<div class="friend"><img src="../../static/images/prototype/people/paul.jpg" width="90px"></div>
+										<div class="friendTag">Paul. K</div>
 									</div>
 									<div class="friendBlock">
-										<div class="friend"><img src="../../static/images/prototype/people/lisa.jpg" width="90px"></div>
-										<div class="friendTag">Lisa S.</div>
+										<div class="friend"><img src="../../static/images/prototype/people/sara.jpg" width="90px"></div>
+										<div class="friendTag">Sara Y.</div>
 									</div>
 									<div class="friendBlock">
-										<div class="friend"><img src="../../static/images/prototype/people/tina.jpg" width="90px"></div>
-										<div class="friendTag">Tina D.</div>
+										<div class="friend"><img src="../../static/images/prototype/people/deirdre.jpg" width="90px"></div>
+										<div class="friendTag">Deirdre O.</div>
 									</div>
 								</center>
 							</div>
@@ -208,14 +211,13 @@
 							<div class="recipeBox">
 								<div class="headingSmall">Tap a checkbox to claim an item to bring!</div>
 								<div class="alignLeftBlock">
-									<p><input type="checkbox" name="checkbox1">1 c butter</p>
-									<p><input type="checkbox" name="checkbox2">2 c brown sugar</p>
-									<p><input type="checkbox" name="checkbox3">2 eggs</p>
-									<p><input type="checkbox" name="checkbox4">2 tsp vanilla extract</p>
-									<p><input type="checkbox" name="checkbox4">3 c flour</p>
-									<p><input type="checkbox" name="checkbox4">1 tsp baking soda</p>
-									<p><input type="checkbox" name="checkbox4">1/2 tsp salt</p>
-									<p><input type="checkbox" name="checkbox4">2 c semisweet chocolate chips</p>
+									<p><input type="checkbox" name="checkbox1">1 1/2 c flour</p>
+									<p><input type="checkbox" name="checkbox2">3 1/2 tsp baking powder</p>
+									<p><input type="checkbox" name="checkbox3">1 tps salt</p>
+									<p><input type="checkbox" name="checkbox4">1 Tbsp sugar</p>
+									<p><input type="checkbox" name="checkbox4">1 1/4 c milk</p>
+									<p><input type="checkbox" name="checkbox4">1 egg</p>
+									<p><input type="checkbox" name="checkbox4">3 Tbsp melted butter</p>
 								</div>
 							</div>
 						</div>
@@ -223,18 +225,16 @@
 							<div class="headingSmall">Comments</div>
 								<div class="alignLeftBlock">
 									<input type="text" name="eventLocation" value="Your Comment Here">
-									<p> 10/05 - Allie says: Sure!  Did you have any types in mind? </p>
-									<p> 10/04 - Tina says: Chocolate chip--my favorite!  Any interest in making other kinds of cookies, as well? </p>
-									<p> 9/30 - Allie says: No problem :)  We should do this more often! </p>
-									<p> 9/27 - Corinne says: Thanks for hosting, Allie!  It's been too long since we've had a cookie-baking party :) </p>
+									<p> 10/7 - Paul says: No problem--hopefully we can do it again sometime that works better for you! </p>
+									<p> 10/1 - Sara says: I'd love to come, but I'm out of town :(   Sorry about that! </p>
+									<p> 9/30 - Deirdre says: This sounds like so much fun!  I love breakfast :) </p>
 								</div>
 								<div class="buttonBlock">
-									<a href="mainpage_v1.html"><div class="submitButton" id="submitButtonClicked">Submit</div></a>
-									<!-- <a href="mainpage_v1.html"><div class="cancelButton">Cancel</div></a> -->
+									<a href="mainpage_v2.html"><div class="submitButton" id="submitButtonClicked">Submit</div></a>
+									<!-- <a href="mainpage_v2.html"><div class="cancelButton">Cancel</div></a> -->
 								</div>
 							</div>
 						</div>
-
 					</div>
 				</div>
 			</div>

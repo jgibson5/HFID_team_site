@@ -117,7 +117,11 @@
 			
 				$('#submitButtonClicked').click(function () {
 					console.log("clicked submit button");
-					return confirm("Ready to submit?");
+					var r= confirm("Ready to submit?");
+					if (r==true) {
+						alert("The event information has been submitted!");
+					}
+					return r;
 				});
 				
 				$('#basic_example_2').datetimepicker();
@@ -229,8 +233,8 @@
 									<p> 9/27 - Corinne says: Thanks for hosting, Allie!  It's been too long since we've had a cookie-baking party :) </p>
 								</div>
 								<div class="buttonBlock">
-									<a href="mainpage_v1.html"><div class="submitButton" id="submitButtonClicked">Submit</div></a>
-									<!-- <a href="mainpage_v1.html"><div class="cancelButton">Cancel</div></a> -->
+									<a href="mainpage_v2.html"><div class="submitButton" id="submitButtonClicked">Submit</div></a>
+									<!-- <a href="mainpage_v2.html"><div class="cancelButton">Cancel</div></a> -->
 								</div>
 							</div>
 						</div>

@@ -136,6 +136,15 @@
 			}
 			
 			$(document).ready(function() {
+				$('#submitButtonClicked').click(function () {
+					console.log("clicked submit button");
+					var r= confirm("Ready to submit?");
+					if (r==true) {
+						alert("The new friend's information has been submitted!");
+					}
+					return r;
+				});
+				
 				$('#basic_example_2').datetimepicker();
 				$('#timeTextBox').keypress(function(e) {
 					if (e.which == 13) {
@@ -251,7 +260,7 @@
 							<div class="newFriendBox" id="friendBox">
 								Name
 								<input type="text" name="Name" size="16">
-								<a onclick="modal();"><div class="submitButton">Submit</div></a>
+								<a onclick="modal();"><div class="submitButton" id="submitButtonClicked">Submit</div></a>
 								Email
 								<input type="text" name="email" size="16">
 								<a onclick="modal();"><div class="cancelButton">Cancel</div></a>

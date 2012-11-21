@@ -12,6 +12,7 @@
 		input[type="text"]{
 			display:inline-block;
 			float:center;
+			opacity: 0.6;
 			background: #FFFFFF;
 			border: 2px solid #000000;
 			padding:7px;
@@ -113,6 +114,12 @@
 			}
 			
 			$(document).ready(function() {
+			
+				$('#submitButtonClicked').click(function () {
+					console.log("clicked submit button");
+					return confirm("Ready to submit?");
+				});
+				
 				$('#basic_example_2').datetimepicker();
 				$('#timeTextBox').keypress(function(e) {
 					if (e.which == 13) {
@@ -178,8 +185,8 @@
 							<div class="alignLeftBlock">
 								<p>What: Steak</p>
 								<p>When: October 23rd, 2012 at 7:30 pm</p>
-								<p>Where: Gina's house</p>
-								<p>Scheduled by: Gina</p>
+								<p>Where: Your house</p>
+								<p>Scheduled by: You</p>
 								<p>Invited:</p>
 								<center>
 									<div class="friendBlock">
@@ -199,16 +206,18 @@
 						</div>
 						<div class="nav-bar-toggle" id="ingredientsBlock">
 							<div class="recipeBox">
-								<div class="headingSmall">Tap a checkbox to claim an item to bring!</div>
+								<div class="headingSmall">Your friends are bringing these ingredients!</div>
 								<div class="alignLeftBlock">
-									<p><input type="checkbox" name="checkbox1">2 (8oz) beef rib-eye steaks</p>
-									<p><input type="checkbox" name="checkbox2">1 tsp steak seasoning</p>
-									<p><input type="checkbox" name="checkbox3">3 thick slices bacon</p>
-									<p><input type="checkbox" name="checkbox4">2 tsp butter</p>
+									<p>Paul: 2 (8oz) beef rib-eye steaks</p>
+									<p>Deirdre: 1 tsp steak seasoning</p>
+									<p>Gina: 3 thick slices bacon</p>
+								</div>
+								<div class="headingSmall">Remaining unclaimed ingredients:</div>
+								<div class="alignLeftBlock">
 									<p><input type="checkbox" name="checkbox4">1/4 tsp Worchestershire sauce</p>
 									<p><input type="checkbox" name="checkbox4">3/4 tsp Dijon mustard</p>
 									<p><input type="checkbox" name="checkbox4">1/2 c sliced red bell pepper</p>
-									<p><input type="checkbox" name="checkbox4">2 Tbsp crumbled blue cheese</p>
+									<!-- <p><input type="checkbox" name="checkbox4">2 Tbsp crumbled blue cheese</p> -->
 								</div>
 							</div>
 						</div>
@@ -219,6 +228,10 @@
 									<p> 10/20 - Gina says: I got some great-looking steaks at the store today--I think this is going to be great! </p>
 									<p> 10/17 - Corinne says: I've never made steak before, so this is going to be a fun experience. </p>
 									<p> 10/10 - Paul says: Huzzah for manly food!  There can never be enough steak in my life. </p>
+								</div>
+								<div class="buttonBlock">
+									<a href="mainpage_v1.html"><div class="submitButton" id="submitButtonClicked">Submit</div></a>
+									<!-- <a href="mainpage_v1.html"><div class="cancelButton">Cancel</div></a> -->
 								</div>
 							</div>
 						</div>

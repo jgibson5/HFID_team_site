@@ -1,8 +1,6 @@
 <!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<!--Fix time and location-->
-
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="../../static/css/demo.css">
@@ -121,10 +119,40 @@
 				
 			}
 			
+			function removeDishes() {
+				var r=confirm("Are you sure you want to remove all the dishes from the menu?");
+				if (r==true) {
+					<!-- n.style.display = 'none'; -->
+					info.dishes = [];
+					$('#dishTextBox').val("");
+					$('#sDish_Recipe').html("");
+				}
+			}
+			
+			function removeIngredients() {
+				var r=confirm("Are you sure you want to clear the whole ingredients list?");
+				if (r==true) {
+					<!-- n.style.display = 'none'; -->
+					info.ingredients = [];
+					$('#ingredientTextBox').val("");
+					$('#sIngredient_Recipe').html("");
+				}
+			}
+			
 			$(document).ready(function() {
+				$('#submitButtonClicked').click(function () {
+					console.log("clicked submit button");
+					var r= confirm("Ready to submit?");
+					if (r==true) {
+						alert("The event information has been submitted!");
+					}
+					return r;
+				});
+			
 				$('#basic_example_2').datetimepicker();
 				$('#timeTextBox').keypress(function(e) {
 					if (e.which == 13) {
+						console.log("time");
 						<!-- toggle_visibility('#locationTab', '#locationBlock'); -->
 						$('#eTime').html($('#timeTextBox').val());
 					}
@@ -162,7 +190,7 @@
 					if (e.which == 13) {
 						console.log("location");
 						$('#eLocation').html($('#locationTextBox').val());
-						toggle_visibility('#summaryTab', '#summaryBlock');
+						toggle_visibility('#friendsTab', '#friendsBlock');
 					}
 				});
 				$('#commentsTextBox').keypress(function(e) {
@@ -203,6 +231,8 @@
 								<div class="nav-bar-link-tall" id="dateTab">
 									<div>When? Where?</div>
 									<div id="eDate"></div>
+									<div id="eTime"></div>
+									<div id="eLocation"></div>
 								</div>
 							</a>
 							<a class="select" onclick="toggle_visibility('#friendsTab', '#friendsBlock');">
@@ -220,17 +250,26 @@
 						</div>
 						<div class="nav-bar-toggle-2" id="nameBlock">
 							<div class="headingSmall">Title your event!</div>
+							<div>Please hit "Enter" to save.</div>
 							<input id="nameTextBox" type="text" name="eventTitle">
 							
 							
-							<div class="headingSmall">Choose a dish!</div>
+							<div class="headingSmall">Add a dish to the menu!</div>
+							<!-- <div>Please hit "Enter" to save.</div> -->
 							<input id="dishTextBox" type="text" name="eventDish">
-							<p>Cooking: <span id="sDish_Recipe"></span> 
+							<a class="select" onclick="removeDishes();">
+								<div class="x xCreateEventMargin"><img src="../../static/images/styling/x.png" width="10px"></div>
+							</a> 
+							<div>Cooking: <span id="sDish_Recipe"></span></div>
 							
 							<div class="headingSmall">What ingredients would you like others to bring?</div>
+							<!-- <div>Please specify quantity.</div> -->
 							<input id="ingredientTextBox" type="text" name="eventIngredient">
 							
-							<p>Ingredients: <span id="sIngredient_Recipe"></span></p>
+							<a class="select" onclick="removeIngredients();">
+								<div class="x xCreateEventMargin"><img src="../../static/images/styling/x.png" width="10px"></div>
+							</a> 
+							<div>Ingredients: <span id="sIngredient_Recipe"></span></div>
 							
 							<!-- <div class="headingSmall">List recipes to cook:</div>
 							<input id="nameTextBox" type="text" name="recipeList">
@@ -285,8 +324,8 @@
 							</div>
 						</div>
 						<div class="nav-bar-toggle" id="dateBlock">
-							<div class="headingSmall">Tap a date to select:</div>
-							<center><h4>October 2012</h4></center>
+							<div class="headingSmall2">Tap a date to select:</div>
+							<center>December 2012</center>
 							<div class="calendar">
 								<div class="dateHolder"></div>
 								<a href="#" onclick="toggleDate('d1');"><div class="date" id="d1">1</div></a>
@@ -326,28 +365,20 @@
 							</div>
 							
 							
-							<div class="headingSmall">Select a time:</div>
+							<div class="headingSmall2">Select a time:</div>
 							<input id="timeTextBox" type="text" value="">
 							
-							<div class="headingSmall">Enter the event location:</div>
-							<input id="locationTextBox" type="text" name="eventLocation">
-						</div>
-						<div class="nav-bar-toggle" id="timeBlock">
-							<div class="headingSmall">Select a time:</div>
-							<input id="timeTextBox" type="text" value="">
-						</div>
-						<div class="nav-bar-toggle" id="locationBlock">
-							<div class="headingSmall">Enter the event location:</div>
+							<div class="headingSmall2">Enter the event location:</div>
 							<input id="locationTextBox" type="text" name="eventLocation">
 						</div>
 						<div class="nav-bar-toggle" id="summaryBlock">
 							<div class="alignLeftBlock">
-								<p>What: <span id="sName">Dessert Party!</span></p>
-								<p>Cooking: <span id="sDish">Dishes</span> 
-								<p>Ingredients: <span id="sIngredient">Ingredients</span></p>
-								<p>When: <span id="sDate">October 1st, 2012</span> at <span id="sTime">2:30 pm</span></p>
-								<p>Where: <span id="sLocation">My house</span></p>
-								<p>Invited: <span id="sFriends">My friends</span></p>
+								<div class="createEventSummaryMargins">What: <span id="sName">Dessert Party!</span></div>
+								<div class="createEventSummaryMargins">Cooking: <span id="sDish">Dishes</span></div>
+								<div class="createEventSummaryMargins">Ingredients: <span id="sIngredient">Ingredients</span></div>
+								<div class="createEventSummaryMargins">When: <span id="sDate">October 1st, 2012</span> at <span id="sTime">2:30 pm</span></div>
+								<div class="createEventSummaryMargins">Where: <span id="sLocation">My house</span></div>
+								<div class="createEventSummaryMargins">Invited: <span id="sFriends">My friends</span></div>
 								<!-- TODO: show correct friends, not defaults
 								<div class="friendsSelected">
 									<div class="friendsSelectedNormal">
@@ -364,14 +395,14 @@
 											<div class="friendTag">Deirdre O.</div>
 										</div>
 									</div> -->
-								<p>Comments: <span id="sComments"></p>
-								<input id="commentsTextBox" type="text" name="eventComments">
+								<div class="createEventSummaryMargins">Comments: <span id="sComments"></div>
+								<input id="commentsTextBox" type="text" name="eventComments" value="Your Comment Here">
 								
 									
 								</div>
 								<div class="buttonBlock">
-									<a href="mainpage_v1.html"><div class="submitButton">Submit</div></a>
-									<a href="mainpage_v1.html"><div class="cancelButton">Cancel</div></a>
+									<a href="mainpage_v2.html"><div class="submitButton" id="submitButtonClicked">Submit</div></a>
+									<!-- <a href="mainpage_v1.html"><div class="cancelButton">Cancel</div></a> -->
 								</div>
 							</div>
 						</div>

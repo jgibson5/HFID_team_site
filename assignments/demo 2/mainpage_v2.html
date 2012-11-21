@@ -1,8 +1,6 @@
 <!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<!-- TODO: add friends tab and functionality-->
-
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -101,6 +99,16 @@
 				var randURL = background_images[Math.floor(Math.random() * background_images.length)];
 				document.getElementById("mainBody").style.background = randURL;
 			}
+			$(document).ready(function() {
+				$('#submitButtonClicked').click(function () {
+					console.log("clicked submit button");
+					var r= confirm("Ready to submit?");
+					if (r==true) {
+						alert("The new friend's information has been submitted!");
+					}
+					return r;
+				});
+			});
 		
 		</script>
 		
@@ -132,28 +140,28 @@
 							</a>							
 							<div class="subTimelineTall-2" id="eventsBlock">
 								<div class="slider">
-									<a href="Pancakes_Paul_event.html">
+									<a href="Pancakes_Paul_event_v2.html">
 										<div class="timelineItemButton">
 											<div class="timelineItemTop"><span class="with">You are </span>going<span class="with"> to: </span></div>
 											<div class="timelineItem">Pancakes <span class="with">organized by</span> Paul</div>
 											<div class="timelineItem">Oct. 14th, Sun 10:00 AM.</div>
 										</div>
 									</a>
-									<a href="Steak_Gina_event.html">
+									<a href="Steak_Gina_event_v2.html">
 										<div class="timelineItemButton">
 											<div class="timelineItemTop"><span class="with">You are </span>hosting<span class="with">: </span></div>
 											<div class="timelineItem">Steak <span class="with">organized by</span> yourself</div>
 											<div class="timelineItem">Oct. 23rd, Tue 7:30 PM.</div>
 										</div>
 									</a>
-									<a href="Cookies_Allie_event.html">
+									<a href="Cookies_Allie_event_v2.html">
 										<div class="timelineItemButton">
 											<div class="timelineItemTop"><span class="with">You are </span>invited<span class="with"> to: </span></div>
 											<div class="timelineItem">Cookies <span class="with">organized by</span> Allie</div>
 											<div class="timelineItem">Oct. 28th, Sun 11:00 AM.</div>
 										</div>
 									</a>
-									<a href="Cinnamon_Bob_event.html">
+									<a href="Cinnamon_Bob_event_v2.html">
 										<div class="timelineItemButton">
 											<div class="timelineItemTop"><span class="with">You are </span>invited<span class="with"> to: </span></div>
 											<div class="timelineItem">Cinnamon Rolls <span class="with">organized by</span> Bob</div>
@@ -254,7 +262,7 @@
 										Email
 										<input type="text" name="email" size="16">
 										<center>
-											<a onclick="modal();"><div class="submitButton">Submit</div></a>
+											<a onclick="modal();"><div class="submitButton" id="submitButtonClicked">Submit</div></a>
 											<a onclick="modal();"><div class="cancelButton">Cancel</div></a>
 										</center>
 									</div>									

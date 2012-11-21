@@ -117,7 +117,11 @@
 			
 				$('#submitButtonClicked').click(function () {
 					console.log("clicked submit button");
-					return confirm("Ready to submit?");
+					var r= confirm("Ready to submit?");
+					if (r==true) {
+						alert("The event information has been submitted!");
+					}
+					return r;
 				});
 				
 				$('#basic_example_2').datetimepicker();
@@ -154,7 +158,7 @@
 				<div class="strawberryBody" id="mainBody">
 					<!-- PUT STUFF HERE -->
 					<div class="createEventHomeButtonDiv">
-						<a href="mainpage_v2.html"><div class="mainPageNameButton">Cook With Friends</div></a>
+						<a href="mainpage_v1.html"><div class="mainPageNameButton">Cook With Friends</div></a>
 					</div>	
 						
 					<div class = "createNewEventTitleButton">Create Event</div>
