@@ -144,6 +144,12 @@
 						$('#eLocation').html($('#locationTextBox').val());
 					}
 				});
+				$('#commentsTextBox').keypress(function(e) {
+					if (e.which == 13) {
+						console.log("comments");
+						$('#sComments').html($('#commentsTextBox').val());
+					}
+				});
 			});
 			
 		</script>
@@ -226,7 +232,8 @@
 						<div class="nav-bar-toggle" id="commentsBlock">
 							<div class="headingSmall">Comments</div>
 								<div class="alignLeftBlock">
-									<input type="text" name="eventLocation" value="Your Comment Here">
+									<input id="commentsTextBox" type="text" name="eventComments" value="Your Comment Here">
+									<div class="createEventSummaryMargins">Your comment: <span id="sComments"></div>
 									<p> 10/05 - Allie says: Sure!  Did you have any types in mind? </p>
 									<p> 10/04 - Tina says: Chocolate chip--my favorite!  Any interest in making other kinds of cookies, as well? </p>
 									<p> 9/30 - Allie says: No problem :)  We should do this more often! </p>

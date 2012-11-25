@@ -143,6 +143,12 @@
 						$('#eLocation').html($('#locationTextBox').val());
 					}
 				});
+				$('#commentsTextBox').keypress(function(e) {
+					if (e.which == 13) {
+						console.log("comments");
+						$('#sComments').html($('#commentsTextBox').val());
+					}
+				});
 			});
 			
 		</script>
@@ -224,10 +230,11 @@
 						<div class="nav-bar-toggle" id="commentsBlock">
 							<div class="headingSmall">Comments</div>
 								<div class="alignLeftBlock">
-									<input type="text" name="eventLocation" value="Your Comment Here">
+									<input id="commentsTextBox" type="text" name="eventComments" value="Your Comment Here">
+									<div class="createEventSummaryMargins">Your comment: <span id="sComments"></div>
 									<p> 10/30 - Joe says: Did you realize that my HFID's team icon is a cinnamon roll?  The fallera hairstyle looks like the Princess Leia cinnamon-buns :) </p>
-									<p> 10/18 - Sara says: Any excuse to put more cinnamon in food is good by me! </p>
-									<p> 10/10 - Bob says: I like cinnamon rolls, but I like them extra-cinnamony.  Do any of you mind if we add some extra cinnamon to the filling?  I think it'll turn out deliciously :D </p>
+									<p> 10/18 - Sara says: Fine by me! </p>
+									<p> 10/10 - Bob says: I like cinnamon rolls, but I like them extra-cinnamony.  Do any of you mind if we add some extra cinnamon to the filling? </p>
 								</div>
 								<div class="buttonBlock">
 									<a href="mainpage_v1.html"><div class="submitButton" id="submitButtonClicked">Submit</div></a>

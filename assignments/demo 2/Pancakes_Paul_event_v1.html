@@ -143,6 +143,12 @@
 						$('#eLocation').html($('#locationTextBox').val());
 					}
 				});
+				$('#commentsTextBox').keypress(function(e) {
+					if (e.which == 13) {
+						console.log("comments");
+						$('#sComments').html($('#commentsTextBox').val());
+					}
+				});
 			});
 			
 		</script>
@@ -224,7 +230,8 @@
 						<div class="nav-bar-toggle" id="commentsBlock">
 							<div class="headingSmall">Comments</div>
 								<div class="alignLeftBlock">
-									<input type="text" name="eventLocation" value="Your Comment Here">
+									<input id="commentsTextBox" type="text" name="eventComments" value="Your Comment Here">
+									<div class="createEventSummaryMargins">Your comment: <span id="sComments"></div>
 									<p> 10/7 - Paul says: No problem--hopefully we can do it again sometime that works better for you! </p>
 									<p> 10/1 - Sara says: I'd love to come, but I'm out of town :(   Sorry about that! </p>
 									<p> 9/30 - Deirdre says: This sounds like so much fun!  I love breakfast :) </p>
