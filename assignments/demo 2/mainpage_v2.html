@@ -82,17 +82,31 @@
 		
 			function funcToCall()
 			{
-				$(".slider").draggable({axis: "y"});
-				$(".slider").on("mouseup", function() {
-					var height = $(".slider > a").length * 80;
+				$(".slider1").draggable({axis: "y"});
+				$(".slider1").on("mouseup", function() {
+					var height = $(".slider1 > a").length * 80;
 					var div_height = 400;
 					console.log(height, div_height);
-					var top = $(".slider").css("top");
+					var top = $(".slider1").css("top");
 					
 					if (top.slice(0, top.length-2) > 0) {
-						$(".slider").animate({top: 0}, 200);
+						$(".slider1").animate({top: 0}, 200);
 					} else if (top.slice(0, top.length-2) < -50) {
-						$(".slider").animate({top: -50}, 200);
+						$(".slider1").animate({top: -50}, 200);
+					}
+					
+				});
+				$(".slider2").draggable({axis: "y"});
+				$(".slider2").on("mouseup", function() {
+					var height = $(".slider2 > div").length * 80;
+					var div_height = 400;
+					console.log(height, div_height);
+					var top = $(".slider2").css("top");
+					
+					if (top.slice(0, top.length-2) > 0) {
+						$(".slider2").animate({top: 0}, 200);
+					} else if (top.slice(0, top.length-2) < -290) {
+						$(".slider2").animate({top: -290}, 200);
 					}
 					
 				});
@@ -139,7 +153,7 @@
 								</div>
 							</a>							
 							<div class="subTimelineTall-2" id="eventsBlock">
-								<div class="slider">
+								<div class="slider1">
 									<a href="Pancakes_Paul_event_v2.html">
 										<div class="timelineItemButton">
 											<div class="timelineItemTop"><span class="with">You are </span>going<span class="with"> to: </span></div>
@@ -171,7 +185,7 @@
 								</div>
 							</div>
 							<div class="subTimelineTall" id="friendsBlock">
-								<div class="slider">
+								<div class="slider2">
 									<div class="friendMain" id="allie">
 										<div class="friendOutline">
 											<a class="select" onclick="hide('allie');">
