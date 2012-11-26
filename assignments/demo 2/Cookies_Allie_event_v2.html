@@ -26,7 +26,7 @@
 		
 		<script type="text/javascript">
 		
-			background_images = new Array("url('../../static/images/prototype/food/raspberry cupcakes.jpg')", "url('../../static/images/prototype/food/rainbowCake2.jpg')", "url('../../revisedMockups/assets/strawberriesBg.png')", "url('../../static/images/prototype/food/sashimi.jpg')", "url('../../static/images/prototype/food/tuscanLemonChicken.jpg')");
+			background_images = new Array("url('../../static/images/prototype/food/raspberrycupcakes.jpg')", "url('../../static/images/prototype/food/rainbowCake2.jpg')", "url('../../revisedMockups/assets/strawberriesBg.png')", "url('../../static/images/prototype/food/sashimi.jpg')", "url('../../static/images/prototype/food/tuscanLemonChicken.jpg')");
 		
 			function funcToCall()
 			{
@@ -117,7 +117,11 @@
 			
 				$('#submitButtonClicked').click(function () {
 					console.log("clicked submit button");
-					return confirm("Ready to submit?");
+					var r= confirm("Ready to submit?");
+					if (r==true) {
+						alert("The event information has been submitted!");
+					}
+					return r;
 				});
 				
 				$('#basic_example_2').datetimepicker();
@@ -138,6 +142,12 @@
 					if (e.which == 13) {
 						toggle_visibility('#summaryTab', '#summaryBlock');
 						$('#eLocation').html($('#locationTextBox').val());
+					}
+				});
+				$('#commentsTextBox').keypress(function(e) {
+					if (e.which == 13) {
+						console.log("comments");
+						$('#sComments').html($('#commentsTextBox').val());
 					}
 				});
 			});
@@ -222,15 +232,16 @@
 						<div class="nav-bar-toggle" id="commentsBlock">
 							<div class="headingSmall">Comments</div>
 								<div class="alignLeftBlock">
-									<input type="text" name="eventLocation" value="Your Comment Here">
+									<input id="commentsTextBox" type="text" name="eventComments" value="Your Comment Here">
+									<div class="createEventSummaryMargins">Your comment: <span id="sComments"></div>
 									<p> 10/05 - Allie says: Sure!  Did you have any types in mind? </p>
 									<p> 10/04 - Tina says: Chocolate chip--my favorite!  Any interest in making other kinds of cookies, as well? </p>
 									<p> 9/30 - Allie says: No problem :)  We should do this more often! </p>
 									<p> 9/27 - Corinne says: Thanks for hosting, Allie!  It's been too long since we've had a cookie-baking party :) </p>
 								</div>
 								<div class="buttonBlock">
-									<a href="mainpage_v1.html"><div class="submitButton" id="submitButtonClicked">Submit</div></a>
-									<!-- <a href="mainpage_v1.html"><div class="cancelButton">Cancel</div></a> -->
+									<a href="mainpage_v2.html"><div class="submitButton" id="submitButtonClicked">Submit</div></a>
+									<!-- <a href="mainpage_v2.html"><div class="cancelButton">Cancel</div></a> -->
 								</div>
 							</div>
 						</div>

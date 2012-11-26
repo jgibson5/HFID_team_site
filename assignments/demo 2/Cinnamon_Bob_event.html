@@ -12,6 +12,7 @@
 		input[type="text"]{
 			display:inline-block;
 			float:center;
+			opacity: 0.6;
 			background: #FFFFFF;
 			border: 2px solid #000000;
 			padding:7px;
@@ -113,6 +114,11 @@
 			}
 			
 			$(document).ready(function() {
+				$('#submitButtonClicked').click(function () {
+					console.log("clicked submit button");
+					return confirm("Ready to submit?");
+				});
+				
 				$('#basic_example_2').datetimepicker();
 				$('#timeTextBox').keypress(function(e) {
 					if (e.which == 13) {
@@ -215,10 +221,13 @@
 							<div class="headingSmall">Comments</div>
 								<div class="alignLeftBlock">
 									<input type="text" name="eventLocation" value="Your Comment Here">
-									<p> 10/30 - Deirdre says: That's really funny!  Sounds like a fun project. </p>
 									<p> 10/30 - Joe says: Did you realize that my HFID's team icon is a cinnamon roll?  The fallera hairstyle looks like the Princess Leia cinnamon-buns :) </p>
 									<p> 10/18 - Sara says: Any excuse to put more cinnamon in food is good by me! </p>
 									<p> 10/10 - Bob says: I like cinnamon rolls, but I like them extra-cinnamony.  Do any of you mind if we add some extra cinnamon to the filling?  I think it'll turn out deliciously :D </p>
+								</div>
+								<div class="buttonBlock">
+									<a href="mainpage_v1.html"><div class="submitButton" id="submitButtonClicked">Submit</div></a>
+									<!-- <a href="mainpage_v1.html"><div class="cancelButton">Cancel</div></a> -->
 								</div>
 							</div>
 						</div>

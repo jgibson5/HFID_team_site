@@ -26,7 +26,7 @@
 		
 		<script type="text/javascript">
 		
-			background_images = new Array("url('../../static/images/prototype/food/raspberry cupcakes.jpg')", "url('../../static/images/prototype/food/rainbowCake2.jpg')", "url('../../revisedMockups/assets/strawberriesBg.png')", "url('../../static/images/prototype/food/sashimi.jpg')", "url('../../static/images/prototype/food/tuscanLemonChicken.jpg')");
+			background_images = new Array("url('../../static/images/prototype/food/raspberrycupcakes.jpg')", "url('../../static/images/prototype/food/rainbowCake2.jpg')", "url('../../revisedMockups/assets/strawberriesBg.png')", "url('../../static/images/prototype/food/sashimi.jpg')", "url('../../static/images/prototype/food/tuscanLemonChicken.jpg')");
 		
 			function funcToCall()
 			{
@@ -117,7 +117,11 @@
 			
 				$('#submitButtonClicked').click(function () {
 					console.log("clicked submit button");
-					return confirm("Ready to submit?");
+					var r= confirm("Ready to submit?");
+					if (r==true) {
+						alert("The event information has been submitted!");
+					}
+					return r;
 				});
 				
 				$('#basic_example_2').datetimepicker();
@@ -138,6 +142,12 @@
 					if (e.which == 13) {
 						toggle_visibility('#summaryTab', '#summaryBlock');
 						$('#eLocation').html($('#locationTextBox').val());
+					}
+				});
+				$('#commentsTextBox').keypress(function(e) {
+					if (e.which == 13) {
+						console.log("comments");
+						$('#sComments').html($('#commentsTextBox').val());
 					}
 				});
 			});
@@ -181,60 +191,61 @@
 								</div>
 							</a>
 						</div>
-												<div class="nav-bar-toggle-2" id="overviewBlock">
+						<div class="nav-bar-toggle-2" id="overviewBlock">
 							<div class="alignLeftBlock">
-								<p>What: Cookies</p>
-								<p>When: October 28th, 2012 at 11:00 am</p>
-								<p>Where: Allie's Apartment</p>
-								<p>Scheduled by: Allie</p>
+								<p>What: Steak</p>
+								<p>When: October 23rd, 2012 at 7:30 pm</p>
+								<p>Where: Your house</p>
+								<p>Scheduled by: You</p>
 								<p>Invited:</p>
 								<center>
 									<div class="friendBlock">
-										<div class="friend"><img src="../../static/images/prototype/people/allie.jpg" width="90px"></div>
-										<div class="friendTag">Allie S.</div>
+										<div class="friend"><img src="../../static/images/prototype/people/paul.jpg" width="90px"></div>
+										<div class="friendTag">Paul K.</div>
 									</div>
 									<div class="friendBlock">
-										<div class="friend"><img src="../../static/images/prototype/people/lisa.jpg" width="90px"></div>
-										<div class="friendTag">Lisa S.</div>
+										<div class="friend"><img src="../../static/images/prototype/people/deirdre.jpg" width="90px"></div>
+										<div class="friendTag">Deirdre O.</div>
 									</div>
 									<div class="friendBlock">
-										<div class="friend"><img src="../../static/images/prototype/people/tina.jpg" width="90px"></div>
-										<div class="friendTag">Tina D.</div>
+										<div class="friend"><img src="../../static/images/prototype/people/gina.jpg" width="90px"></div>
+										<div class="friendTag">Gina H.</div>
 									</div>
 								</center>
 							</div>
 						</div>
 						<div class="nav-bar-toggle" id="ingredientsBlock">
 							<div class="recipeBox">
-								<div class="headingSmall">Tap a checkbox to claim an item to bring!</div>
+								<div class="headingSmall">Your friends are bringing these ingredients!</div>
 								<div class="alignLeftBlock">
-									<p><input type="checkbox" name="checkbox1">1 c butter</p>
-									<p><input type="checkbox" name="checkbox2">2 c brown sugar</p>
-									<p><input type="checkbox" name="checkbox3">2 eggs</p>
-									<p><input type="checkbox" name="checkbox4">2 tsp vanilla extract</p>
-									<p><input type="checkbox" name="checkbox4">3 c flour</p>
-									<p><input type="checkbox" name="checkbox4">1 tsp baking soda</p>
-									<p><input type="checkbox" name="checkbox4">1/2 tsp salt</p>
-									<p><input type="checkbox" name="checkbox4">2 c semisweet chocolate chips</p>
+									<p>Paul: 2 (8oz) beef rib-eye steaks</p>
+									<p>Deirdre: 1 tsp steak seasoning</p>
+									<p>Gina: 3 thick slices bacon</p>
+								</div>
+								<div class="headingSmall">Remaining unclaimed ingredients:</div>
+								<div class="alignLeftBlock">
+									<p><input type="checkbox" name="checkbox4">1/4 tsp Worchestershire sauce</p>
+									<p><input type="checkbox" name="checkbox4">3/4 tsp Dijon mustard</p>
+									<p><input type="checkbox" name="checkbox4">1/2 c sliced red bell pepper</p>
+									<!-- <p><input type="checkbox" name="checkbox4">2 Tbsp crumbled blue cheese</p> -->
 								</div>
 							</div>
 						</div>
 						<div class="nav-bar-toggle" id="commentsBlock">
 							<div class="headingSmall">Comments</div>
 								<div class="alignLeftBlock">
-									<input type="text" name="eventLocation" value="Your Comment Here">
-									<p> 10/05 - Allie says: Sure!  Did you have any types in mind? </p>
-									<p> 10/04 - Tina says: Chocolate chip--my favorite!  Any interest in making other kinds of cookies, as well? </p>
-									<p> 9/30 - Allie says: No problem :)  We should do this more often! </p>
-									<p> 9/27 - Corinne says: Thanks for hosting, Allie!  It's been too long since we've had a cookie-baking party :) </p>
+									<input id="commentsTextBox" type="text" name="eventComments" value="Your Comment Here">
+									<div class="createEventSummaryMargins">Your comment: <span id="sComments"></div>
+									<p> 10/20 - Gina says: I got some great-looking steaks at the store today--I think this is going to be great! </p>
+									<p> 10/17 - Corinne says: I've never made steak before, so this is going to be a fun experience. </p>
+									<p> 10/10 - Paul says: Huzzah for manly food!  There can never be enough steak in my life. </p>
 								</div>
 								<div class="buttonBlock">
-									<a href="mainpage_v1.html"><div class="submitButton" id="submitButtonClicked">Submit</div></a>
-									<!-- <a href="mainpage_v1.html"><div class="cancelButton">Cancel</div></a> -->
+									<a href="mainpage_v2.html"><div class="submitButton" id="submitButtonClicked">Submit</div></a>
+									<!-- <a href="mainpage_v2.html"><div class="cancelButton">Cancel</div></a> -->
 								</div>
 							</div>
 						</div>
-
 					</div>
 				</div>
 			</div>

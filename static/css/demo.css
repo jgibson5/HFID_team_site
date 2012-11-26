@@ -33,6 +33,10 @@ a:hover{
 	float:right;	
 }
 
+.createEventSummaryMargins {
+	margin: 10px 0px 5px 0px;
+}
+
 /* Normal button on the main page */
 .mainPageButton {
      -moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
@@ -237,6 +241,30 @@ a:hover{
 	margin:25px 25px 25px 25px;
 	overflow:hidden; /*Prevents last button from overflowing outside upcoming events box*/
 }
+
+.mainPageTimelineTall{
+    -moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    box-shadow:inset 1px 1px 0px 0px #ffffff;
+    background-color:rgba(255, 255, 255, 0.6);
+    -moz-border-radius:16px;
+    -webkit-border-radius:16px;
+    border-radius:16px;
+    display:inline-block;
+    color:#000000;
+    font-family:"Trebuchet MS", Helvetica, sans-serif;
+    font-size:18px;
+    font-weight:bold;
+    width: 290px;
+    height: 520px;
+    text-decoration:none;
+    text-shadow:1px 1px 0px #777777;
+    text-align:center;
+	border:2px solid #000000;
+	margin:25px 25px 25px 25px;
+	overflow:hidden; /*Prevents last button from overflowing outside upcoming events box*/
+}
+
 
 .nav-bar-link 
 {
@@ -688,28 +716,45 @@ a:hover{
 }
 
 .book{
-	width:80px;
-	height:100px;
-	border:2px solid #000000;	
-	margin:4px 10px 4px 10px;
+	width:100px;
+	height:120px;
+	margin:4px 14px 4px 14px;
 	display:inline-block;
 	text-align:center;
 	float:center;
 	padding:5px;
-	background-color:#993300;
+}
+
+.friendMain{
+	width:100px;
+	height:115px;
+	margin:4px 0px 4px 0px;
+	display:inline-block;
+	text-align:center;
+	float:center;
+	padding:5px;
+	position:relative;
+}
+
+.x{
+	position:relative;
+	z-index:5000;
+	height:0px;
+	margin-top:-6px;
+	margin-right:2px;
+	float:right;
+}
+
+.xCreateEventMargin {
+	margin-top:5px;
+	margin-right:10px;
 }
 
 .shelf{
-	width:638px;
+	width:715px;
 	height:120px;
-	background-color:#FFFFFF;
 	margin:10px 25px 10px 25px;
-	border-width:2px;
-	border-top-style:none;
-	border-right-style:none;
-	border-bottom-style:solid;
-	border-left-style:none;
-	border-color:#000000;
+	border:none;
 	display:inline-block;
 }
 
@@ -737,13 +782,13 @@ a:hover{
 }
 
 .newFriendBox{
-	border:2px solid #000000;
-	border-radius:5px;
+	border:1px solid #000000;
+	border-radius:10px;
 	display:none;
 	width:290px;
 	height:90px;
 	color:#000000;
-	background-color:#FFFFFF;
+	background-color:rgba(255, 255, 255, 0.6);
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	font-size:16px;
 	padding:7px 7px 7px 7px;
@@ -751,12 +796,53 @@ a:hover{
 	float:right;
 }
 
+.newFriendBoxThin{
+	border:1px solid #000000;
+	border-radius:10px;
+	display:none;
+	width:218px;
+	height:95px;
+	color:#000000;
+	background-color:rgba(255, 255, 255, 0.6);
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:16px;
+	padding:5px 15px 5px 15px;
+	margin: 10px 10px 10px 10px;
+	text-align:left;
+	float:right;
+}
+
+.mainRightTab{
+	background-color:rgba(100, 100, 100, 0.8);
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:24px;
+	display:inline-block;
+	width:145px;
+	height:40px;
+	padding:20px 0px 15px 0px;
+	margin:0px 0px 5px 0px;
+	border-top-right-radius:14px;
+	float:right;
+}
+
+.mainRightTab-2{
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:24px;
+	display:inline-block;
+	width:145px;
+	height:70px;
+	padding:5px 0px 0px 0px;
+	margin:0px 0px 5px 0px;
+	border-top-left-radius:14px;
+	float:left;
+}
+
 .newFriendButton {
     -moz-box-shadow:inset 1px 1px 0px 0px #99CCFF;
     -webkit-box-shadow:inset 1px 1px 0px 0px #99CCFF;
     box-shadow:inset 1px 1px 0px 0px #99CCFF;
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
-    background-color:#6699CC;
+    background-color:rgba(255, 255, 255, 0.6);
     border:1px solid #000000;
 	border-radius:10px;
     display:inline-block;
@@ -766,7 +852,8 @@ a:hover{
     font-weight:bold;
 	height:70px;
 	width:60px;
-    padding:20px;
+    padding:15px 20px 15px 20px;
+	margin:10px 20px 0px 0px;
     text-decoration:none;
     text-shadow:1px 1px 0px #CCCCCC;
 	text-align:center;
@@ -813,6 +900,14 @@ a:hover{
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	font-size:28px;
 	padding:10px;
+}
+
+.headingSmall2 {
+	display:inline-block;
+	text-align:center;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:24px;
+	padding:5px;
 }
 
 .align-bottom-left
@@ -920,7 +1015,9 @@ a:active{
 	float:center;
 	border:1px solid #000000;
 	margin:0px 0px 0px 0px;
-	height:60px;
+	height:100px;
+	position:relative;
+	z-index:4000;
 }
 
 
@@ -938,8 +1035,8 @@ a:active{
 	-webkit-box-shadow:inset 1px 1px 0px 0px #99FF99;
 	box-shadow:inset 1px 1px 0px 0px #99FF99;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
-	background-color:#009900;
-	border:2px solid #000000;
+	background-color:rgba(0, 160, 0, 0.8);
+	border:1px solid #000000;
 	display:inline-block;
 	color:#FFFFFF;
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
@@ -960,8 +1057,8 @@ a:active{
 	-webkit-box-shadow:inset 1px 1px 0px 0px #FF9999;
 	box-shadow:inset 1px 1px 0px 0px #FF9999;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
-	background-color:#990000;
-	border:2px solid #000000;
+	background-color:rgba(160, 0, 0, 0.8);
+	border:1px solid #000000;
 	display:inline-block;
 	color:#FFFFFF;
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
@@ -981,7 +1078,7 @@ a:active{
 	display:inline-block;
 	width:300px;
 	text-align:center;
-	margin:30px 10px 10px 10px;
+	margin:20px 10px 10px 10px;
 }
 
 .alignLeftBlock{
@@ -1308,6 +1405,21 @@ a:active{
     box-shadow: inset 0px 0px 20px 15px rgba(255, 255, 255, .7);
 }
 
+.subTimelineTall{
+	display:none;
+	width:270px;
+	height:500px;
+	overflow:hidden;
+	margin:0px 9px 0px 9px;
+}
+
+.subTimelineTall-2{
+	width:270px;
+	height:500px;
+	overflow:hidden;
+	margin:0px 9px 0px 9px;
+}
+
 .select:hover {
 	cursor:pointer;
 }
@@ -1520,7 +1632,7 @@ a:active{
 	float:left;
 }
 
-#eName, #eFriends, #eDate, #eTime, #eLocation, #eSummary {
+#eName, #eFriends, #eRecipes, #eDate, #eTime, #eLocation, #eSummary {
 	height:20px;
 	font-size:14px;
 	overflow:hidden;
