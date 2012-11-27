@@ -94,6 +94,62 @@ a:hover{
     top:1px;
 }
 
+.editEventTitleButton {
+     -moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    box-shadow:inset 1px 1px 0px 0px #ffffff;
+	background-color:rgba(255, 255, 255, 0.6);
+    width: 250px;
+    height: 40px;
+	padding: 10px;
+	font-size:26px;
+	font-weight:bold;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	color:#000000;
+	text-decoration:none;
+	text-shadow: 1px 1px 0px #777777;
+	text-align:center;
+	display:inline-block;
+	margin:70px 0px 0px 348px;
+	text-align:center;
+	border-top:2px solid #000000;
+	border-right:2px solid #000000;
+	border-bottom:0px solid #000000;
+	border-left:2px solid #000000;
+	
+}.mainPageButton:active {
+    position:relative;
+    top:1px;
+}
+
+.cinnamonRollsEventTitleButton {
+     -moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+    box-shadow:inset 1px 1px 0px 0px #ffffff;
+	background-color:rgba(255, 255, 255, 0.6);
+    width: 300px;
+    height: 40px;
+	padding: 10px;
+	font-size:26px;
+	font-weight:bold;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	color:#000000;
+	text-decoration:none;
+	text-shadow: 1px 1px 0px #777777;
+	text-align:center;
+	display:inline-block;
+	margin:70px 0px 0px 323px;
+	text-align:center;
+	border-top:2px solid #000000;
+	border-right:2px solid #000000;
+	border-bottom:0px solid #000000;
+	border-left:2px solid #000000;
+	
+}.mainPageButton:active {
+    position:relative;
+    top:1px;
+}
+
 .friendsButton {
      -moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
     -webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;

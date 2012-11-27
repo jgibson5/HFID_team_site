@@ -56,6 +56,9 @@
 				'time':'',
 				'location':''
 				};
+				
+			isOnFriendsPage = false;
+				
 			tabs = new Array('#nameTab', '#recipeTab', '#friendsTab', '#dateTab', '#timeTab', '#locationTab', '#summaryTab');
 			blocks = new Array('#nameBlock', '#recipeBlock', '#friendsBlock', '#dateBlock', '#timeBlock', '#locationBlock', '#summaryBlock');
 			
@@ -75,6 +78,10 @@
 				$(idt).css('height', '90px');
 				$(idt).css('background-color', 'rgba(255, 255, 255, 0)');
 				$(idt).css('border', '2px none solid none solid');
+				
+				if (idt === '#friendsTab') {
+					isOnFriendsPage = true;
+				}
 				
 				if (idt === '#summaryTab') {
 					$('#sName').html($('#eName').html());
@@ -138,6 +145,15 @@
 					$('#sIngredient_Recipe').html("");
 				}
 			}
+			
+			
+			$(document).keypress(function(e) {
+				if (e.which == 13 && isOnFriendsPage == true) {
+					console.log("friends");
+					toggle_visibility('#summaryTab', '#summaryBlock');
+					isOnFriendsPage = false;
+				}
+			});
 			
 			$(document).ready(function() {
 				$('#submitButtonClicked').click(function () {
@@ -250,7 +266,7 @@
 						</div>
 						<div class="nav-bar-toggle-2" id="nameBlock">
 							<div class="headingSmall">Title your event!</div>
-							<div>Please hit "Enter" to save.</div>
+							<div>Please press "Enter" to save.</div>
 							<input id="nameTextBox" type="text" name="eventTitle">
 							
 							
