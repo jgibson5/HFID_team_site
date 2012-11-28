@@ -1,6 +1,21 @@
 <!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
+<?php
+$username = "root";
+$password = "japanfood(9";
+mysql_connect("localhost", $username, $password);
+mysql_select_db("mydb");
+
+//$query = 'create table cwftable (
+//		id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+//		eventTitle VARCHAR(255),
+//		eventDish VARCHAR(255),
+//		eventLocation VARCHAR(255)
+//		);'
+//mysql_query($query);
+?>
+
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="../../static/css/demo.css">
@@ -56,9 +71,6 @@
 				'time':'',
 				'location':''
 				};
-				
-			isOnFriendsPage = false;
-				
 			tabs = new Array('#nameTab', '#recipeTab', '#friendsTab', '#dateTab', '#timeTab', '#locationTab', '#summaryTab');
 			blocks = new Array('#nameBlock', '#recipeBlock', '#friendsBlock', '#dateBlock', '#timeBlock', '#locationBlock', '#summaryBlock');
 			
@@ -78,10 +90,6 @@
 				$(idt).css('height', '90px');
 				$(idt).css('background-color', 'rgba(255, 255, 255, 0)');
 				$(idt).css('border', '2px none solid none solid');
-				
-				if (idt === '#friendsTab') {
-					isOnFriendsPage = true;
-				}
 				
 				if (idt === '#summaryTab') {
 					$('#sName').html($('#eName').html());
@@ -145,15 +153,6 @@
 					$('#sIngredient_Recipe').html("");
 				}
 			}
-			
-			
-			$(document).keypress(function(e) {
-				if (e.which == 13 && isOnFriendsPage == true) {
-					console.log("friends");
-					toggle_visibility('#summaryTab', '#summaryBlock');
-					isOnFriendsPage = false;
-				}
-			});
 			
 			$(document).ready(function() {
 				$('#submitButtonClicked').click(function () {
@@ -220,9 +219,31 @@
 		</script>
 		
 	</head>
-	
+
+
 	<body onload="funcToCall()">
-		
+
+
+<!------------------------------PHP for storing info in a Datatable-------- -->	
+	
+<?php
+if (isset($_POST['submitbutton'])) {    //if the submit button is pressed
+	echo '<p>hii</p>';
+	$eventTitle = mysql_escape_string($_POST['eventTitle']);
+	$eventDish = mysql_escape_string($_POST['eventDish']);				
+	$eventLocation = mysql_escape_string($_POST['eventLocation']);		
+	
+	$query = 'insert into cwftable
+			(eventTitle, eventDish, eventLocation)
+			values
+			("'.$eventTitle.'", "'.$eventDish.'" "'.$eventLocation.'")';
+	mysql_query($query);
+	
+}
+?>
+
+<!------------------------------PHP for storing info in a Datatable-------- -->	
+	
 		<div style="position:relative; margin:40px 0px 0px 40px">
 			<img class="ipad-img" src="../../static/images/prototype/ipadRev.png">
 			<div class="template-div">  <!--756 by 576-->
@@ -239,12 +260,6 @@
 						<div class="nav-bar">
 							<a class="select" onclick="toggle_visibility('#nameTab', '#nameBlock');">
 								<div class="nav-bar-link-tall-2" id="nameTab">
-									<div>Event Name?</div>
-									<div id="eName"></div>
-								</div>
-							</a>
-							<a class="select" onclick="toggle_visibility('#recipeTab', '#recipeBlock');">
-								<div class="nav-bar-link-tall-2" id="recipeTab">
 									<div>What's Cooking?</div>
 									<div id="eName"></div>
 								</div>
@@ -259,7 +274,7 @@
 							</a>
 							<a class="select" onclick="toggle_visibility('#friendsTab', '#friendsBlock');">
 								<div class="nav-bar-link-tall" id="friendsTab">
-									<div>Who's Coming?</div>
+									<div>Invite Friends</div>
 									<div id="eFriends"></div>
 								</div>
 							</a>
@@ -271,20 +286,18 @@
 							</a>
 						</div>
 						<div class="nav-bar-toggle-2" id="nameBlock">
-							<div class="headingSmall">Title your event.</div>
-							<div>Please press "Enter" to save.</div>
+							<div class="headingSmall">Title your event!</div>
+							<div>Please hit "Enter" to save.</div>
 							<input id="nameTextBox" type="text" name="eventTitle">
 							
-						</div>
-							<div class="nav-bar-toggle" id="recipeBlock">
 							
-							<div class="headingSmall">What would you like to cook?</div>
+							<div class="headingSmall">Add a dish to the menu!</div>
 							<!-- <div>Please hit "Enter" to save.</div> -->
 							<input id="dishTextBox" type="text" name="eventDish">
 							<a class="select" onclick="removeDishes();">
 								<div class="x xCreateEventMargin"><img src="../../static/images/styling/x.png" width="10px"></div>
 							</a> 
-							<p>Cooking: <span id="sDish_Recipe"></span> 
+							<div>Cooking: <span id="sDish_Recipe"></span></div>
 							
 							<div class="headingSmall">What ingredients would you like others to bring?</div>
 							<!-- <div>Please specify quantity.</div> -->
@@ -293,11 +306,12 @@
 							<a class="select" onclick="removeIngredients();">
 								<div class="x xCreateEventMargin"><img src="../../static/images/styling/x.png" width="10px"></div>
 							</a> 
-							<p>Ingredients: <span id="sIngredient_Recipe"></span></p>
-							<!--<div class="recipeBox">
-								<div class="headingSmall">Recipes already selected:</div>
-							</div>
-							<a href="recipebook.html"><div class="uploadRecipeButton">Choose another recipe</div></a> -->
+							<div>Ingredients: <span id="sIngredient_Recipe"></span></div>
+							
+							<!-- <div class="headingSmall">List recipes to cook:</div>
+							<input id="nameTextBox" type="text" name="recipeList">
+							<div class="headingSmall">List ingredients you will bring:</div>
+							<input id="nameTextBox" type="text" name="ingredientList"> -->
 						</div>
 						<div class="nav-bar-toggle" id="recipeBlock">
 							<div class="recipeBox">
@@ -425,6 +439,7 @@
 								</div>
 								<div class="buttonBlock">
 									<a href="mainpage_v2.html"><div class="submitButton" id="submitButtonClicked">Submit</div></a>
+									<input type="submit" name="submitbutton" value="Post" />
 									<!-- <a href="mainpage_v1.html"><div class="cancelButton">Cancel</div></a> -->
 								</div>
 							</div>

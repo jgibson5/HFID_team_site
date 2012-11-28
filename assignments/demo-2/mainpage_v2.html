@@ -1,4 +1,4 @@
-l<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN"
+<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html>
@@ -82,31 +82,17 @@ l<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN"
 		
 			function funcToCall()
 			{
-				$(".slider1").draggable({axis: "y"});
-				$(".slider1").on("mouseup", function() {
-					var height = $(".slider1 > a").length * 80;
+				$(".slider").draggable({axis: "y"});
+				$(".slider").on("mouseup", function() {
+					var height = $(".slider > a").length * 80;
 					var div_height = 400;
 					console.log(height, div_height);
-					var top = $(".slider1").css("top");
+					var top = $(".slider").css("top");
 					
 					if (top.slice(0, top.length-2) > 0) {
-						$(".slider1").animate({top: 0}, 200);
+						$(".slider").animate({top: 0}, 200);
 					} else if (top.slice(0, top.length-2) < -50) {
-						$(".slider1").animate({top: -50}, 200);
-					}
-					
-				});
-				$(".slider2").draggable({axis: "y"});
-				$(".slider2").on("mouseup", function() {
-					var height = $(".slider2 > div").length * 80;
-					var div_height = 400;
-					console.log(height, div_height);
-					var top = $(".slider2").css("top");
-					
-					if (top.slice(0, top.length-2) > 0) {
-						$(".slider2").animate({top: 0}, 200);
-					} else if (top.slice(0, top.length-2) < -400) {
-						$(".slider2").animate({top: -400}, 200);
+						$(".slider").animate({top: -50}, 200);
 					}
 					
 				});
@@ -153,7 +139,7 @@ l<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN"
 								</div>
 							</a>							
 							<div class="subTimelineTall-2" id="eventsBlock">
-								<div class="slider1">
+								<div class="slider">
 									<a href="Pancakes_Paul_event_v2.html">
 										<div class="timelineItemButton">
 											<div class="timelineItemTop"><span class="with">You are </span>going<span class="with"> to: </span></div>
@@ -185,20 +171,7 @@ l<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN"
 								</div>
 							</div>
 							<div class="subTimelineTall" id="friendsBlock">
-								<div class="slider2">
-									<a onclick="modal();">
-										<div class="newFriendButton" id="friendButton">Add New Friend</div>
-									</a>				
-									<div class="newFriendBoxThin" id="friendBox">
-										Name
-										<input type="text" name="Name" size="16">
-										Email
-										<input type="text" name="email" size="16">
-										<center>
-											<a onclick="modal();"><div class="submitButton" id="submitButtonClicked">Submit</div></a>
-											<a onclick="modal();"><div class="cancelButton">Cancel</div></a>
-										</center>
-									</div>					
+								<div class="slider">
 									<div class="friendMain" id="allie">
 										<div class="friendOutline">
 											<a class="select" onclick="hide('allie');">
@@ -279,7 +252,20 @@ l<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN"
 											<img src="../../static/images/prototype/people/lisa.jpg" width="100px">
 										</div>
 										<div class="friendTag">Lisa S.</div>
-									</div>				
+									</div>
+									<a onclick="modal();">
+										<div class="newFriendButton" id="friendButton">Add New Friend</div>
+									</a>				
+									<div class="newFriendBoxThin" id="friendBox">
+										Name
+										<input type="text" name="Name" size="16">
+										Email
+										<input type="text" name="email" size="16">
+										<center>
+											<a onclick="modal();"><div class="submitButton" id="submitButtonClicked">Submit</div></a>
+											<a onclick="modal();"><div class="cancelButton">Cancel</div></a>
+										</center>
+									</div>									
 								</div>
 							</div>
 						</div>
