@@ -34,6 +34,13 @@
 				document.getElementById("mainBody").style.background = randURL;
 			}
 		
+			function accept(){
+				document.getElementById("invited").style.display = "none";
+				document.getElementById("acceptB").style.display = "none";
+				document.getElementById("declineB").style.display = "none";
+				document.getElementById("accepted").style.display = "inline-block";
+			}
+		
 			function removeA(arr){
 			    var what, a= arguments, L= a.length, ax;
 			    while(L> 1 && arr.length){
@@ -193,6 +200,14 @@
 						</div>
 												<div class="nav-bar-toggle-2" id="overviewBlock">
 							<div class="alignLeftBlock">
+								<a id="invited" style="display: inline-block">
+								<p></p>
+								You are: Invited <a onclick="accept();" id="acceptB"><div class="submitButton">Accept</div>
+								</a><a id="declineB"><div class="cancelButton">Decline</div></a>
+								</a>
+								<a id="accepted" style="display: none">
+								<p>You are: Attending</p>
+								</a>
 								<p>What: Cookies</p>
 								<p>When: October 28th, 2012 at 11:00 am</p>
 								<p>Where: Allie's Apartment</p>

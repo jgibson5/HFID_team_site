@@ -8,6 +8,14 @@
 	overflow:hidden;
 }
 
+.invisible{
+	display:none;
+}
+
+.visible{
+	display:inline-block;
+}
+
 a:hover{
 	cursor:pointer;
 }
