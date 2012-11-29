@@ -33,6 +33,13 @@
 				var randURL = background_images[Math.floor(Math.random() * background_images.length)];
 				document.getElementById("mainBody").style.background = randURL;
 			}
+			
+			function accept(){
+				document.getElementById("invited").style.display = "none";
+				document.getElementById("acceptB").style.display = "none";
+				document.getElementById("declineB").style.display = "none";
+				document.getElementById("accepted").style.display = "inline-block";
+			}
 		
 			function removeA(arr){
 			    var what, a= arguments, L= a.length, ax;
@@ -192,6 +199,14 @@
 						</div>
 						<div class="nav-bar-toggle-2" id="overviewBlock">
 							<div class="alignLeftBlock">
+								<a id="invited" style="display: inline-block">
+								<p></p>
+								You are: Invited <a onclick="accept();" id="acceptB"><div class="submitButton">Accept</div>
+								</a><a id="declineB"><div class="cancelButton" href="mainpage_v1.html">Decline</div></a>
+								</a>
+								<a id="accepted" style="display: none">
+								<p>You are: Attending</p>
+								</a>
 								<p>What: Cinnamon Rolls</p>
 								<p>When: October 31st, 2012 at 11:00 AM</p>
 								<p>Where: Bob's house</p>
