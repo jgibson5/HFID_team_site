@@ -918,6 +918,11 @@ a:hover{
     position:relative;
     top:1px;
 }
+.newFriendButton:hover {
+	cursor:pointer;
+}
+
+
 
 .blueBody{
 	background:#99CCFF;
