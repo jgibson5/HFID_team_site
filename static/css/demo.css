@@ -342,7 +342,7 @@ a:hover{
 	border-width:2px;
 	margin:0px -5px 0px 0px;
 	width:180px;
-	height:45px;
+	height:70px;
 	/*background:#BBBBBB;*/
 	background-color:rgba(100, 100, 100, 0.6);
 	border-style:none;
@@ -393,7 +393,7 @@ a:hover{
 	border-width:2px;
 	margin:0px -5px 0px 0px;
 	width:180px;
-	height:50px;
+	height:70px;
 	/*background:#BBBBBB;*/
 	background-color:rgba(100, 100, 100, 0.6);
 	border-style:none;
@@ -460,7 +460,7 @@ a:hover{
 	moz-box-align:left;
 	margin:0px -5px 0px 0px;
 	width:180px;
-	height:90px;
+	height:70px;
 	/*background:#FFFFFF;*/
 	background-color:rgba(255, 255, 255, 0);
 }
