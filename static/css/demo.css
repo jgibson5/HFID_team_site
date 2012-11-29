@@ -480,12 +480,15 @@ a:hover{
 	/*color:#000000;*/
 	background-color:rgba(255, 255, 255, 0);
 	border:none;
+	z-index:10000;
 }
 		
 .createEventHomeButtonDiv {
 	position:absolute;
 	top:0px;
 	left:0px;
+	z-index: 1;
+	height:120px;
 }
 /* Title for pages e.g. Recipe Book and Create New Event */
 .pageTitle { 
@@ -1696,6 +1699,16 @@ a:active{
 	height:20px;
 	font-size:14px;
 	overflow:hidden;
+}
+
+#eDate, #eTime {
+	float:left;
+	display:inline-block;
+	margin-right:15px;
+}
+
+#eLocation {
+	width:180px;
 }
 
 .f_selected {

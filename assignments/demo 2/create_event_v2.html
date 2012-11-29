@@ -248,8 +248,8 @@
 					
 					<div class="eventBox">
 						<div class="nav-bar">
-							<a class="select" onclick="toggle_visibility('#nameTab', '#nameBlock');">
-								<div class="nav-bar-link-tall-2" id="nameTab">
+							<a class="select" >
+								<div onclick="toggle_visibility('#nameTab', '#nameBlock');" class="nav-bar-link-tall-2" id="nameTab">
 									<div>Event Name?</div>
 									<div id="eName"></div>
 								</div>
@@ -263,9 +263,11 @@
 							<a class="select" onclick="toggle_visibility('#dateTab', '#dateBlock');">
 								<div class="nav-bar-link-tall" id="dateTab">
 									<div>When? Where?</div>
-									<div id="eDate"></div>
-									<div id="eTime"></div>
-									<div id="eLocation"></div>
+									<div style="display:block;">
+										<div id="eDate"></div>
+										<div id="eTime"></div>
+									</div>
+									<div id="eLocation" style="display:block;"></div>
 								</div>
 							</a>
 							<a class="select" onclick="toggle_visibility('#friendsTab', '#friendsBlock');">
