@@ -225,6 +225,16 @@
 						$('#sComments').html($('#commentsTextBox').val());
 					}
 				});
+				$('#commentsTextBox').focus(function() {
+					if ($(this).val() == "Your Comment Here") {
+						$(this).val("");
+					}
+				});
+				$('#commentsTextBox').blur(function() {
+					if ($(this).val() == "") {
+						$(this).val("Your Comment Here");
+					}
+				});
 			});
 			
 		</script>
