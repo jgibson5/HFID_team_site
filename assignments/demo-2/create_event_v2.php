@@ -3,7 +3,7 @@
 
 <?php
 $username = "root";
-$password = "japanfood(9";
+$password = "password";
 mysql_connect("localhost", $username, $password);
 mysql_select_db("mydb");
 
