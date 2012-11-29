@@ -45,6 +45,13 @@
 			    return arr;
 			}
 			
+			function accept(){
+				document.getElementById("invited").style.display = "none";
+				document.getElementById("acceptB").style.display = "none";
+				document.getElementById("declineB").style.display = "none";
+				document.getElementById("accepted").style.display = "inline-block";
+			}
+			
 			info = {
 				'friends':[],
 				'recipes':[],
@@ -192,6 +199,14 @@
 						</div>
 						<div class="nav-bar-toggle-2" id="overviewBlock">
 							<div class="alignLeftBlock">
+								<a id="invited" style="display: none">
+								<p></p>
+								You are: Invited <a onclick="accept();" id="acceptB" style="display: none"><div class="submitButton">Accept</div>
+								</a><a id="declineB" style="display: none" href="mainpage_v1.html"><div class="cancelButton">Decline</div></a>
+								</a>
+								<a id="accepted" style="display: inline-block">
+								<p>You are: Attending</p>
+								</a>
 								<p>What: Pancakes</p>
 								<p>When: October 14th, 2012 at 10:00 am</p>
 								<p>Where: Paul's House</p>
