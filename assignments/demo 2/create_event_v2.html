@@ -58,6 +58,7 @@
 				};
 				
 			isOnFriendsPage = false;
+			hasChosenFriends = false;
 				
 			tabs = new Array('#nameTab', '#recipeTab', '#friendsTab', '#dateTab', '#timeTab', '#locationTab', '#summaryTab');
 			blocks = new Array('#nameBlock', '#recipeBlock', '#friendsBlock', '#dateBlock', '#timeBlock', '#locationBlock', '#summaryBlock');
@@ -82,6 +83,7 @@
 				if (idt === '#friendsTab') {
 					isOnFriendsPage = true;
 				}
+				
 				
 				if (idt === '#summaryTab') {
 					$('#sName').html($('#eName').html());
@@ -110,6 +112,8 @@
 					$(f).css('margin-left', '0px');
 					removeA(info.friends, $(f + ' > .friendTag').html());
 				}
+				
+				hasChosenFriends = true;
 				<!-- $('#eFriends').html(info.friends.join(", ")); -->
 			}
 			
@@ -148,10 +152,11 @@
 			
 			
 			$(document).keypress(function(e) {
-				if (e.which == 13 && isOnFriendsPage == true) {
+				if (e.which == 13 && isOnFriendsPage == true && hasChosenFriends == true) {
 					console.log("friends");
 					toggle_visibility('#summaryTab', '#summaryBlock');
 					isOnFriendsPage = false;
+					hasChosenFriends = false;
 				}
 			});
 			

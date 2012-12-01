@@ -149,6 +149,11 @@
 						$('#sComments').html($('#commentsTextBox').val());
 					}
 				});
+				$('#commentsTextBox').focus(function() {
+					if ($(this).val() == "Your Comment Here") {
+						$(this).val("");
+					}
+				});
 			});
 			
 		</script>
