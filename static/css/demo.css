@@ -813,8 +813,8 @@ a:hover{
 }
 
 .xCreateEventMargin {
-	margin-top:5px;
-	margin-right:10px;
+	margin:0px 0px 0px 5px;
+	float: right;
 }
 
 .shelf{
@@ -1717,6 +1717,22 @@ a:active{
 
 #eLocation {
 	width:180px;
+}
+
+#sDish_Recipe, #sIngredient_Recipe {
+	height:100px;
+	overflow: hidden;
+	float: right;
+}
+
+.ingredient {
+	float:right;
+	margin:0px 15px 0px 0px;
+}
+
+.ingrListItem {
+	width:200px;
+	height: 25px;
 }
 
 .f_selected {
