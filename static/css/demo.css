@@ -1739,3 +1739,11 @@ a:active{
 	border:2px solid #00CC00;
 	margin:3px -2px;
 }
+
+
+.instructions {
+	display:inline-block;
+	width:370px;
+	float:left;
+	margin:25px 0px 0px 25px;
+}
