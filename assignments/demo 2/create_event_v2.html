@@ -148,7 +148,7 @@
 				$('#sDish_Recipe').html((function(){
 					var out = '';
 					for (i=0;i<info.dishes.length;i++) {
-						out = out + '<div class="ingrListItem">' + x1 + info.dishes[i] + x2 + '<div class="ingredient" id="dish' + i.toString() + '"><span>' + info.dishes[i] + '</span></div>' + '</div>';
+						out = out + '<div class="dishListItem">' + x1 + info.dishes[i] + x2 + '<div class="ingredient" id="dish' + i.toString() + '"><span>' + info.dishes[i] + '</span></div>' + '</div>';
 					}
 					return out;
 				}));
@@ -175,14 +175,6 @@
 					}
 					return out;
 				}));
-					/*	$('#sIngredient_Recipe').html((function(){
-							var out = '';
-							for (i=0;i<info.ingredients.length;i++) {
-								out = out + '<div class="ingrListItem">' + x1 + i.toString() + x2 + '<div class="ingredient" id="ingr' + i.toString() + '"><span>' + info.ingredients[i] + '</span></div>' + '</div>';
-							}
-							console.log(out);
-							return out;
-						}));*/
 			}
 			
 			function removeIngredients(ingr) {
@@ -249,29 +241,35 @@
 				});
 				$(".dishDrag").draggable({axis: "y"});
 				$(".dishDrag").on("mouseup", function() {
-					var height = $(".slider1 > a").length * 80;
-					var div_height = 400;
-					console.log(height, div_height);
-					var top = $(".slider1").css("top");
+					var top = $(".dishDrag").css("top");
+					var n = $(".dishListItem").length * -20 + 140;
 					
 					if (top.slice(0, top.length-2) > 0) {
-						$(".slider1").animate({top: 0}, 200);
-					} else if (top.slice(0, top.length-2) < -50) {
-						$(".slider1").animate({top: -50}, 200);
+						$(".dishDrag").animate({top: 0}, 200);
+					} else if (top.slice(0, top.length-2) < n) {
+						if (n < 0) {
+							console.log(true);
+							$(".dishDrag").animate({top: n}, 200);
+						} else {
+							$(".dishDrag").animate({top: 0}, 200);
+						}
 					}
 					
 				});
 				$(".ingrDrag").draggable({axis: "y"});
 				$(".ingrDrag").on("mouseup", function() {
-					var height = $(".slider1 > a").length * 80;
-					var div_height = 400;
-					console.log(height, div_height);
-					var top = $(".slider1").css("top");
+					var top = $(".ingrDrag").css("top");
+					var n = $(".ingrListItem").length * -20 + 140;
 					
 					if (top.slice(0, top.length-2) > 0) {
-						$(".slider1").animate({top: 0}, 200);
-					} else if (top.slice(0, top.length-2) < -50) {
-						$(".slider1").animate({top: -50}, 200);
+						$(".ingrDrag").animate({top: 0}, 200);
+					} else if (top.slice(0, top.length-2) < n) {
+						if (n < 0) {
+							console.log(true);
+							$(".ingrDrag").animate({top: n}, 200);
+						} else {
+							$(".ingrDrag").animate({top: 0}, 200);
+						}
 					}
 					
 				});
@@ -364,19 +362,27 @@
 						</div>
 						<div class="nav-bar-toggle" id="recipeBlock">
 							
-							<div class="headingSmall" style="font-size:20px;">What would you like to cook?</div>
+							<div class="headingSmall" style="font-size:20px; width:400px;">What would you like to cook?</div>
 							<!-- <div>Please hit "Enter" to save.</div> -->
-							<input id="dishTextBox" type="text" name="eventDish">
-							<div class="dishDrag" style="height:140px;">
-								<span style="font-size:16px;">Cooking:</span>
-								<div id="sDish_Recipe"></div>
+							<div style="height:140px; width:200px; float:left;">
+								<input id="dishTextBox" type="text" name="eventDish">
+							</div>
+							<div style="font-size:16px; width:240px; float:left;">Cooking:</div>
+							<div style="height:140px; width:240px; float:left; overflow:hidden;">
+								<div class="dishDrag" style="width:240px; float:left;">
+									<div id="sDish_Recipe"></div>
+								</div>
 							</div>
 							<div class="headingSmall" style="font-size:20px;">What ingredients would you like others to bring?</div>
 							<!-- <div>Please specify quantity.</div> -->
-							<input id="ingredientTextBox" type="text" name="eventIngredient">
-							<div class="ingrDrag">
-								<span style="font-size:16px;">Ingredients:</span> 
-								<div id="sIngredient_Recipe"></div>
+							<div style="height:140px; width:200px; float:left;">
+								<input id="ingredientTextBox" type="text" name="eventIngredient">
+							</div>
+							<div style="font-size:16px; width:240px; float:left;">Ingredients:</div>
+							<div style="height:140px; width:240px; float:left; overflow:hidden;">
+								<div class="ingrDrag" style="width:240px; float:left;">
+									<div id="sIngredient_Recipe"></div>
+								</div>
 							</div>
 							<!--<div class="recipeBox">
 								<div class="headingSmall">Recipes already selected:</div>
