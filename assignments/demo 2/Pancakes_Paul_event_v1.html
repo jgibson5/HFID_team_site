@@ -49,7 +49,17 @@
 				document.getElementById("invited").style.display = "none";
 				document.getElementById("acceptB").style.display = "none";
 				document.getElementById("declineB").style.display = "none";
-				document.getElementById("accepted").style.display = "inline-block";
+				document.getElementById("accepted").style.display = "inherit";
+			}
+			
+			function decline(){
+				var r=confirm("Decline event?");
+				if (r==true) {
+					
+				}
+				else {
+					n.style.opacity = '1';
+				}
 			}
 			
 			info = {
@@ -121,12 +131,19 @@
 			}
 			
 			$(document).ready(function() {
+				
 				$('#submitButtonClicked').click(function () {
 					console.log("clicked submit button");
 					var r= confirm("Ready to submit?");
 					if (r==true) {
-						alert("The event information has been submitted!");
+						alert("Your changes have been submitted! (Your changes will not show up on the main page in this prototype.)");
 					}
+					return r;
+				});
+				
+				$('#declineB').click(function () {
+					console.log("clicked decline button");
+					var r= confirm("Decline event?");
 					return r;
 				});
 				
@@ -156,11 +173,6 @@
 						$('#sComments').html($('#commentsTextBox').val());
 					}
 				});
-				$('#commentsTextBox').focus(function() {
-					if ($(this).val() == "Your Comment Here") {
-						$(this).val("");
-					}
-				});
 			});
 			
 		</script>
@@ -178,7 +190,7 @@
 						<a href="mainpage_v1.html"><div class="mainPageNameButton">Cook With Friends</div></a>
 					</div>	
 						
-					<div class = "editEventTitleButton">Panckes with Paul</div>
+					<div class = "editEventTitleButton">Pancakes with Paul</div>
 					
 					
 					<div class="eventBox">
@@ -206,10 +218,10 @@
 							<div class="alignLeftBlock">
 								<a id="invited" style="display: none">
 								<p></p>
-								You are: Invited <a onclick="accept();" id="acceptB" style="display: none"><div class="submitButton">Accept</div>
-								</a><a id="declineB" style="display: none" href="mainpage_v1.html"><div class="cancelButton">Decline</div></a>
+								You are: Invited <a onclick="accept();" id="acceptB" style="display:none"><div class="submitButton" style="margin:0px 0px 0px 10px;padding: 0px 7px 0px 7px; height:20px; font-size:14px">Accept</div>
+								</a><a href="mainpage_v1.html" style="display:none"><div class="cancelButton" style="padding: 0px 7px 0px 7px; height:20px; font-size:14px" id="declineB">Decline</div></a>
 								</a>
-								<a id="accepted" style="display: inline-block">
+								<a id="accepted" style="display: inherit">
 								<p>You are: Attending</p>
 								</a>
 								<p>What: Pancakes</p>
