@@ -45,6 +45,23 @@
 			    return arr;
 			}
 			
+			function accept(){
+				document.getElementById("invited").style.display = "none";
+				document.getElementById("acceptB").style.display = "none";
+				document.getElementById("declineB").style.display = "none";
+				document.getElementById("accepted").style.display = "inherit";
+			}
+			
+			function decline(){
+				var r=confirm("Decline event?");
+				if (r==true) {
+					
+				}
+				else {
+					n.style.opacity = '1';
+				}
+			}
+			
 			info = {
 				'friends':[],
 				'recipes':[],
@@ -114,12 +131,19 @@
 			}
 			
 			$(document).ready(function() {
+				
 				$('#submitButtonClicked').click(function () {
 					console.log("clicked submit button");
 					var r= confirm("Ready to submit?");
 					if (r==true) {
-						alert("The event information has been submitted!");
+						alert("Your changes have been submitted! (Your changes will not show up on the main page in this prototype.)");
 					}
+					return r;
+				});
+				
+				$('#declineB').click(function () {
+					console.log("clicked decline button");
+					var r= confirm("Decline event?");
 					return r;
 				});
 				
@@ -149,11 +173,6 @@
 						$('#sComments').html($('#commentsTextBox').val());
 					}
 				});
-				$('#commentsTextBox').focus(function() {
-					if ($(this).val() == "Your Comment Here") {
-						$(this).val("");
-					}
-				});
 			});
 			
 		</script>
@@ -168,10 +187,10 @@
 				<div class="strawberryBody" id="mainBody">
 					<!-- PUT STUFF HERE -->
 					<div class="createEventHomeButtonDiv">
-						<a href="mainpage_v2.html"><div class="mainPageNameButton">Cook With Friends</div></a>
+						<a href="mainpage_v1.html"><div class="mainPageNameButton">Cook With Friends</div></a>
 					</div>	
 						
-					<div class = "editEventTitleButton">Pancakes with Paul</div>
+					<div class = "editEventTitleButton">Berry Pie with Gina</div>
 					
 					
 					<div class="eventBox">
@@ -197,10 +216,18 @@
 						</div>
 						<div class="nav-bar-toggle-2" id="overviewBlock">
 							<div class="alignLeftBlock">
-								<p>What: Pancakes</p>
-								<p>When: October 14th, 2012 at 10:00 am</p>
-								<p>Where: Paul's House</p>
-								<p>Scheduled by: Paul</p>
+								<a id="invited" style="display: none">
+								<p></p>
+								You are: Invited <a onclick="accept();" id="acceptB" style="display:none"><div class="submitButton" style="margin:0px 0px 0px 10px;padding: 0px 7px 0px 7px; height:20px; font-size:14px">Accept</div>
+								</a><a href="mainpage_v1.html" style="display:none"><div class="cancelButton" style="padding: 0px 7px 0px 7px; height:20px; font-size:14px" id="declineB">Decline</div></a>
+								</a>
+								<a id="accepted" style="display: inherit">
+								<p>You are: Attending</p>
+								</a>
+								<p>What: Berry Pie</p>
+								<p>When: November 2nd, 2012 at 4:00 pm</p>
+								<p>Where: Tina's House</p>
+								<p>Scheduled by: Tina</p>
 								<p>Invited:</p>
 								<center>
 									<div class="friendBlock">
@@ -208,8 +235,8 @@
 										<div class="friendTag">Paul. K</div>
 									</div>
 									<div class="friendBlock">
-										<div class="friend"><img src="../../static/images/prototype/people/sara.jpg" width="90px"></div>
-										<div class="friendTag">Sara Y.</div>
+										<div class="friend"><img src="../../static/images/prototype/people/joe.jpg" width="90px"></div>
+										<div class="friendTag">Joe F.</div>
 									</div>
 									<div class="friendBlock">
 										<div class="friend"><img src="../../static/images/prototype/people/deirdre.jpg" width="90px"></div>
@@ -223,12 +250,12 @@
 								<div class="headingSmall">Tap a checkbox to claim an item to bring!</div>
 								<div class="alignLeftBlock">
 									<p><input type="checkbox" name="checkbox1">1 1/2 c flour</p>
-									<p><input type="checkbox" name="checkbox2">3 1/2 tsp baking powder</p>
-									<p><input type="checkbox" name="checkbox3">1 tps salt</p>
+									<p><input type="checkbox" name="checkbox2">1 tps salt</p>
+									<p><input type="checkbox" name="checkbox3">6 c blueberries</p>
 									<p><input type="checkbox" name="checkbox4">1 Tbsp sugar</p>
-									<p><input type="checkbox" name="checkbox4">1 1/4 c milk</p>
-									<p><input type="checkbox" name="checkbox4">1 egg</p>
-									<p><input type="checkbox" name="checkbox4">3 Tbsp melted butter</p>
+									<p><input type="checkbox" name="checkbox5">2/3 c shortening</p>
+									<p><input type="checkbox" name="checkbox6">1 egg</p>
+									<p><input type="checkbox" name="checkbox7">1 Tbsp butter</p>
 								</div>
 							</div>
 						</div>
@@ -237,13 +264,13 @@
 								<div class="alignLeftBlock">
 									<input id="commentsTextBox" type="text" name="eventComments" value="Your Comment Here">
 									<div class="createEventSummaryMargins">Your comment: <span id="sComments"></div>
-									<p> 10/7 - Paul says: No problem--hopefully we can do it again sometime that works better for you! </p>
-									<p> 10/1 - Sara says: I'd love to come, but I'm out of town :(   Sorry about that! </p>
-									<p> 9/30 - Deirdre says: This sounds like so much fun!  I love breakfast :) </p>
+									<p> 11/1 - Paul says: I bought some nice blueberries at the store today! </p>
+									<p> 10/21 - Tina says: It's a new recipe--I hope it turns out well. </p>
+									<p> 9/30 - Deirdre says: I can't wait to make pie! :) </p>
 								</div>
 								<div class="buttonBlock">
-									<a href="mainpage_v2.html"><div class="submitButton" id="submitButtonClicked">Submit</div></a>
-									<!-- <a href="mainpage_v2.html"><div class="cancelButton">Cancel</div></a> -->
+									<a href="mainpage_v1.html"><div class="submitButton" id="submitButtonClicked">Submit</div></a>
+									<!-- <a href="mainpage_v1.html"><div class="cancelButton">Cancel</div></a> -->
 								</div>
 							</div>
 						</div>

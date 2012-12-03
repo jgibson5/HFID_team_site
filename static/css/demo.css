@@ -810,6 +810,7 @@ a:hover{
 	margin-top:-6px;
 	margin-right:2px;
 	float:right;
+	top:-3px;
 }
 
 .xCreateEventMargin {
@@ -1720,19 +1721,18 @@ a:active{
 }
 
 #sDish_Recipe, #sIngredient_Recipe {
-	height:100px;
-	overflow: hidden;
 	float: right;
 }
 
 .ingredient {
 	float:right;
 	margin:0px 15px 0px 0px;
+	font-size:14px;
 }
 
-.ingrListItem {
+.ingrListItem, .dishListItem {
 	width:200px;
-	height: 25px;
+	height: 20px;
 }
 
 .f_selected {
