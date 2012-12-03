@@ -122,6 +122,15 @@
 			
 			$(document).ready(function() {
 			
+				$('#submitButtonClicked').click(function () {
+					console.log("clicked submit button");
+					var r= confirm("Ready to submit?");
+					if (r==true) {
+						alert("Your changes have been submitted! (Your changes will not show up on the main page in this prototype.)");
+					}
+					return r;
+				});
+				
 				$('#declineB').click(function () {
 					console.log("clicked decline button");
 					var r= confirm("Decline event?");
