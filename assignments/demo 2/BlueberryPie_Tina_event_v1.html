@@ -173,6 +173,11 @@
 						$('#sComments').html($('#commentsTextBox').val());
 					}
 				});
+				$('#commentsTextBox').focus(function() {
+					if ($(this).val() == "Your Comment Here") {
+						$(this).val("");
+					}
+				});
 			});
 			
 		</script>
@@ -190,7 +195,7 @@
 						<a href="mainpage_v1.html"><div class="mainPageNameButton">Cook With Friends</div></a>
 					</div>	
 						
-					<div class = "editEventTitleButton">Berry Pie with Gina</div>
+					<div class = "editEventTitleButton">Berry Pie with Tina</div>
 					
 					
 					<div class="eventBox">
