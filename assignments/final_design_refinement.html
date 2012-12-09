@@ -52,7 +52,7 @@
 					<p>In addition, we found that consistency was a major issue in our app. There were many buttons with different functions, as well as pages with inconsistent layouts, backgrounds, and text. We have decided to keep the rotating background image consistent on every page and have made every box transparent. In addition, we have standardized the buttons, layout, and text. Finally, we have created a “Cook with Friends” logo that will serve as the button that brings the user back to the home page. </p>
 					<p>In summary, we have refined our app by simplifying its functionality, returning it to its basic purpose: to help users organize cooking in person with their friends. </p>
 					
-					<a id="experiment-design"><h2>Formal Experiment Design</h2>
+					<a id="experiment-design"><h2>Formal Experiment Design</h2></a>
 					<p>We will test one version of the prototype, with two factors varied, on each user. We will time the user as they complete two tasks and ask them to think aloud as they use the app. We will also show the user the other version of the prototype and ask whether they prefer one or the other. We expect them to be better at accomplishing each task the second time around, so we will not include the time it takes them to accomplish these tasks in our test results.</p>
 					<p>We will ideally have four users that we test so we can test each version of the interface twice. We will test users on Monday and Thursday. Following the Monday usability test, we will make modifications suggested by the users. After the Thursday test, we will choose the version of the prototype that worked best for the users, or some combination of both, and add the finishing touches. </p>
 					
@@ -96,7 +96,7 @@
 					<h4> Ideal Conditions </h4>
 					<p>Ideally, we would test at least 10 users on each version of the prototype. We would show each user the other version, but they would only be tested on one version. Our team has no prior experience in the design of controlled experiments.</p>
 					
-					<h3> Test Script </h3>
+					<a id="test-script"><h3> Test Script </h3></a>
 					<h4> Informed Consent</h4>
 					<p>Hello, thank you for helping us out today. The usability test we are conducting today will help us learn how to improve the usability of our functional prototyped interface design. We will ask you to complete several tasks, as well as fill out a follow-up survey with some demographic information and other comments. Please think aloud as you work through the tasks. Do not worry about making mistakes, since that will be particularly helpful to us in learning which aspects of our design need improvement. Remember you are free to change your mind about the study at any point if you feel uncomfortable. Please read through the informed <a href="consent_form.html">consent form</a>. Do we have your permission to observe you and take notes? </p>
 					<h4> Intro</h4>
@@ -179,6 +179,50 @@
 						<li>he noted that the My Friends title on the friends' page looks like a button</li>
 					</ul>
 					
+					<a id="final-writeup"><h2>Final Write-up</h2></a>
+					<h3>Problem Statement</h3>
+					<p>Many people enjoy cooking with their friends, but the coordination and planning of an event are hindered by poor communication channels. For example, emailing or calling friends to coordinate a cooking event requires looking up friends’ email addresses or phone numbers, remembering all the details of the event when sending that one email or making that one call, and checking a calendar to determine which days and times will work. Emails are sent back and forth, with people suggesting alternatives. Often, if schedules conflict, people give up on planning the event and decide to reschedule for an indeterminate future date.</p>
+					
+					<h3>Solution Overview</h3>
+					<p>There are many details to coordinate when organizing a cooking event with friends. The date, time, and location, what dishes to cook, and who will bring which ingredients are just a few of the logistics required to schedule a social cooking event. To make this process quicker and simpler, we designed a tablet application that helps users view, discuss, and coordinate all the details in one place. The user has a list of friends he or she can invite to social cooking events, as well as a list of upcoming cooking events. </p>
+					
+					<h3>Personas and Scenarios </h3>
+					<p>Our personas, Abby and Corinne, are shown <a href="needs_analysis.html#personas">here</a>. We primarily designed for Corinne because she is more organized when scheduling events. However, our design also addresses Abby’s goals and needs. Our final three scenarios are creating an event, adding a friend, and interacting with an event you are invited to, which are the same scenarios we used in our <a href="#test-script">formal usability test script</a>. </p>
+					
+					<h3>Final Interface Design</h3>
+					
+					<h4>Functionality </h4>
+					<p>“Cooking with Friends” enables a user to create a social cooking event by titling the event, listing the dishes he or she wants to cook and the ingredients that are needed, inviting friends, and suggesting a time and place. The user can view events he or she has created in order to see friends’ comments and what ingredients friends can bring. When the user is invited to a social cooking event, he or she can accept or decline the invitation, as well as volunteer to bring ingredients or leave a comment suggesting another dish or an alternate time/date. This increases everyone’s involvement, which is essential to any successful collaborative cooking experience. Finally, the user can view his or her friend list, add friends, and delete friends.</p>
+					
+					<h4>Interaction Flow</h4>
+					
+					<p>After removing the recipe books, our app was simplified to two layers: the main page and three pages that link directly back to the main page, but not to each other (as shown in the image below).</p>
+					
+					<img src="../static/images/interaction_flow.jpg" width="700px">
+					
+					<h4>What was left unimplemented? </h4>
+					
+					<p>Initially, we left out <a href="design_refinement.html#features-left-out">these features</a>. However, when we made our final refinement, we cut out the recipe books completely. Due to time constraints, we were unable to make all the revisions we had hoped to make. For example, we would have liked to replace the “Cooking with Friends” home page button with a nicely designed logo. We also wanted to change selecting a time by entering a string on the create event page to using a dial instead. Instead of merely displaying a pop-up saying information for adding a friend or creating an event had been saved but would not appear, we would have liked to use a database to store the information so that newly created events or added friends would appear. Finally, instead of requiring the user to press “Enter” to save information on the create event page, we would have liked to add a “Save” button so that the function of pressing “Enter” would be reserved for moving to the next step in the event creation process.</p>
+					
+					<h4>Tools Used</h4>
+					
+					<p>We used paper, sticky notes, and sharpies for our initial paper prototypes. We discussed what our major features were, then laid them out in various ways with the help of the removable post-its. Once we agreed on a layout as a team, we made mockups on Balsamiq Mockups. This was an incredibly powerful tool that helped us make many variations of designs quickly and easily. We could spend less time drawing and more time thinking about layout and flow. However, it was more difficult initially to learn to use Balsamiq than it would have been to simply use pen and paper.</p>
+					
+					<p>We used a combination of HTML, CSS, and Javascript to implement our prototype. The problem with this approach was that only one team member was comfortable using HTML, CSS, and Javascript. Although all team members did learn a lot in the process, the learning curve was quite steep, especially for the Javascript. We also used Github for version control, which made the collaborative coding process much easier. The most difficult aspect of this was due to accidentally writing over another team member’s changes if one team member forgot to “pull” from the git repository before “pushing” their changes to the repository.</p>
+					
+					<h3>Design Evolution</h3>
+					
+					<p>During the paper prototyping phase, we described <a href="design_development.html#idea-development">here</a> which UI designs we moved forward with in Balsamiq from the initial storyboard sketches. After testing our paper prototypes on users, we revised our interface design as described <a href="design_refinement.html#revised-mockup">here</a>. A summary of the major changes we made to the prototype is listed <a href="design_refinement.html#major-changes">here</a>. Our final refinement after the heuristic evaluation is described <a href="#refinement-summary">here</a>.</p>
+					
+					<h4>Final Revisions</h4>
+					
+					[Colby's part goes here]
+					
+					<h4>The Most Helpful Step</h4>
+					
+					<p>The Heuristic Evaluation was by far the most helpful evaluation technique for our project. Up until that point, we were steadily expanding the capability of our app to cover the entire cooking experience, from deciding what to cook all the way to helping users cook, by adding features such as timers and photo-taking. From our Heuristic Evaluation, it was clear that we could not accomplish everything that we wanted to do in the limited time available, and that our app would not be fully functional if we continued with the current design. Therefore, we decided to simplify our app significantly. Simplifying our app has been the best decision our team made this whole semester. Before the simplification took place, everyone on the team was feeling overwhelmed and concerned about the outcome of the project, but with a smaller scope, we were able to focus more on what could be done. By limited ourselves to the event creation process, we have greatly improved the few features that are most important to the user experience. The app is now simpler, more beautiful, and easier to use than before.</p>
+					
+					<a href="https://docs.google.com/open?id=0B8UKwcBSXcvPT2Y1MHVUYVBUMVE"><h2>Final Presentation</h2></a>
 					
 					<a id="work-breakdown"><h2>Work Breakdown</h2></a>
 					<table>
@@ -236,8 +280,8 @@
 								<td>Scripts and Final Report</td>
 								<td>0</td>
 								<td>0</td>
-								<td>50</td>
-								<td>50</td>
+								<td>30</td>
+								<td>70</td>
 								<td>0</td>
 							</tr>
 							
@@ -253,6 +297,8 @@
 				<div class="side-bar-link"><a href="final_design_refinement.html">Final Refinement</a></div>
 				<div class="side-bar-link sub-link"><a href="#design-refinement">Refinement Summary</a></div>
 				<div class="side-bar-link sub-link"><a href="#experiment-design">Formal Experiment Design</a></div>
+				<div class="side-bar-link sub-link"><a href="#test-script">Test Script</a></div>
+				<div class="side-bar-link sub-link"><a href="#final-writeup">Final Writeup</a></div>
 				<div class="side-bar-link sub-link"><a href="#work-breakdown">Work Breakdown</a></div>
 				<div class="side-bar-link"><a href="demo 2/mainpage_v1.html">Final Prototype</a></div>
 			</div>
